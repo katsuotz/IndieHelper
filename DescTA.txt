@@ -1,0 +1,27 @@
+Site map
+
+1) Home : 
+	- Banner
+	- Popular
+	- Categori
+	- Finished Project
+	- Login / Register
+	- Search
+2) Profile
+	- Profile
+	- project
+	- Setting
+	- Point
+3) Explore
+4) Admin
+5) About
+6) Detail Project
+ 
+Table
+1) Account
+2) user
+3) Admin
+4) Donation
+5) Bank
+6) Project
+7) Group ( Insyaallah ) 
