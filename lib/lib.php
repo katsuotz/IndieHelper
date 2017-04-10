@@ -12,7 +12,7 @@
 		
 		function __construct()
 		{
-			$this->mysqli = new mysqli('localhost','root','','');
+			$this->mysqli = new mysqli('localhost','root','','db_indie');
 		}
 
 		function getAll($tbname){
