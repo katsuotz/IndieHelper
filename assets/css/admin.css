@@ -2,9 +2,34 @@
 	padding-left: 300px;
 }
 
-.side-nav input,
-.side-nav input:hover,
-.side-nav input:focus {
+.search i {
+	margin-top: .7rem;
+	color: #777;
+	font-size: 1.9rem !important;
+}
+
+.search i.active {
+	color: #333 !important;
+}
+
+.search .input-field input[type=text] {
+    border-bottom: 		1px solid transparent !important;
+  	-webkit-box-shadow: 0 1px 0 0 transparent !important;
+  	-moz-box-shadow: 	0 1px 0 0 transparent !important;
+  	box-shadow: 		0 1px 0 0 transparent !important;
+}
+
+.search .input-field input[type=text]:focus {
+    border-bottom: 		1px solid transparent !important;
+  	-webkit-box-shadow: 0 1px 0 0 transparent !important;
+  	-moz-box-shadow: 	0 1px 0 0 transparent !important;
+  	box-shadow: 		0 1px 0 0 transparent !important;
+}
+
+.card:hover {
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.28), 
+    			0 1px 5px 0 rgba(0,0,0,0.24), 
+    			0 3px 1px -2px rgba(0,0,0,0.4);
 }
 
 .tabs {
@@ -17,17 +42,21 @@
 }
 
 .tabs .tab a {
-    color: rgba(0, 0, 0, 0.87) !important;
+    color: rgba(0, 0, 0, 0.5) !important;
     font-weight: 0;
+    -webkit-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;: 
 }
 
 .tabs .tab a:hover {
     background-color: rgba(0, 0, 0, 0.05) !important;
-    color: rgba(0, 0, 0, 0.87) !important;
+    color: #333 !important;
 }
 
 .tabs .tab a.active {
-    color: rgba(0, 0, 0, 0.87) !important;
+    color: #333 !important;
+    background-color: rgba(0, 0, 0, 0.05) !important;
 }
 
 .tabs .tab i {
@@ -35,7 +64,7 @@
 }
 
 .tabs .indicator {
-    background-color: #eee !important;
+    background-color: transparent !important;
 }
 
 .copyright,

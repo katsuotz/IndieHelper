@@ -22,10 +22,15 @@
 		    	<div class="row">
 		    		<div class="col s12">
 		    			<div class="card py0 mb0">
-		    				<div class="card-content black-text px1 py0">
-		    					<form action="<?= baseurl() ?>" method="POST">
-									<input type="text" class="m0" id="" placeholder="Search..">
-						    	</form>
+		    				<div class="card-content black-text px1 py0 search">
+		    					<form action="" method="POST">
+		    						<div class="input-field"> 
+		    							<div class="form-group">
+		    								<i class="material-icons prefix">search</i>
+          									<input id="icon_prefix" type="text" class="form-control my0">
+		    							</div>
+		    						</div>
+		    					</form>
 		    				</div>
 		    			</div>
 		    		</div>
