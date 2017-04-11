@@ -44,9 +44,6 @@
 .tabs .tab a {
     color: rgba(0, 0, 0, 0.5) !important;
     font-weight: 0;
-    -webkit-transition: all .3s ease-in-out;
-    -o-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;: 
 }
 
 .tabs .tab a:hover {
@@ -74,4 +71,8 @@
 
 .copyright a:hover {
 	color: #333;
+}
+
+.content {
+	min-height: 200vh;
 }

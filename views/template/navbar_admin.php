@@ -39,11 +39,11 @@
 	    </li>
 	    <li>
 		    <ul class="tabs">
-				<li class="tab col s12"><a class="active left-align" href="#dashboard"><i class="fa fa-dashboard"></i>Dashboard</a></li>
-				<li class="tab col s12"><a class="left-align" href="#user"><i class="fa fa-user"></i>User</a></li>
-				<li class="tab col s12"><a class="left-align" href="#project"><i class="fa fa-bookmark"></i>Project</a></li>
-				<li class="tab col s12"><a class="left-align" href="#bank"><i class="fa fa-credit-card-alt"></i>Bank</a></li>
-				<li class="tab col s12"><a class="left-align" href="#donasi"><i class="fa fa-paypal"></i>Donasi</a></li>
+				<li class="tab col s12"><a class="active left-align waves-effect waves-shadow" href="#dashboard"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+				<li class="tab col s12"><a class="left-align waves-effect waves-shadow" href="#user"><i class="fa fa-user"></i>User</a></li>
+				<li class="tab col s12"><a class="left-align waves-effect waves-shadow" href="#project"><i class="fa fa-bookmark"></i>Project</a></li>
+				<li class="tab col s12"><a class="left-align waves-effect waves-shadow" href="#bank"><i class="fa fa-credit-card-alt"></i>Bank</a></li>
+				<li class="tab col s12"><a class="left-align waves-effect waves-shadow" href="#donasi"><i class="fa fa-paypal"></i>Donasi</a></li>
 			</ul>
 	    </li>
 		
@@ -56,16 +56,18 @@
 	</ul>
 	
 	<div class="all">
-		<nav>
-			<div class="nav-wrapper container-fluid">
-				<a href="#!" class="brand-logo left">IndieHelper</a>
-				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-				<ul class="right hide-on-med-and-down">
-		     	 	<li><a href="sass.html">Log Out</a></li>
-		    	</ul>
-				<ul class="side-nav" id="mobile-demo">
-					<li><a href="sass.html">Sass</a></li>
-					<li><a href="components.html">Components</a></li>
-				</ul>
-			</div>
-		</nav>
+		<div>
+			<nav class="purple lighten-1">
+				<div class="nav-wrapper container-fluid">
+					<a href="#!" class="brand-logo left">IndieHelper</a>
+					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+					<ul class="right hide-on-med-and-down">
+			     	 	<li><a href="#" class="waves-effect waves-shadow">Log Out</a></li>
+			    	</ul>
+					<ul class="side-nav" id="mobile-demo">
+						<li><a href="sass.html">Sass</a></li>
+						<li><a href="components.html">Components</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
