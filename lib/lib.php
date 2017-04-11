@@ -22,6 +22,9 @@
 		public $fieldname = '';
 		public $value = '';
 
+		public $infield = '';
+		public $invalues = '';
+
 		function __construct()
 		{	
 			$this->mysqli = new mysqli('localhost','root','','db_indie');
@@ -40,6 +43,23 @@
 				$res[] = $datas;
 			}
 			return $res;
+		}
+
+
+		function insert($data){
+			foreach ($data as $key => $value) {
+				$this->infield[] = $key;
+				$this->invalues[] = "'".$value."'";
+				
+			}
+
+			$query = "INSERT INTO $this->tblname (".implode( $this->infield, ",").") VALUES (".implode(", ",$this->invalues).")";
+
+			if($this->mysqli->query($query)){
+				return 1;
+			}else{
+				return 0;
+			}
 		}
 
 		function get($tbname){
