@@ -1,0 +1,48 @@
+.all {
+	padding-left: 300px;
+}
+
+.side-nav input,
+.side-nav input:hover,
+.side-nav input:focus {
+}
+
+.tabs {
+	overflow: auto !important;
+	height: auto !important;
+}
+
+.tabs li {
+	display: block !important;
+}
+
+.tabs .tab a {
+    color: rgba(0, 0, 0, 0.87) !important;
+    font-weight: 0;
+}
+
+.tabs .tab a:hover {
+    background-color: rgba(0, 0, 0, 0.05) !important;
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.tabs .tab a.active {
+    color: rgba(0, 0, 0, 0.87) !important;
+}
+
+.tabs .tab i {
+	margin: 0 20px 0 20px !important;
+}
+
+.tabs .indicator {
+    background-color: #eee !important;
+}
+
+.copyright,
+.copyright a {
+	color: #777;
+}
+
+.copyright a:hover {
+	color: #333;
+}

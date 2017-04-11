@@ -27,6 +27,11 @@
 			$this->mysqli = new mysqli('localhost','root','','db_indie');
 		}
 
+		function addCss($css)
+		{
+			$_SESSION['css'][] = $css;
+		}
+
 		function getall($tbname = ''){
 			if(!empty($tbname))
 				$data = $this->mysqli->query("SELECT * FROM $tbname");
