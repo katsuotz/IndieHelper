@@ -1,6 +1,6 @@
     
     <nav id="navigation">
-        <div class="nav-wrapper purple lighten-1 z-depth-4"> <a href="#" class="brand-logo center">IndieHelper</a>
+        <div class="nav-wrapper navbar-fixed purple lighten-1 z-depth-4"> <a href="#" class="brand-logo center">IndieHelper</a>
             <ul id="nav-mobile" class="left">
                 <li>
                     <a href="#" data-activates="slide-out" class="button-sid waves-effect waves-shadow"> <i class="fa fa-bars fa-2x" aria-hidden="true"></i> </a>
