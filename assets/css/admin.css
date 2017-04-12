@@ -2,6 +2,28 @@
     padding-left: 300px;
 }
 
+.dropdown-content {
+    width: auto !important;
+    margin-top: 18px !important; 
+    margin-left: 5px !important;
+}
+
+i.dropdown-button {
+    padding: 0 10px;
+}
+
+.dropdown-content li { 
+    min-height: auto !important;
+}
+
+.dropdown-content a {
+    padding: 0 30px 0 20px !important;
+}
+
+.dropdown-content i {
+    margin: 0 !important;
+}
+
 .search i {
   	margin-top: .7rem;
   	color: #777;
@@ -73,15 +95,15 @@
     color: #333;
 }
 
-nav .nav-wrapper a {
+nav .nav-wrapper a.brand-logo {
     color: #ba68c8 !important; 
     transition: all .3s ease-out;
 }
 
-nav .nav-wrapper a:hover {
+nav .nav-wrapper a.brand-logo:hover {
     color: #ab47bc !important; 
 }
 
 .content {
-	min-height: 200vh;
+    min-height: 100vh;
 }

@@ -5,4 +5,6 @@ $(document).ready(function() {
 		edge: 'left',
 		closeOnClick: true
 	});
+
+	$('.modal').modal();
 });

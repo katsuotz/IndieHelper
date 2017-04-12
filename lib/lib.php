@@ -24,18 +24,15 @@
 
 		public $infield = '';
 		public $invalues = '';
+		public $select = '*';
+		public $where = '';
 
 		function __construct()
 		{	
 			$this->mysqli = new mysqli('localhost','root','','db_indie');
 		}
 
-		function addCss($css)
-		{
-			$_SESSION['css'][] = $css;
-		}
-
-		function getall($tbname = ''){
+		function getall($tbname = '') {
 			if(!empty($tbname))
 				$data = $this->mysqli->query("SELECT * FROM $tbname");
 			$res = array();
@@ -45,46 +42,75 @@
 			return $res;
 		}
 
-
-		function insert($data){
+		function insert($data) {
 			foreach ($data as $key => $value) {
 				$this->infield[] = $key;
-				$this->invalues[] = "'".$value."'";
-				
+				$this->invalues[] = "'" . $value . "'";		
 			}
 
-			$query = "INSERT INTO $this->tblname (".implode( $this->infield, ",").") VALUES (".implode(", ",$this->invalues).")";
+			$query = "INSERT INTO $this->tblname(" . implode( $this->infield, ",") . ") VALUES (" . implode(", ", $this->invalues) . ")";
 
-			if($this->mysqli->query($query)){
+			if ($this->mysqli->query($query)) {
 				return 1;
-			}else{
+			} else {
 				return 0;
 			}
 		}
 
-		function get($tbname){
-			$this->tblname = $tbname;
-		}
+		// function get($tbname) {
+		// 	$this->tblname = $tbname;
+		// }
 
-		function where($fieldname,$value){
-			$this->fieldname = $fieldname;
-			$this->value = $value;
-		}
+		// function where($fieldname, $value) {
+		// 	$this->fieldname = $fieldname;
+		// 	$this->value = $value;
+		// }
 
-		function delete($tblname){
+		function delete($tblname) {
 			$query = $this->mysqli->query("DELETE FROM $tblname WHERE $this->fieldname = $this->value");
 			return $query;
 		}
 
-		function getwhere($fieldname,$value){
-			$data = $this->mysqli->query("SELECT * FROM $this->tblname WHERE $fieldname = '$value'");
+		function select($value) {
+			$this->select = implode(',', $value);
+		}
+
+		function from($value) {
+			$this->tblname = $value;
+		}
+
+		function where($value) {
+			$row = array();
+			$col = array();
+
+			foreach ($value as $key => $values) {
+				array_push($row, $key);
+				array_push($col, $values);
+			}
+
+			$data = array();
+
+			for ($i = 0; $i < count($row); $i++) {
+				array_push($data, ($row[$i] . " AND '" . $col[$i]) . "'");
+			}
+
+			$this->where = 'WHERE ' . implode(' = ', $data);
+		}
+
+		function get($tblname = '') {
+			if ($tblname)
+				$this->tblname = $tblname;
+
+			$data = $this->mysqli->query("SELECT $this->select FROM $this->tblname $this->where");
 			$res = array();
 			while ($datas = $data->fetch_object()) {
 				$res[] = $datas;
 			}
+			$this->select = '*';
+			$this->tblname = '';
+			$this->where = '';
 			return $res;
 		}
-
 	}
 
 
