@@ -57,7 +57,7 @@
 	
 	<div class="all">
 		<div>
-			<nav class="purple lighten-1">
+			<nav class="white">
 				<div class="nav-wrapper container-fluid">
 					<a href="#!" class="brand-logo left">IndieHelper</a>
 					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
