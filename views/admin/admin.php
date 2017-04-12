@@ -1,4 +1,4 @@
-<div class="content">
+<div class="row content">
 	<div id="dashboard" class="col s12">Test 1</div>
 	<div id="user" class="col s12">Test 2</div>
 	<div id="project" class="col s12">Test 3</div>

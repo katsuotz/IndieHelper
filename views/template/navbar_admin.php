@@ -16,7 +16,7 @@
 				</ul>
 
 				<!-- Dropdown Structure -->
-				<a href="#!email"><span class="white-text email">Admin</span></a>
+				<a href="#"><span class="white-text email">Admin</span></a>
 				
 	    	</div>
 	    </li>
