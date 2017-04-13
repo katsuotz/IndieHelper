@@ -29,7 +29,7 @@
 		public $where = '';
 
 		function __construct()
-		{
+		{	
 			$this->mysqli = new mysqli('localhost','root','','db_indie');
 		}
 
@@ -134,29 +134,15 @@
 	class Input extends Database
 	{
 		
-		function post($post) {
+		function post($post){
 			return $_POST[$post];
 		}
 
-		function get($get) {
+		function get($get){
 			return $_GET[$get];
 		}
 	}
 
-	class Session extends Database
-	{
-		function set_session($session) {
-			foreach ($session as $key => $value) {
-				$_SESSION[$key] = $value;
-			}
-		}
-
-		function get_session($keyname) {
-			return $_SESSION[$keyname];
-		}
-	}
-
-	$session = new Session();
 	$input = new Input();
 	$db = new Database();
 

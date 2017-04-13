@@ -13,19 +13,6 @@ $(document).ready(function() {
 			$('#form-sign-up')[0].reset();
 			Materialize.toast('Sign Up ' + result, 4000);
 		})
-	});
-
-	$('#form-log-in').submit(function(e) {
-		console.log(1);
-		e.preventDefault();
-		$.ajax({
-			url: $(this).attr('action'),
-			type: $(this).attr('method'),
-			data: $(this).serialize(),
-		})
-		.done(function(result) {
-			Materialize.toast('Log In ' + result, 4000);
-		})
 		
 	});
 });
