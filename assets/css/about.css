@@ -1,31 +1,30 @@
-body{
-	background-color: #E9EAED;
-}
-
-.content{
-	width: 90% !important;
+.content {
+    width: 90% !important;
 }
 
 .parallax-container {
-	width: 100%;
+    width: 100%;
 }
 
 .profile-card {
-	min-height: 80vh;
-}	
-
-.avatar img{
-	width: 160px;
-	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
-                  0 1px 5px 0 rgba(0, 0, 0, 0.12),
-                  0 3px 1px -2px rgba(0, 0, 0, 0.2);
-                      margin: -80px auto 0;
+    min-height: 80vh;
 }
-.indie{
-	border-bottom: solid #e5e8ef 1px;
-	padding: 9px;
+.title{
+	line-height: 102px
 }
 
-.team{
-	min-height: 80%;
+.avatar img {
+    width: 160px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    margin: -80px auto 0;
+}
+
+.indie {
+    border-bottom: 1px solid #e5e8ef;
+    padding: 5px;
+}
+
+.team-card {
+    
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19) !important;
 }

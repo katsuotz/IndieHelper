@@ -1,9 +1,12 @@
+<div class="back-login purple darken-3">
+    
+</div>
 <div class="row p0">
     <div class="col s4 offset-s4 mt3">
         <div class="card">
             <div class="card-image center-align"> 
               <img class="activator" src="<?= baseurl('assets/images/login/banner.jpg')?>"> 
-              <span class="card-title center col s12 top50">IndieHelper</span>
+              <h3 class="card-title center col s12 top50 font42">IndieHelper</h3>
             </div>
             <div class="card-tabs">
                 <ul class="tabs tabs-fixed-width">
@@ -83,4 +86,3 @@
             </div>
         </div>
     </div>
-</div>

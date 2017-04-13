@@ -2,7 +2,7 @@
 	
 	/**
 	* Lib For IndieHelper
-	* XI-RPL 3
+	* SMKN 4 Bandung XI-RPL 3
 	*/
 
 	function baseurl($custom = ''){
@@ -55,8 +55,6 @@
 
 			$query = "INSERT INTO $this->tblname(" . implode( $this->infield, ",") . ") VALUES (" . implode(", ", $this->invalues) . ")";
 
-			$this->infield 	= null;
-			$this->invalues = null;
 
 			if ($this->mysqli->query($query)) {
 				return 'Berhasil';
@@ -64,6 +62,8 @@
 				return 'Gagal';
 			}
 
+			$this->infield 	= null;
+			$this->invalues = null;
 
 		}
 
