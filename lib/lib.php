@@ -143,6 +143,22 @@
 		}
 	}
 
+	class Session extends Database
+	{
+		function set_session($session) {
+			foreach ($session as $key => $value) {
+				$_SESSION[$key] = $value;
+			}
+		}
+
+		function get_session($keyname) {
+			return $_SESSION[$keyname];
+		}
+	}
+
+	$session = new Session();
+
+
 	$input = new Input();
 	$db = new Database();
 

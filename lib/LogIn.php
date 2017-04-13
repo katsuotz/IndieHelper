@@ -15,11 +15,19 @@
 		$db->where($where);
 		$result = $db->gettable();
 
+		$data = array(
+			'id_akun' 	=> $result->id_akun,
+			'username' 	=> $result->username,
+			'status'	=> $result->status 
+			);
+
 		if ($result->username == $username && $result->password == $password) {
-			echo "gg";
+			$session->set_session($data);
+			echo "Berhasil";
 		} else {
-			echo "wp";
+			echo "Gagal";
 		}
+
 	}
 
 ?>
