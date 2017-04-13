@@ -16,7 +16,7 @@
                     <form action="" method="POST">
                         <div class="input-field">
                             <div class="form-group">
-                                <input id="username_prefix" type="text" class="validate">
+                                <input id="username_prefix" name="login_username" type="text" class="validate">
                                 <label for="icon_prefix">Username</label>
                             </div>
                         </div>
@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div class="right-align">
-                            <button type="submit" class="btn waves-effect waves-light purple lighten-1">Submit</button>
+                            <button type="submit" name="login" class="btn waves-effect waves-light purple lighten-1">Submit</button>
                         </div>
                     </form>
                 </div>

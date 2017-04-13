@@ -1,7 +1,8 @@
 <?php 
 	
 	/**
-	* 
+	* Lib For IndieHelper
+	* XI-RPL 3
 	*/
 
 	function baseurl($custom = ''){
@@ -97,7 +98,7 @@
 			$this->where = 'WHERE ' . implode(' = ', $data);
 		}
 
-		function get($tblname = '') {
+		function gettable($tblname = '') {
 			if ($tblname)
 				$this->tblname = $tblname;
 
@@ -114,6 +115,19 @@
 	}
 
 
+	class Input extends Database
+	{
+		
+		function Post($post){
+			return $_POST[$post];
+		}
+
+		function Get($get){
+			return $_GET[$get];
+		}
+	}
+
+	$input = new Input();
 	$db = new Database();
 
  ?>

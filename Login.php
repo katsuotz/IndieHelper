@@ -6,7 +6,9 @@
 		'js'	=> array('jquery.min.js', 'materialize.min.js', 'parent.js','login.js')
 	);
 
+
 	include 'views/template/header.php';
 	include 'views/login/login.php';
 	include 'views/template/footer_admin.php';
+
  ?>
