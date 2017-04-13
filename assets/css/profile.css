@@ -1,0 +1,11 @@
+.parallax-container {
+	width: 100%;
+}
+
+.card {
+	min-height: 150vh;
+}
+
+.card-image-profile img {
+	width: 150px;
+}

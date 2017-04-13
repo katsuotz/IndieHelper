@@ -5,18 +5,24 @@
 		      	<div class="background">
 		        	<img src="<?= baseurl('assets/images/template/sidenav-bg.jpg') ?>">
 		      	</div>
-				<a href="#"><img class="circle" src="<?= baseurl('assets/images/admin/admin.jpg') ?>">
-				</a>
-				<!-- Dropdown Trigger -->
-				<a class='dropdown-button' href='#'><span class="white-text name">Azunyan<i class="fa fa-caret-down dropdown-button" data-activates='dropdown-profile'></i></span></a>
-				
-				<ul id='dropdown-profile' class='dropdown-content'>
-					<li><a href="#"><i class="fa fa-gear"></i> Setting</a></li>
-					<li><a href="#"><i class="fa fa-sign-out"></i> Log Out</a></li>
-				</ul>
 
-				<!-- Dropdown Structure -->
-				<a href="#"><span class="white-text email">Admin</span></a>
+				<div class="row">
+					<div class="col s4">
+						<a href="#"><img class="circle" src="<?= baseurl('assets/images/admin/admin.jpg') ?>"></a>
+					</div>
+					<div class="col s8">
+						<!-- Dropdown Trigger -->
+						<a class='dropdown-button' href='#'><span class="white-text name">Azunyan <i class="fa fa-ellipsis-v dropdown-button right" data-activates='dropdown-profile'></i></span></a>
+						
+						<ul id='dropdown-profile' class='dropdown-content'>
+							<li><a href="#" class="pr3"><i class="fa fa-gear p0 m0"></i> Setting</a></li>
+							<li><a href="#" class="pr3"><i class="fa fa-sign-out p0 m0"></i> Log Out</a></li>
+						</ul>
+
+						<!-- Dropdown Structure -->
+						<a href="#"><span class="white-text email">Admin</span></a>
+					</div>
+				</div>
 				
 	    	</div>
 	    </li>
