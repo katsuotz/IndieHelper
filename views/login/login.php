@@ -13,7 +13,7 @@
             </div>
             <div class="card-content white lighten-4">
                 <div id="login">
-                    <form action="" method="POST">
+                    <form action="<?= baseurl('lib/login.php') ?>" method="POST" id="form-log-in">
                         <div class="input-field">
                             <div class="form-group">
                                 <input id="username_prefix" name="login_username" type="text" class="validate">
@@ -22,20 +22,20 @@
                         </div>
                         <div class="input-field">
                             <div class="form-group">
-                                <input id="password_prefix" type="password" class="validate">
+                                <input id="password_prefix" type="password" class="validate" name="login_password">
                                 <label for="icon_prefix">Password</label>
                             </div>
                         </div>
                         <div class="right-align">
-                            <button type="submit" name="login" class="btn waves-effect waves-light purple lighten-1">Submit</button>
+                            <button type="submit" name="login" class="btn waves-effect waves-light purple lighten-1">Log In</button>
                         </div>
                     </form>
                 </div>
                 <div id="register">
-                    <form action="" method="POST">
+                    <form action="<?= baseurl('lib/signup.php') ?>" method="POST" id="form-sign-up">
                         <div class="input-field">
                             <div class="form-group">
-                                <input id="username_prefix" type="text" class="validate">
+                                <input id="username_prefix" type="text" class="validate" name="nama">
                                 <label for="icon_prefix">Nama</label>
                             </div>
                         </div>
@@ -51,24 +51,24 @@
                         </div>
                         <div class="input-field">
                             <div class="form-group">
-                                <input id="username_prefix" type="text" class="validate">
+                                <input id="username_prefix" type="text" class="validate" name="username">
                                 <label for="icon_prefix">Username</label>
                             </div>
                         </div>
                         <div class="input-field">
                             <div class="form-group">
-                                <input id="username_prefix" type="password" class="validate">
+                                <input id="username_prefix" type="password" class="validate" name="password">
                                 <label for="icon_prefix">Password</label>
                             </div>
                         </div>
                         <div class="input-field">
                             <div class="form-group">
-                                <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                <textarea id="textarea1" class="materialize-textarea" name="alamat"></textarea>
                                 <label for="textarea1">Alamat</label>
                             </div>
                         </div>
                         <div class="input-field">
-                            <select style="">
+                            <select name="jk">
                                 <option value="" disabled selected>Pilih Jenis Kelamin</option>
                                 <option value="L">Laki - Laki</option>
                                 <option value="P">Perempuan</option>
@@ -76,7 +76,7 @@
                             <label>Jenis Kelamin</label>
                         </div>
                         <div class="right-align">
-                            <button type="submit" class="btn waves-effect waves-light purple lighten-1">Submit</button>
+                            <button type="submit" class="btn waves-effect waves-light purple lighten-1">Sign Up</button>
                         </div>
                     </form>
                 </div>

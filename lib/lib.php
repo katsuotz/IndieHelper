@@ -43,6 +43,10 @@
 			return $res;
 		}
 
+		function select_tbl($value) {
+			return $this->tblname = $value;
+		}
+
 		function insert($data) {
 			foreach ($data as $key => $value) {
 				$this->infield[] = $key;
@@ -51,11 +55,21 @@
 
 			$query = "INSERT INTO $this->tblname(" . implode( $this->infield, ",") . ") VALUES (" . implode(", ", $this->invalues) . ")";
 
+			$this->infield 	= null;
+			$this->invalues = null;
+
 			if ($this->mysqli->query($query)) {
-				return 1;
+				return 'Berhasil';
 			} else {
-				return 0;
+				return 'Gagal';
 			}
+
+
+		}
+
+		function return_id() {
+			$result = $this->mysqli->insert_id;
+			return $result;
 		}
 
 		// function get($tbname) {
@@ -92,25 +106,27 @@
 			$data = array();
 
 			for ($i = 0; $i < count($row); $i++) {
-				array_push($data, ($row[$i] . " AND '" . $col[$i]) . "'");
+				array_push($data, ($row[$i] . " = '" . $col[$i]) . "'");
 			}
 
-			$this->where = 'WHERE ' . implode(' = ', $data);
+			$this->where = 'WHERE ' . implode(' AND ', $data);
+
+			return $this->where;
 		}
 
 		function gettable($tblname = '') {
 			if ($tblname)
 				$this->tblname = $tblname;
 
-			$data = $this->mysqli->query("SELECT $this->select FROM $this->tblname $this->where");
+			$query = "SELECT $this->select FROM $this->tblname $this->where";
+			$data = $this->mysqli->query($query);
 			$res = array();
-			while ($datas = $data->fetch_object()) {
-				$res[] = $datas;
-			}
 			$this->select = '*';
 			$this->tblname = '';
 			$this->where = '';
-			return $res;
+			if ($data) {
+				return $data->fetch_object();
+			}
 		}
 	}
 
@@ -118,11 +134,11 @@
 	class Input extends Database
 	{
 		
-		function Post($post){
+		function post($post){
 			return $_POST[$post];
 		}
 
-		function Get($get){
+		function get($get){
 			return $_GET[$get];
 		}
 	}

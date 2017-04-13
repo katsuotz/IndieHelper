@@ -13,12 +13,12 @@ body {
 }
 
 .card-tabs .tabs {
-    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.14), 0 0px 0px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid #ddd;
     overflow: hidden;
 }
 
 .tabs .indicator {
-    background-color: #ba68c8 !important;
+    background-color: #ab47bc !important;
 }
 
 .input-field textarea:focus + label,
@@ -26,17 +26,11 @@ body {
     color: #ab47bc !important;
 }
 
-
-/* label underline focus color */
-
 .input-field textarea:focus,
 .input-field input:focus {
     border-bottom: 1px solid #ab47bc !important;
     box-shadow: 0 1px 0 0 #ab47bc !important;
 }
-
-
-/* valid color */
 
 .input-field textarea.valid,
 .input-field input.valid {
@@ -44,17 +38,11 @@ body {
     box-shadow: 0 1px 0 0 #ab47bc !important;
 }
 
-
-/* invalid color */
-
 .input-field textarea.invalid,
 .input-field input.invalid {
     border-bottom: 1px solid #ab47bc !important;
     box-shadow: 0 1px 0 0 #ab47bc !important;
 }
-
-
-/* icon prefix focus color */
 
 .input-field .prefix.active {
     color: #ab47bc !important;
