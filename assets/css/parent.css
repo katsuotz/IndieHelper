@@ -1,3 +1,31 @@
+.clear-left {
+	clear: left !important;
+}
+
+.clear-right {
+	clear: right !important;
+}
+
+.clear-both {
+	clear: both !important;
+}
+
+.justify-align {
+	text-align: justify !important;
+}
+
+.capitalize {
+	text-transform: capitalize !important;
+}
+
+.uppercase {
+	text-transform: uppercase !important;
+}
+
+.lowercase {
+	text-transform: lowercase !important;
+}
+
 .top0 {
 	top: 0 !important;
 }
@@ -15,8 +43,20 @@
 	left: 0 !important;
 }
 
+.left50 {
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+}
+
 .right0 {
 	right: 0 !important;
+}
+
+.center-content {
+	left: 50% !important;
+	transform: translateX(-50%) !important;
+	top: 50% !important;
+	transform: translateY(-50%) !important;	
 }
 
 .mauto {

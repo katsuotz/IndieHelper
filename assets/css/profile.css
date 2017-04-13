@@ -2,10 +2,34 @@
 	width: 100%;
 }
 
-.card {
-	min-height: 150vh;
+.profile-card {
+	min-height: 80vh;
 }
 
 .card-image-profile img {
 	width: 150px;
+}
+
+.follow-btn {
+	text-transform: capitalize !important;
+	transition: all 3s ease-in-out;
+}
+
+.tabs {
+	border-bottom: 1px solid #ddd;
+}
+
+.tabs .indicator {
+	background-color: #ab47bc !important;
+}
+
+.my-project .card-image {
+	overflow: hidden;
+}
+
+.my-project .card-image img {
+}
+
+.see-details {
+	text-transform: capitalize !important;
 }
