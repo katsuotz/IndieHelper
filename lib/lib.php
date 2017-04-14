@@ -55,6 +55,8 @@
 
 			$query = "INSERT INTO $this->tblname(" . implode( $this->infield, ",") . ") VALUES (" . implode(", ", $this->invalues) . ")";
 
+			$this->infield 	= null;
+			$this->invalues = null;
 
 			$this->infield 	= null;
 			$this->invalues = null;
@@ -64,7 +66,6 @@
 			} else {
 				return 'Gagal';
 			}
-
 		}
 
 		function return_id() {
