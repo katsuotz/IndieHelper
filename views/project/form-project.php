@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col s12">
                 <div class="card white black-text">
-                    <form action="" method="POST" runat="server">
+                    <form action="" method="POST" id="form-project">
                         <div class="card-content black-text">
                             <span class="card-title">Form Project</span>
                             <legend>ID Project</legend>

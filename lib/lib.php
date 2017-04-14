@@ -66,11 +66,6 @@
 			} else {
 				return 'Gagal';
 			}
-
-<<<<<<< HEAD
-
-=======
->>>>>>> cd6d3ce6a4bb583a3827c7119723ac13f3e17b97
 		}
 
 		function return_id() {
