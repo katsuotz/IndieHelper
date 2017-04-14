@@ -13,9 +13,9 @@ $(document).ready(function() {
     		processData: false,
 		})
 		.done(function(result) {
-			// $('#form-sign-up')[0].reset();
-			// Materialize.toast('Sign Up ' + result, 4000);
-			alert(result);
+			$('#form-sign-up')[0].reset();
+			Materialize.toast('Sign Up ' + result, 4000);
+
 		});
 	});
 
