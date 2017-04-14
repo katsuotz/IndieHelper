@@ -25,7 +25,7 @@
                                                 <img src="<?= baseurl('assets/images/about/irvan.jpg')?>" class="circle responsive-img" alt="">
                                             </div>
                                             <div class="row m0">
-                                                <p class="pb1 pt1"> <b>Irvan Lutfi Gunawan</b></p>
+                                                <p class="pt1"> <b>Irvan Lutfi Gunawan</b></p>
                                                 <p class="pb1">Front End & Back End</p>
                                                 <p>I am a very simple card. I am good at containing small bits of information.</p>
 
@@ -34,9 +34,9 @@
                                         <div class="card-action">
                                             <div class="container-fluid">
                                                 <div class="row">
-                                                    <div class="col s4"><a class="waves-effect waves-light btn purple "><i class="fa fa-facebook fa-fw"></i></a></div>
-                                                    <div class="col s4"><a class="waves-effect waves-light btn purple"><i class="fa fa-instagram fa-fw"></i></a></div>
-                                                    <div class="col s4"><a class="waves-effect waves-light btn purple"><i class="fa fa-twitter fa-fw"></i></a></div>
+                                                    <div class="col s2 offset-s3"><i class="fa fa-facebook fa-2x waves-effect"></i></div>
+                                                    <div class="col s2"><i class="fa fa-instagram fa-2x waves-effect"></i></div>
+                                                    <div class="col s2"><i class="fa fa-twitter fa-2x waves-effect"></i></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -49,7 +49,7 @@
                                                 <img src="<?= baseurl('assets/images/about/irvan.jpg')?>" class="circle responsive-img" alt="">
                                             </div>
                                             <div class="row m0">
-                                                <p class="pb1 pt1"> <b>Jalu Nugroho</b></p>
+                                                <p class="pt1"> <b>Jalu Nugroho</b></p>
                                                 <p class="pb1">Front End</p>
                                                 <p>I am a very simple card. I am good at containing small bits of information.</p>
 
@@ -58,9 +58,9 @@
                                         <div class="card-action">
                                             <div class="container-fluid">
                                                 <div class="row">
-                                                    <div class="col s4"><a class="waves-effect waves-light btn purple"><i class="fa fa-facebook fa-fw"></i></a></div>
-                                                    <div class="col s4"><a class="waves-effect waves-light btn purple"><i class="fa fa-instagram fa-fw"></i></a></div>
-                                                    <div class="col s4"><a class="waves-effect waves-light btn purple"><i class="fa fa-twitter fa-fw"></i></a></div>
+                                                    <div class="col s2 offset-s3"><i class="fa fa-facebook fa-2x waves-effect"></i></div>
+                                                    <div class="col s2"><i class="fa fa-instagram fa-2x waves-effect"></i></div>
+                                                    <div class="col s2"><i class="fa fa-twitter fa-2x waves-effect"></i></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -73,7 +73,7 @@
                                                 <img src="<?= baseurl('assets/images/about/irvan.jpg')?>" class="circle responsive-img" alt="">
                                             </div>
                                             <div class="row m0">
-                                                <p class="pb1 pt1"> <b>M. Irfan Fakhri</b></p>
+                                                <p class="pt1"> <b>M. Irfan Fakhri</b></p>
                                                 <p class="pb1">Front End , Designer & Back End</p>
                                                 <p>I am a very simple card. I am good at containing small bits of information.</p>
 
@@ -82,9 +82,9 @@
                                         <div class="card-action">
                                             <div class="container-fluid">
                                                 <div class="row">
-                                                    <div class="col s4"><a class="waves-effect waves-light btn purple"><i class="fa fa-facebook fa-fw"></i></a></div>
-                                                    <div class="col s4"><a class="waves-effect waves-light btn purple"><i class="fa fa-instagram fa-fw"></i></a></div>
-                                                    <div class="col s4"><a class="waves-effect waves-light btn purple"><i class="fa fa-twitter fa-fw"></i></a></div>
+                                                    <div class="col s2 offset-s3"><i class="fa fa-facebook fa-2x waves-effect"></i></div>
+                                                    <div class="col s2"><i class="fa fa-instagram fa-2x waves-effect"></i></div>
+                                                    <div class="col s2"><i class="fa fa-twitter fa-2x waves-effect"></i></div>
                                                 </div>
                                             </div>
                                         </div>
