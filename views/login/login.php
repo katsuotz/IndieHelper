@@ -5,7 +5,7 @@
     <div class="col s4 offset-s4 mt3">
         <div class="card">
             <div class="card-image center-align"> 
-              <img class="activator" src="<?= baseurl('assets/images/login/banner.jpg')?>"> 
+              <img class="activator" src="<?= baseurl('assets/images/login/banner1.jpg')?>"> 
               <h3 class="card-title center col s12 top50 font42">IndieHelper</h3>
             </div>
             <div class="card-tabs">
@@ -35,7 +35,7 @@
                     </form>
                 </div>
                 <div id="register">
-                    <form action="<?= baseurl('lib/signup.php') ?>" method="POST" id="form-sign-up">
+                    <form action="<?= baseurl('lib/signup.php') ?>" enctype="multipart/form-data" method="POST" id="form-sign-up">
                         <div class="input-field">
                             <div class="form-group">
                                 <input id="username_prefix" type="text" class="validate" name="nama">
@@ -46,7 +46,7 @@
                             <div class="form-group">
                                 <div class="file-field input-field">
                                     <div class="btn purple lighten-1"> <span>File</span>
-                                        <input type="file" multiple> </div>
+                                        <input type="file" multiple accept="image/*" name="photo"> </div>
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" type="text" placeholder="Upload Foto"> </div>
                                 </div>

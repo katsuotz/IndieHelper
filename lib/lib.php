@@ -56,14 +56,14 @@
 			$query = "INSERT INTO $this->tblname(" . implode( $this->infield, ",") . ") VALUES (" . implode(", ", $this->invalues) . ")";
 
 
+			$this->infield 	= null;
+			$this->invalues = null;
+
 			if ($this->mysqli->query($query)) {
 				return 'Berhasil';
 			} else {
 				return 'Gagal';
 			}
-
-			$this->infield 	= null;
-			$this->invalues = null;
 
 		}
 
@@ -71,15 +71,6 @@
 			$result = $this->mysqli->insert_id;
 			return $result;
 		}
-
-		// function get($tbname) {
-		// 	$this->tblname = $tbname;
-		// }
-
-		// function where($fieldname, $value) {
-		// 	$this->fieldname = $fieldname;
-		// 	$this->value = $value;
-		// }
 
 		function delete($tblname) {
 			$query = $this->mysqli->query("DELETE FROM $tblname WHERE $this->fieldname = $this->value");
@@ -141,6 +132,17 @@
 		function get($get){
 			return $_GET[$get];
 		}
+
+		function files($file){
+			$name = $_FILES[$file]['name'];
+			$data = array(
+				'name' => $name,
+				'dir' => $_FILES[$file]['tmp_name'],
+				'size' => $_FILES[$file]['size'],
+				'ext' => strtolower(pathinfo($name,PATHINFO_EXTENSION)),
+				);
+			return $data;
+		}
 	}
 
 	class Session extends Database
@@ -154,6 +156,7 @@
 		function get_session($keyname) {
 			return $_SESSION[$keyname];
 		}
+
 	}
 
 	$session = new Session();
