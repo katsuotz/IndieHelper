@@ -55,6 +55,8 @@
 
 			$query = "INSERT INTO $this->tblname(" . implode( $this->infield, ",") . ") VALUES (" . implode(", ", $this->invalues) . ")";
 
+			$this->infield 	= null;
+			$this->invalues = null;
 
 			if ($this->mysqli->query($query)) {
 				return 'Berhasil';
@@ -62,8 +64,6 @@
 				return 'Gagal';
 			}
 
-			$this->infield 	= null;
-			$this->invalues = null;
 
 		}
 
