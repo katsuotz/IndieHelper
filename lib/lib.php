@@ -5,6 +5,8 @@
 	* SMKN 4 Bandung XI-RPL 3
 	*/
 
+	include 'Helper.php';
+
 	function baseurl($custom = ''){
 		$baseurl = 'http';
 		$baseurl .= "://".$_SERVER['HTTP_HOST'];

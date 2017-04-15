@@ -4,7 +4,8 @@ $(document).ready(function() {
 
 	$('#form-sign-up').submit(function(e) {
 		e.preventDefault();
-		var $data = new FormData($(this)[0]);
+		$data = new FormData($(this)[0]);
+
 		$.ajax({
 			url: $(this).attr('action'),
 			type: $(this).attr('method'),
