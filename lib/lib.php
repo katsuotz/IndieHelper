@@ -137,14 +137,16 @@
 		}
 
 		function files($file){
-			$name = $_FILES[$file]['name'];
-			$data = array(
-				'name' => $name,
-				'dir' => $_FILES[$file]['tmp_name'],
-				'size' => $_FILES[$file]['size'],
-				'ext' => strtolower(pathinfo($name,PATHINFO_EXTENSION)),
-				);
-			return $data;
+			if ($_FILES[$file]['name']) {
+				$name = $_FILES[$file]['name'];
+				$data = array(
+					'name' => $name,
+					'dir' => $_FILES[$file]['tmp_name'],
+					'size' => $_FILES[$file]['size'],
+					'ext' => strtolower(pathinfo($name,PATHINFO_EXTENSION)),
+					);
+				return $data;
+			}
 		}
 	}
 

@@ -16,7 +16,6 @@ $(document).ready(function() {
 		.done(function(result) {
 			$('#form-sign-up')[0].reset();
 			Materialize.toast('Sign Up ' + result, 4000);
-
 		});
 	});
 
