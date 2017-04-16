@@ -7,11 +7,11 @@
 		$id_kategori= $input->post('id_kategori');
 		$tags 		= json_decode($input->post('tags'));
 		$jumlah 	= $input->post('jumlah');
-		$desc 		= $input->post('desc');
+		$deskripsi 	= $input->post('deskripsi');
 
 		$namafile 	= array();
 		$tmpfile  	= array();
-		for ($i = 1; $i <= 1; $i++) {
+		for ($i = 1; $i <= 5; $i++) {
 			if (!empty($input->files('project-image' . $i)['name'])) {
 				array_push($namafile, $input->files('project-image' . $i)['name']);
 				array_push($tmpfile, $input->files('project-image' . $i)['dir']);
@@ -20,7 +20,11 @@
 			}
 		}
 
-		$namafile = json_encode($namafile);
+		if (!empty($namafile)) {
+			$namafile = json_encode($namafile);
+		} else {
+			$namafile = '';
+		}
 
 		$data_project = array(
 			'nama' 			=> $nama,
@@ -28,13 +32,13 @@
 			'tags' 			=> $tags,
 			'jumlah'		=> $jumlah,
 			'foto'			=> $namafile,
-			'desc'			=> $desc
+			'deskripsi'		=> $deskripsi
 			);
 
 		$db->select_tbl('project');
 		$result = $db->insert($data_project);
 		$id_project = $db->return_id();
-		echo $desc;
+		echo $result;
 	}
 
 

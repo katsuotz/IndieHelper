@@ -4,28 +4,27 @@ $(document).ready(function() {
 	$('.chips-initial').material_chip();
 	var origin = window.location.origin;
 
-	function readImagePath(input) {
+	$('.project-image').change(function(e) {
+		readImagePath(this, $(this).attr('name'));
+	});
+
+	function readImagePath(input, target) {
+		console.log(input);
+		console.log(target);
 		if (input.files[0]) {
 			var reader = new FileReader();
 			reader.onload = function (e) {
-				$('#uploaded').attr('src', e.target.result);
+				$('#uploaded-' + target).attr('src', e.target.result);
 			};
 
 			reader.readAsDataURL(input.files[0]);
 		} else {
-			$('#uploaded').attr('src', '#');
+			$(target).attr('src', '#');
 		}
 	}
 
-	$('#project-image').change(function(e) {
-		readImagePath(this);
-		console.log($(this).val());
-	});
-
 	var i = 2;
-	var j = 1;
 	var fileHTML = '';
-	console.log(fileHTML);
 
 	$('#addFile').click(function(e) {
 		if (i <= 5) {
@@ -34,7 +33,6 @@ $(document).ready(function() {
 				+ '" class="project-image' + i + ' project-image"></div><div class="file-path-wrapper" id="textFile'+ i 
 				+ '"><input class="file-path validate" type="text" placeholder="ggwp"></div></div>');
 			fileHTML.appendTo($('.file-group'));
-			console.log(i);
 			i++;
 		}
 	});
@@ -48,13 +46,11 @@ $(document).ready(function() {
 		var array = new Array();
 		var $data = new FormData($(this)[0]);
 		var chipJSON = ' { '
-		console.log(chips.length);
 		for (var i = 0; i < chips.length; i++) {
 			array['tags' + i] = chips[i].tag;
 			chipJSON += ' "tags ' + i + '" : "' + chips[i].tag + '", '; 
 		}
 		chipJSON += ' } ';
-		console.log(JSON.stringify(chipJSON));
 		$data.append('tags', JSON.stringify(chipJSON));
 		$.ajax({
 			url: $(this).attr('action'),
@@ -64,7 +60,7 @@ $(document).ready(function() {
     		processData: false,
 		})
 		.done(function(result) {
-			console.log(result);
+			alert(result);
 			// $(location).attr('href', origin + '/IndieHelper/');
 		})
 

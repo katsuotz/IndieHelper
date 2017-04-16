@@ -14,19 +14,26 @@
                                     <input type="text" class="form-control" name="nama">
                                 </div>
                             </div>
-                            <a href="#" class="btn" id="addFile"><i class="fa fa-plus"></i></a>
                             <div class="file-group">
-                                <div class="file-field input-field">
-                                    <div class="btn">
-                                        <span>File</span>
-                                        <input type="file" name="project-image1" class="project-image1 project-image">
+                                <div class="row">  
+                                    <?php for ($i = 1; $i <= 5; $i++): ?>
+                                    <div class="file-field input-field col s3">
+                                        <div class="btn">
+                                            <span><i class="fa fa-plus"></i></span>
+                                            <input type="file" name="project-image<?= $i ?>" class="project-image<?= $i ?> project-image">
+                                        </div>
+                                        <div class="file-path-wrapper" id="textFile1">
+                                            <input class="file-path validate" type="text" placeholder="ggwp">
+                                        </div>
                                     </div>
-                                    <div class="file-path-wrapper" id="textFile1">
-                                        <input class="file-path validate" type="text" placeholder="ggwp">
-                                    </div>
+                                    <?php endfor; ?>
                                 </div>
                             </div>
-                            <img src="#" id="uploaded">
+                            <div class="row">
+                                <?php for ($i = 1; $i <= 5; $i++): ?>
+                                <img src="" id="uploaded-project-image<?= $i ?>" class="col s2 uploaded-project-image">
+                                <?php endfor; ?>
+                            </div>
                             <div class="input-field">
                                 <select name="id_kategori">
                                     <option value="" disabled selected>Choose your option</option>
@@ -51,7 +58,7 @@
                                 <div class="form-group">
                                     <label class="control-label" for="textarea1">Deskripsi Project</label>
                                     <span class="help-block"></span>
-                                    <textarea name="desc" class="materialize-textarea" id="textarea1">aa</textarea>
+                                    <textarea name="deskripsi" class="materialize-textarea" id="textarea1">aa</textarea>
                                 </div>
                             </div>
                         </div>
