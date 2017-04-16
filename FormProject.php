@@ -7,6 +7,8 @@ $assets = array(
 	'js'	=> array('jquery.min.js', 'materialize.min.js', 'parent.js', 'form.js')
 	);
 
+$kategori = $db->gettable('kategori');
+
 include 'views/template/header.php';
 include 'views/project/form-project.php';
 include 'views/template/footer_admin.php';

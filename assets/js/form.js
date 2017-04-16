@@ -2,44 +2,55 @@ $(document).ready(function() {
 
 	$('select').material_select();
 	$('.chips-initial').material_chip();
-	var origin = window.location.origin;
+
+	var idFile = '';
+	$('.choose-file').bind('click', function(e) {
+		idFile = $(this).attr('id');
+		idFile = idFile.charAt(11);
+		if (!$('#project-image' + idFile).val()) {
+			$('#project-image' + idFile).click();
+		} else {
+			alert($('#project-image' + idFile).val());
+			$('#uploaded-project-image' + idFile).attr('src', '');
+			$('#project-image' + idFile).val('');
+			$('#choose-file' + idFile + ' .fa').addClass('fa-plus').removeClass('fa-remove');
+		}
+	});
 
 	$('.project-image').change(function(e) {
-		readImagePath(this, $(this).attr('name'));
+		var idInputFile = $(this).attr('name');
+		readImagePath(this, idInputFile.charAt(13));
 	});
 
 	function readImagePath(input, target) {
-		console.log(input);
-		console.log(target);
 		if (input.files[0]) {
+			$('#choose-file' + target + ' .fa').removeClass('fa-plus').addClass('fa-remove');
 			var reader = new FileReader();
 			reader.onload = function (e) {
-				$('#uploaded-' + target).attr('src', e.target.result);
+				$('#uploaded-project-image' + target).attr('src', e.target.result).removeClass('hidden');
 			};
-
 			reader.readAsDataURL(input.files[0]);
 		} else {
-			$(target).attr('src', '#');
+			$('#uploaded-project-image' + target).attr('src', '#');
 		}
 	}
 
-	var i = 2;
-	var fileHTML = '';
+	// var i = 2;
+	// var fileHTML = '';
 
-	$('#addFile').click(function(e) {
-		if (i <= 5) {
-			fileHTML = $('<div class="file-field input-field"><div class="btn" id="btnFile' + i 
-				+ '"><span>File</span><input type="file" name="project-image' + i 
-				+ '" class="project-image' + i + ' project-image"></div><div class="file-path-wrapper" id="textFile'+ i 
-				+ '"><input class="file-path validate" type="text" placeholder="ggwp"></div></div>');
-			fileHTML.appendTo($('.file-group'));
-			i++;
-		}
-	});
+	// $('#addFile').click(function(e) {
+	// 	if (i <= 5) {
+	// 		fileHTML = $('<div class="file-field input-field"><div class="btn" id="btnFile' + i 
+	// 			+ '"><span>File</span><input type="file" name="project-image' + i 
+	// 			+ '" class="project-image' + i + ' project-image"></div><div class="file-path-wrapper" id="textFile'+ i 
+	// 			+ '"><input class="file-path validate" type="text" placeholder="ggwp"></div></div>');
+	// 		fileHTML.appendTo($('.file-group'));
+	// 		i++;
+	// 	}
+	// });
 
 	$('.chips input').attr('name', 'tags');
 	
-	console.log(origin);
 	$('#form-project').submit(function(e) {
 		e.preventDefault();
 		var chips = $('.chips').material_chip('data');

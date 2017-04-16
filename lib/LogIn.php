@@ -15,15 +15,18 @@
 		$db->where($where);
 		$result = $db->gettable();
 
-		$data = array(
-			'id_akun' 	=> $result->id_akun,
-			'username' 	=> $result->username,
-			'status'	=> $result->status 
-			);
-
-		if ($result->username == $username && $result->password == $password) {
-			$session->set_session($data);
-			echo "Berhasil";
+		if ($result) {
+			if ($result->username == $username && $result->password == $password) {
+				$data = array(
+					'id_akun' 	=> $result->id_akun,
+					'username' 	=> $result->username,
+					'status'	=> $result->status
+					);
+				$session->set_session($data);
+				echo "Berhasil";
+			} else {
+				echo "Gagal";
+			}
 		} else {
 			echo "Gagal";
 		}

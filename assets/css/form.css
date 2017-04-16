@@ -1,3 +1,17 @@
 .tabs {
 	border-bottom: 1px solid #ddd;
 }
+
+.card-image img {
+	height: 73px !important;
+}
+
+.file-group .btn-floating {
+	width: 28px;
+	height: 28px;
+	line-height: 28px;
+}
+
+.file-group .btn-floating i {
+	line-height: 28px;
+}
