@@ -3,7 +3,7 @@
 
 	$assets = array(
 		'css' 	=> array('parent.css', 'explore.css', 'materialize.min.css', 'material-icon.css', 'font-awesome.min.css'),
-		'js'	=> array('jquery.min.js', 'materialize.min.js', 'parent.js', 'about.js')
+		'js'	=> array('jquery.min.js', 'materialize.min.js', 'parent.js', 'explore.js')
 	);
 
 	include 'views/template/header.php';
