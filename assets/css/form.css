@@ -1,3 +1,11 @@
+.back-project {
+    height: 50vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 .tabs {
 	border-bottom: 1px solid #ddd;
 }
