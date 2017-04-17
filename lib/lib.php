@@ -29,20 +29,12 @@
 		public $invalues = '';
 		public $select = '*';
 		public $where = '';
+		public $join = array();
+		public $data = '';
 
 		function __construct()
 		{	
 			$this->mysqli = new mysqli('localhost','root','','db_indie');
-		}
-
-		function getall($tbname = '') {
-			if(!empty($tbname))
-				$data = $this->mysqli->query("SELECT * FROM $tbname");
-			$res = array();
-			while ($datas = $data->fetch_object()) {
-				$res[] = $datas;
-			}
-			return $res;
 		}
 
 		function select_tbl($value) {
@@ -104,23 +96,53 @@
 			}
 
 			$this->where = 'WHERE ' . implode(' AND ', $data);
-
-			return $this->where;
 		}
 
-		function gettable($tblname = '') {
+		function join($tbljoin, $jointype = '', $column1, $column2) {
+			$join = $jointype . ' JOIN ' . $tbljoin . ' ON (' . $column1 . ' = ' . $column2 . ') ';
+			array_push($this->join, $join);
+		}
+
+		function get_tbl($tblname = '') {
 			if ($tblname)
 				$this->tblname = $tblname;
 
-			$query = "SELECT $this->select FROM $this->tblname $this->where";
-			$data = $this->mysqli->query($query);
-			$res = array();
+			if ($this->join) {
+				$this->join = implode(' ', $this->join);
+			} else {
+				$this->join = '';
+			}
+
+			$query = "SELECT $this->select FROM $this->tblname $this->join $this->where";
+			$this->data = $this->mysqli->query($query);
 			$this->select = '*';
 			$this->tblname = '';
 			$this->where = '';
-			if ($data) {
-				return $data->fetch_object();
+			$this->join = array();
+		}
+
+		function row_result() {
+			return $this->data->fetch_object();
+		}
+
+		function row_array() {
+			return $this->data->fetch_array();
+		}
+
+		function result() {
+			$res = array();
+			while ($datas = $this->data->fetch_object()) {
+				$res[] = $datas;
 			}
+			return $res;
+		}
+
+		function result_array() {
+			$res = array();
+			while ($datas = $this->data->fetch_array()) {
+				$res[] = $datas;
+			}
+			return $res;
 		}
 	}
 

@@ -23,7 +23,7 @@
 }
 
 .search i.active {
-	 color: #333 !important;
+    color: #333 !important;
 }
 
 .search .input-field input[type=text] {
@@ -98,4 +98,8 @@ nav .nav-wrapper a.brand-logo:hover {
 
 .content {
     min-height: 100vh;
+}
+
+.image-user {
+    width: 80px;
 }

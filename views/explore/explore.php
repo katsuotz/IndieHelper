@@ -1,6 +1,6 @@
 <div class="all">
 
-    <div class="back-banner purple darken-1 white-text">
+    <div class="back-banner purple white-text">
         <div class="container">
             <div class="row">
 
