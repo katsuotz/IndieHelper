@@ -29,6 +29,7 @@
 		public $invalues = '';
 		public $select = '*';
 		public $where = '';
+		public $logic = 'AND';
 
 		function __construct()
 		{	
@@ -60,8 +61,6 @@
 			$this->infield 	= null;
 			$this->invalues = null;
 
-			$this->infield 	= null;
-			$this->invalues = null;
 
 			if ($this->mysqli->query($query)) {
 				return 'Berhasil';
@@ -103,9 +102,16 @@
 				array_push($data, ($row[$i] . " = '" . $col[$i]) . "'");
 			}
 
-			$this->where = 'WHERE ' . implode(' AND ', $data);
+			if($this->logic == 'AND')
+				$this->where = 'WHERE ' . implode(' AND ', $data);
+			else
+				$this->where = 'WHERE ' .implode(" $this->logic ",$data);
 
 			return $this->where;
+		}
+
+		function logic_where($logic = 'AND'){
+			$this->logic = $logic;
 		}
 
 		function gettable($tblname = '') {
