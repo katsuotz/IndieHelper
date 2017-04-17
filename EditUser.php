@@ -7,14 +7,17 @@ $assets = array(
 	'js'	=> array('jquery.min.js', 'materialize.min.js', 'parent.js', 'admin.js')
 	);
 
+$arr = array('akun.id_akun' => $input->get('id_akun'));
+
 $db->select(array('akun.id_akun', 'foto', 'username', 'nama', 'jk', 'alamat'));
 $db->join('user', '', 'akun.id_akun', 'user.id_akun');
+$db->where($arr);
 $db->get_tbl('akun');
-$user = $db->result();
+$user = $db->row_result();
 
 include 'views/template/header.php';
 include 'views/template/navbar_admin.php';
-include 'views/admin/admin.php';
+include 'views/admin/edit_user.php';
 include 'views/template/footer_admin.php';
 
 ?>
