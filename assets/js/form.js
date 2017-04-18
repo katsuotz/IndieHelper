@@ -35,20 +35,6 @@ $(document).ready(function() {
 		}
 	}
 
-	// var i = 2;
-	// var fileHTML = '';
-
-	// $('#addFile').click(function(e) {
-	// 	if (i <= 5) {
-	// 		fileHTML = $('<div class="file-field input-field"><div class="btn" id="btnFile' + i 
-	// 			+ '"><span>File</span><input type="file" name="project-image' + i 
-	// 			+ '" class="project-image' + i + ' project-image"></div><div class="file-path-wrapper" id="textFile'+ i 
-	// 			+ '"><input class="file-path validate" type="text" placeholder="ggwp"></div></div>');
-	// 		fileHTML.appendTo($('.file-group'));
-	// 		i++;
-	// 	}
-	// });
-
 	$('.chips input').attr('name', 'tags');
 	
 	$('#form-project').submit(function(e) {

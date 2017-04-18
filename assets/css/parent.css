@@ -592,6 +592,10 @@ body {
 	font-size: 72px !important;
 }
 
+.fontsize1 {
+	font-size: 1em !important;
+}
+
 .hidden {
 	display: none !important;
 }

@@ -5,8 +5,6 @@
 	* SMKN 4 Bandung XI-RPL 3
 	*/
 
-	include 'Helper.php';
-
 	function baseurl($custom = ''){
 		$baseurl = 'http';
 		$baseurl .= "://".$_SERVER['HTTP_HOST'];
@@ -69,8 +67,8 @@
 		}
 
 		function delete($tblname) {
-			$query = $this->mysqli->query("DELETE FROM $tblname WHERE $this->fieldname = $this->value");
-			return $query;
+			$query = "DELETE FROM $tblname $this->where";
+			return $this->mysqli->query($query);
 		}
 
 		function select($value) {
@@ -102,7 +100,6 @@
 			else
 				$this->where = 'WHERE ' .implode(" $this->logic ",$data);
 
-			$this->where = 'WHERE ' . implode(' AND ', $data);
 		}
 
 		function join($tbljoin, $jointype = '', $column1, $column2) {
@@ -155,6 +152,10 @@
 				$res[] = $datas;
 			}
 			return $res;
+		}
+
+		function affected_rows() {
+			return $this->mysqli->affected_rows;
 		}
 	}
 

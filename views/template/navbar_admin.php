@@ -47,27 +47,27 @@
 		    	</div>
 	    	</div>
 	    </li>
+		<li><a href="#!"><i class="fa fa-dashboard"></i>Dashboard</a></li>
 	    <li>
-		    <ul class="tabs">
-				<li class="tab col s12">
-					<a class="left-align waves-effect waves-shadow" href="#dashboard"><i class="fa fa-dashboard"></i>Dashboard</a>
-				</li>
-				<li class="tab col s12">
-					<a class="left-align waves-effect waves-shadow" href="#user"><i class="fa fa-user"></i>User</a>
-				</li>
-				<li class="tab col s12">
-					<a class="left-align waves-effect waves-shadow" href="#project"><i class="fa fa-bookmark"></i>Project</a>
-				</li>
-				<li class="tab col s12">
-					<a class="left-align waves-effect waves-shadow" href="#bank"><i class="fa fa-credit-card-alt"></i>Bank</a>
-				</li>
-				<li class="tab col s12">
-					<a class="left-align waves-effect waves-shadow" href="#donasi"><i class="fa fa-paypal"></i>Donation</a>
-				</li>
-			</ul>
-	    </li>
-		
-		<li>
+	        <ul class="collapsible collapsible-accordion">
+	          	<li>
+	            	<a class="collapsible-header"><i class="fa fa-users fontsize1"></i><span>User</span><i class="material-icons right">arrow_drop_down</i></a>
+	            	<div class="collapsible-body">
+	              		<ul>
+	                		<li><a href="#!">First</a></li>
+	                		<li><a href="#!">Second</a></li>
+	                		<li><a href="#!">Third</a></li>
+	                		<li><a href="#!">Fourth</a></li>
+	              		</ul>
+	            	</div>
+	          	</li>
+	        </ul>
+	    </li>		
+		<li><a href="#!"><i class="fa fa-tags"></i>Category</a></li>
+	    <li><a href="#!"><i class="fa fa-bookmark"></i>Project</a></li>
+	    <li><a href="#!"><i class="fa fa-credit-card-alt"></i>Bank</a></li>
+	    <li><a href="#!"><i class="fa fa-paypal"></i>Donation</a></li>
+	    <li>
 			<div class="container-fluid center-align copyright">
 				<a href="">IndieHelper</a> &copy; 2017
 			</div>

@@ -1,7 +1,7 @@
 
 <div class="row content">
 	<?= print_r($user) ?>
-	<form action="<?= baseurl('actionEditUser.php?id_akun=' . $user->id_akun) ?>" method="POST">
+	<form action="<?= baseurl('actionEditUser.php?id_user=' . $user->id_user) ?>" method="POST">
 		<legend>Form title</legend>
 		<div class="input-field"> 
 			<div class="form-group">

@@ -46,36 +46,12 @@
           			0 3px 1px -2px rgba(0,0,0,0.4);
 }
 
-.tabs {
-  	overflow: auto !important;
-  	height: auto !important;
+.collapsible-header {
+    padding: 0 32px 0 28px !important;
 }
 
-.tabs li {
-	 display: block !important;
-}
-
-.tabs .tab a {
-    color: rgba(0, 0, 0, 0.5) !important;
-    font-weight: 0;
-}
-
-.tabs .tab a:hover {
-    background-color: rgba(0, 0, 0, 0.05) !important;
-    color: #333 !important;
-}
-
-.tabs .tab a.active {
-    color: #333 !important;
-    background-color: rgba(0, 0, 0, 0.05) !important;
-}
-
-.tabs .tab i {
-    margin: 0 20px 0 20px !important;
-}
-
-.tabs .indicator {
-    background-color: transparent !important;
+.collapsible-header span {
+    padding-left: 4px;
 }
 
 .copyright,
@@ -94,10 +70,6 @@ nav .nav-wrapper a.brand-logo {
 
 nav .nav-wrapper a.brand-logo:hover {
     color: #ab47bc !important; 
-}
-
-.content {
-    min-height: 100vh;
 }
 
 .image-user {

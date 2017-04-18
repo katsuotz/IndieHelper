@@ -38,38 +38,6 @@
                                     <?php endfor; ?>
                                 </div>
                             </div>
-<!--
-
-                            <div class="file-group">
-                                <div class="row">
-                                    <?php for ($i = 1; $i <= 5; $i++): ?>
-                                    <div class="col s2">
-                                        <div class="card white p0 m0">
-                                            <div class="card-content white-text p0 m0">
-                                                <div class="file-field input-field m0 p0" id="file-field<?= $i ?>">
-                                                    <div class="square btn-flat purple white-text waves-effect waves-shadow col s12 center-align">
-                                                        <span><i class="fa fa-plus"></i></span>
-                                                        <input type="file" name="project-image<?= $i ?>" class="project-image<?= $i ?> project-image" id="project-image<?= $i ?>">
-                                                    </div>
-                                                </div>
-                                                <img src="" id="uploaded-project-image<?= $i ?>" class="uploaded-project-image hidden m0">
-                                            </div>
-                                            <div class="card-action p0 m0">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                    <?php endfor; ?>
-                                </div>
-                            </div>
-
-                                    <div class="file-field input-field px1 left" id="file-field<?= $i ?>">
-                                        <div class="btn purple waves-effect waves-shadow">
-                                            <span><i class="fa fa-plus"></i></span>
-                                            <input type="file" name="project-image<?= $i ?>" class="project-image<?= $i ?> project-image">
-                                        </div>
-                                    </div>
--->
                             <div class="row">
                                 <?php for ($i = 1; $i <= 5; $i++): ?>
                                 <img src="" id="uploaded-project-image<?= $i ?>" class="col s2 uploaded-project-image hidden">
