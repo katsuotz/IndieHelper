@@ -13,8 +13,10 @@
 		// print_r($wh);
 		$db->logic_where('OR');
 		$db->where_explore($wh);
-		$result =  $db->get_tbl('project');
-		// print_r($wh);
+		$db->get_tbl('project');
+		$result = $db->result();
+		echo json_encode($result);
+		// print_r($result);
 		// if(!empty($result)){
 
 		// }

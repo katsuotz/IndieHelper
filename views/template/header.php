@@ -11,7 +11,7 @@
 
 	echo "<script>";
 	echo "window.base_url = '".baseurl()."';";
-	echo "window.sideNavChecker = '" . $session->get_session('sidenav') . "';";
+	// echo "window.sideNavChecker = '" . $session->get_session('sidenav') . "';";
 	echo "</script>";
 
 ?>

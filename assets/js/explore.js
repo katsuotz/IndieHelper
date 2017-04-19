@@ -17,7 +17,48 @@ $(document).ready(function() {
     		data: {search : as},
     	})
     	.done(function(as) {
-    		console.log(""+as);
+            var a = JSON.parse(as);
+    		// console.log(""+as);
+            $('.data').html('');
+            $.each(a, function(index, val) {
+                $content = '<div class="col s4 p0">\
+                        <div class="col s12 ">\
+                            <div class="card">\
+                                <div class="card-image">\
+                                    <img src="">\
+                                </div>\
+                                <div class="card-content">\
+\
+                                    <div class="font14 title-category">Travel</div>\
+                                    <span class="card-title">'+val['nama']+'</span>\
+                                    <p>'+val['deskripsi']+'</p>\
+                                </div>\
+                                <div class="card-action">\
+                                    <h3 class="card-title">RP.'+val['jumlah']+'</h3>\
+                                    <div class="progress">\
+                                        <div class="determinate" style="width: 70%"></div>\
+                                    </div>\
+                                    <div class="row m0 py0 pl0 pr1">\
+                                        <div class="col s4 center-align">\
+                                            <span>80</span>\
+                                            <span>Backer</span>\
+                                        </div>\
+                                        <div class="col s4 center-align">\
+                                            <span>80</span>\
+                                            <span>Backer</span>\
+                                        </div>\
+                                        <div class="col s4 center-align">\
+                                            <span>80</span>\
+                                            <span>Backer</span>\
+                                        </div>\
+                                    </div>\
+                                </div>\
+                            </div>\
+                        </div>\
+                    </div>';
+
+                    $('.data').append($content);
+            });
     	});
     	
     });
