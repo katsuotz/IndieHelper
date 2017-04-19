@@ -85,19 +85,22 @@
 		</ul>
 		<nav>
 			<div class="nav-wrapper">
-				<a href="#!" class="brand-logo white-text">Logo</a>
-				<!-- activate side-bav in mobile view -->
-				<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-				<ul class="right hide-on-med-and-down">
-					<li><a href="sass.html">Sass</a></li>
-					<li><a href="components.html">Components</a></li>
-					<!-- Dropdown Trigger -->
-					<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
-				</ul>
-				<!-- navbar for mobile -->
-				<ul class="side-nav" id="mobile-demo">
-					<li><a href="sass.html">Sass</a></li>
-					<li><a href="components.html">Components</a></li>
-				</ul>
+				<div class="container-fluid">
+					<a href="#" class="btn white black-text"><i class="material-icons">reorder</i></a>
+					<a href="#!" class="brand-logo white-text">Indie Helper</a>
+					<!-- activate side-bav in mobile view -->
+					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+					<ul class="right hide-on-med-and-down">
+						<li><a href="sass.html">Sass</a></li>
+						<li><a href="components.html">Components</a></li>
+						<!-- Dropdown Trigger -->
+						<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+					</ul>
+					<!-- navbar for mobile -->
+					<ul class="side-nav" id="mobile-demo">
+						<li><a href="sass.html">Sass</a></li>
+						<li><a href="components.html">Components</a></li>
+					</ul>
+				</div>
 			</div>
 		</nav>
