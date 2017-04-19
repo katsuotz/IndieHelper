@@ -1,4 +1,5 @@
 $(document).ready(function() {
+$('select').material_select();
 	// Initialize collapse button
 	$('.open-slide-out').sideNav({
 		menuWidth: 300,

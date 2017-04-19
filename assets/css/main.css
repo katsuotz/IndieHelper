@@ -1,12 +1,101 @@
-.slider{
-    top: 18px;
-}
-.bod{
-   position: absolute;
-}
 .foto{
     height: 70%;
 }
 .fo{
    vertical-align: middle;
+}
+#nav {
+    float: right;
+    margin-right: 19px;
+}
+nav#navigation{
+    position: fixed;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    z-index: 10000;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0);
+    transition: all 0.2s ease-in-out;
+    height: 60px;
+    background-color:transparent ;
+}
+.back{
+    background: #fff !important;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6)!important;
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6)!important;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.6)!important;
+}
+.parallax{
+    background-image: url(../images/gal/asd.jpg);
+    min-height: 500px; 
+}
+.parallax1{
+    background-image: url(../images/gal/qrqr.jpg);
+    min-height: 500px; 
+}
+.parallax3{
+    background-image: url(../images/gal/qrqr.jpg);
+    min-height: 500px; 
+}
+.parallax ,.parallax1,parallaxcon{ 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;}
+.isi{
+    min-height: 180px;
+    max-height: 1720px;
+    margin-top: 520px;
+    background-color:#eee;
+	box-shadow: 100px 0 100px rgba(0, 0, 0, 0.9);
+}
+.isiG{
+    min-height: 600px;
+    max-height: 1000px;
+    margin-top: 210px;
+    background-color:#eee;
+	box-shadow: 100px 0 100px rgba(0, 0, 0, 0.9);
+}
+.ww{
+    background-color: #eee;
+}
+
+.content {
+  padding: 15px;
+  font: 300 40px Lato, sans-serif;
+  text-align: center;
+  color: #999;
+  text-align: center;
+}
+.footer {
+    text-align: center;}
+#A{
+    font-size: 20px;
+    margin: 15px;
+}
+.social {
+  float: right;
+
+  width: 50px;
+  height: 50px;
+  margin: 0 15px;
+  font-size: 35px;
+  text-align: center;
+  color: #bbb;
+  transition: color .3s;
+}
+
+.social:hover {
+  color: #59d;
+  cursor: pointer;
+}
+.small{
+    width: 280px !important;
+    margin: 15px !important;
+}
+.ct{
+    margin: 1px !important;
 }
