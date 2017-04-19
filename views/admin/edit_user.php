@@ -47,7 +47,4 @@
 		</div>
 	</form>
 </div>
-<<<<<<< HEAD
-=======
 </div>
->>>>>>> aa287f09c7458a02bd4e58ec0b1abc3a5efd7776
