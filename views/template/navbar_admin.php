@@ -47,7 +47,7 @@
 		    	</div>
 	    	</div>
 	    </li>
-		<li><a href="#!"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+		<li><a href="<?= baseurl('admin.php') ?>"><i class="fa fa-dashboard"></i>Dashboard</a></li>
 	    <li>
 	        <ul class="collapsible collapsible-accordion">
 	          	<li>
@@ -63,10 +63,10 @@
 	          	</li>
 	        </ul>
 	    </li>		
-		<li><a href="#!"><i class="fa fa-tags"></i>Category</a></li>
-	    <li><a href="#!"><i class="fa fa-bookmark"></i>Project</a></li>
-	    <li><a href="#!"><i class="fa fa-credit-card-alt"></i>Bank</a></li>
-	    <li><a href="#!"><i class="fa fa-paypal"></i>Donation</a></li>
+		<li><a href="<?= baseurl('datakategori.php') ?>"><i class="fa fa-tags"></i>Category</a></li>
+	    <li><a href="<?= baseurl('dataproject.php') ?>"><i class="fa fa-bookmark"></i>Project</a></li>
+	    <li><a href="<?= baseurl('databank.php') ?>"><i class="fa fa-credit-card-alt"></i>Bank</a></li>
+	    <li><a href="<?= baseurl('datadonasi.php') ?>"><i class="fa fa-paypal"></i>Donation</a></li>
 	    <li>
 			<div class="container-fluid center-align copyright">
 				<a href="">IndieHelper</a> &copy; 2017

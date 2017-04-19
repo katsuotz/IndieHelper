@@ -1,13 +1,3 @@
-.all {
-    padding-left: 300px;
-    transition: all .5s ease-in-out;
-}
-
-.side-nav {
-    transition: all .5s ease-in-out;
-    margin-top: 
-}
-
 .side-nav a {
     text-transform: capitalize;
 }

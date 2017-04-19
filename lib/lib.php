@@ -5,6 +5,8 @@
 	* SMKN 4 Bandung XI-RPL 3
 	*/
 
+	session_start();
+	
 	function baseurl($custom = ''){
 		$baseurl = 'http';
 		$baseurl .= "://".$_SERVER['HTTP_HOST'];
@@ -230,19 +232,17 @@
 	{
 		function set_session($session) {
 			foreach ($session as $key => $value) {
-				$_SESSION[$key] = $value;
+				$_SESSION["$key"] = $value;
 			}
 		}
 
 		function get_session($keyname) {
-			return $_SESSION[$keyname];
+			return $_SESSION["$keyname"];
 		}
 
 	}
 
 	$session = new Session();
-
-
 	$input = new Input();
 	$db = new Database();
 
