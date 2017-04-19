@@ -57,8 +57,7 @@ $(document).ready(function() {
     		processData: false,
 		})
 		.done(function(result) {
-			alert(result);
-			// $(location).attr('href', origin + '/IndieHelper/');
+			Materialize.toast(result + " menambah project")
 		})
 
 	});

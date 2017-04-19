@@ -7,7 +7,8 @@ $assets = array(
 	'js'	=> array('jquery.min.js', 'materialize.min.js', 'parent.js', 'form.js')
 	);
 
-$kategori = $db->get_tbl('kategori');
+$db->get_tbl('kategori');
+$kategori = $db->result();
 
 include 'views/template/header.php';
 include 'views/project/form-project.php';

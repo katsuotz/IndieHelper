@@ -47,7 +47,7 @@
                                 <select name="id_kategori">
                                     <option value="" disabled selected>Choose your option</option>
                                     <?php for ($i = 0; $i < count($kategori); $i++): ?>
-                                    <option value="<?= $kategori->id_kategori ?>"><?= $kategori->nama_kategori ?></option>
+                                    <option value="<?= $kategori[$i]->id_kategori ?>"><?= $kategori[$i]->nama_kategori ?></option>
                                     <?php endfor; ?>
                                 </select>
                                 <label>Select Category</label>

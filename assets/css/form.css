@@ -7,11 +7,22 @@
 }
 
 .tabs {
-	border-bottom: 1px solid #ddd;
+	border-bottom: 1px solid #eee;
+}
+
+.card-image {
+	height: 130px;
+	overflow: hidden;
+	background: #f0f0f0;
+	vertical-align: middle;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .card-image img {
-	height: 73px !important;
+	height: auto !important;
+	width: 100% !important;
 }
 
 .file-group .btn-floating {
