@@ -13,3 +13,14 @@ $(document).ready(function () {
         , stopPropagation: false
     });
 });
+$(document).ready(function(){
+$(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 100) {
+        $("#navigation").addClass("back");
+    } else {
+        $("#navigation").removeClass("back");
+    }
+});
+});
