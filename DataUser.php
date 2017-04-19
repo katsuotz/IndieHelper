@@ -12,6 +12,7 @@ $db->join('user', '', 'akun.id_akun', 'user.id_akun');
 $db->get_tbl('akun');
 $user = $db->result();
 
+
 include 'views/template/header.php';
 include 'views/template/navbar_admin.php';
 include 'views/admin/data_user.php';
