@@ -2,7 +2,7 @@
 	
 <div class="row content">
 
-	<form action="<?= baseurl('actionEditUser.php?id_user=' . $user->id_user) ?>" method="POST">
+	<form action="<?= baseurl('lib/actionEditUser.php?id_user=' . $user->id_user) ?>" method="POST">
 		<legend>Form title</legend>
 		<div class="input-field"> 
 			<div class="form-group">
@@ -28,7 +28,7 @@
 		</div>
 		<div class="input-field"> 
 			<div class="form-group">
-				<textarea id="textarea1" class="materialize-textarea"><?= $user->alamat ?></textarea>
+				<textarea id="textarea1" class="materialize-textarea" name="alamat"><?= $user->alamat ?></textarea>
           		<label for="textarea1">Alamat</label>
 			</div>
 		</div>

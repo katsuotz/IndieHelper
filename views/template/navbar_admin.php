@@ -86,15 +86,12 @@
 		<nav>
 			<div class="nav-wrapper">
 				<div class="container-fluid">
-					<a href="#" class="btn white black-text"><i class="material-icons">reorder</i></a>
+					<a href="#" class="white-text left mr1 side-nav-trigger"><i class="material-icons">reorder</i></a>
 					<a href="#!" class="brand-logo white-text">Indie Helper</a>
 					<!-- activate side-bav in mobile view -->
 					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 					<ul class="right hide-on-med-and-down">
-						<li><a href="sass.html">Sass</a></li>
-						<li><a href="components.html">Components</a></li>
-						<!-- Dropdown Trigger -->
-						<li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+						<li><a href="<?= baseurl('lib/logout.php') ?>" class="waves-effect waves-shadow">Log Out</a></li>
 					</ul>
 					<!-- navbar for mobile -->
 					<ul class="side-nav" id="mobile-demo">

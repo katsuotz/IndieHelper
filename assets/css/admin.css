@@ -1,5 +1,11 @@
 .all {
     padding-left: 300px;
+    transition: all .5s ease-in-out;
+}
+
+.side-nav {
+    transition: all .5s ease-in-out;
+    margin-top: 
 }
 
 .side-nav a {
@@ -52,16 +58,6 @@
 
 .collapsible-header span {
     padding-left: 4px;
-}
-
-.nav-wrapper .btn {
-    width: 48px;
-    padding: 0;
-}
-
-.nav-wrapper .btn i {
-    height: 36px;
-    line-height: 36px;
 }
 
 .copyright,

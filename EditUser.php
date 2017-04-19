@@ -9,7 +9,7 @@ $assets = array(
 
 $where = array('user.id_user' => $input->get('id_user'));
 
-$db->select(array('akun.id_akun', 'foto', 'username', 'nama', 'jk', 'alamat'));
+$db->select(array('user.id_user', 'foto', 'username', 'nama', 'jk', 'alamat'));
 $db->join('user', '', 'akun.id_akun', 'user.id_akun');
 $db->where($where);
 $db->get_tbl('akun');

@@ -53,7 +53,6 @@
 			$this->infield 	= null;
 			$this->invalues = null;
 
-
 			if ($this->mysqli->query($query)) {
 				return 'Berhasil';
 			} else {
@@ -144,6 +143,32 @@
 			$this->tblname = '';
 			$this->where = '';
 			$this->join = array();
+		}
+
+		function update($value, $tblname = '') {
+			if ($tblname)
+				$this->tblname = $tblname;
+			$row = array();
+			$col = array();
+
+			foreach ($value as $key => $values) {
+				array_push($row, $key);
+				array_push($col, $values);
+			}
+
+			$data = array();
+
+			for ($i = 0; $i < count($row); $i++) {
+				array_push($data, ($row[$i] . " = '" . $col[$i]) . "'");
+			}
+
+			$query = "UPDATE $this->tblname SET " . implode(', ', $data) . " $this->where";
+
+			if ($this->mysqli->query($query)) {
+				return 'Berhasil';
+			} else {
+				return 'Gagal';
+			}
 		}
 
 		function row_result() {
