@@ -6,6 +6,14 @@
 <?php foreach ($assets['css'] as $key => $value): ?>
 	<link rel="stylesheet" type="text/css" href="<?= baseurl('assets/css/' . $value) ?>">
 <?php endforeach; ?>
+
+<?php
+
+	echo "<script>";
+	echo "window.base_url = '".baseurl()."'";
+	echo "</script>";
+
+?>
 </head>
 <body>
 	

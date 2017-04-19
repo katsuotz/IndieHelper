@@ -1,4 +1,4 @@
-<?php 
+	<?php 
 	
 	/**
 	* Lib For IndieHelper
@@ -102,15 +102,31 @@
 
 		}
 
-		function join($tbljoin, $jointype = '', $column1, $column2) {
-			$join = $jointype . ' JOIN ' . $tbljoin . ' ON (' . $column1 . ' = ' . $column2 . ') ';
-			array_push($this->join, $join);
+		function where_explore($value){
+			$row = 'nama';
+			$col = array();
+
+			foreach ($value as $value) {
+				array_push($col, $value);			
+			}
+
+			$data = array();
+
+			for ($i=0; $i < count($col); $i++) { 
+				array_push($data, $row." LIKE '". $col[$i] . "%'");
+			}
+
+			 $this->where = 'WHERE '.implode(' OR ', $data);
 		}
 
 		function logic_where($logic = 'AND'){
 			$this->logic = $logic;
 		}
 
+		function join($tbljoin, $jointype = '', $column1, $column2) {
+			$join = $jointype . ' JOIN ' . $tbljoin . ' ON (' . $column1 . ' = ' . $column2 . ') ';
+			array_push($this->join, $join);
+		}
 
 		function get_tbl($tblname = '') {
 			if ($tblname)
