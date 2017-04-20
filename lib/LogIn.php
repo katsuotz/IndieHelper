@@ -11,13 +11,15 @@
 			'password' => $password
 			);
 
-		$db->from('akun');
+		$db->join('user', '', 'akun.id_akun', 'user.id_akun');
 		$db->where($where);
-		$result = $db->gettable();
+		$db->get_tbl('akun');
+		$result = $db->row_result();
 
 		if ($result) {
 			if ($result->username == $username && $result->password == $password) {
 				$data = array(
+					'id_user'	=> $result->id_user,
 					'id_akun' 	=> $result->id_akun,
 					'username' 	=> $result->username,
 					'status'	=> $result->status

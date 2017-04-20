@@ -5,9 +5,16 @@
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$nama 		= $input->post('nama');
 		$id_kategori= $input->post('id_kategori');
-		$tags 		= json_decode($input->post('tags'));
+		$j_tags 	= json_decode($input->post('tags'));
 		$jumlah 	= $input->post('jumlah');
 		$deskripsi 	= $input->post('deskripsi');
+		$tags = array();
+
+		foreach ($j_tags as $key => $value) {
+			array_push($tags, $value);
+		}
+
+		$tags = implode(', ', $tags);
 
 		$namafile 	= array();
 		$tmpfile  	= array();
@@ -29,6 +36,7 @@
 		$data_project = array(
 			'nama' 			=> $nama,
 			'id_kategori' 	=> $id_kategori,
+			'id_user'		=> $session->get_session('id_user'),
 			'tags' 			=> $tags,
 			'jumlah'		=> $jumlah,
 			'foto'			=> $namafile,
