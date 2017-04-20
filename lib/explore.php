@@ -3,22 +3,26 @@
 
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$data = $input->post('search');
-		$wh = array();
-
-
-		foreach ($data as $key => $value) {
-			array_push($wh,$value);
+		
+		if(empty($data)) {
+			$db->get_tbl('project');
+			$result = $db->result();
+			echo json_encode($result);
+	
 		}
-		  
-		// print_r($wh);
-		$db->logic_where('OR');
-		$db->where_explore($wh);
-		$db->get_tbl('project');
-		$result = $db->result();
-		echo json_encode($result);
-		// print_r($result);
-		// if(!empty($result)){
+		else{
+			$wh = array();
 
-		// }
+
+			foreach ($data as $key => $value) {
+				array_push($wh,$value);
+			}
+			  
+			$db->logic_where('OR');
+			$db->where_explore($wh);
+			$db->get_tbl('project');
+			$result = $db->result();
+			echo json_encode($result);
+		}
 	}
  ?>

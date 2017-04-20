@@ -3,22 +3,43 @@ $(document).ready(function() {
 
 	var ss = $('.chip').material_chip('data');
     var as = [];
+
+
    	$('.chips').on('chip.add', function(e, chip){
     	as = [];
     	$.each($(this).material_chip('data'), function(index, val) {
     		 as.push(val.tag);
     	});
 
-    	$dsad = JSON.stringify(as);
+    	// $dsad = JSON.stringify(as);
+        console.log(as);
+    	ajax(as);
+    });
 
-    	$.ajax({
-    		url: base_url+"lib/explore.php",
-    		type: 'POST',
-    		data: {search : as},
-    	})
-    	.done(function(as) {
+    $('.chips').on('chip.delete', function(e, chip){
+        $data = $(this).material_chip('data');
+        a = [];
+        $.each($data, function(index, val) {
+             a.push(val.tag);
+        });
+
+
+        // $dsad = JSON.stringify(as);
+        console.log(a);
+        ajax(a);
+
+    });
+});
+
+function ajax(as){
+            $.ajax({
+            url: base_url+"lib/explore.php",
+            type: 'POST',
+            data: {search : as},
+        })
+        .done(function(as) {
             var a = JSON.parse(as);
-    		// console.log(""+as);
+            // console.log(""+as);
             $('.data').html('');
             $.each(a, function(index, val) {
                 $content = '<div class="col s4 p0">\
@@ -34,7 +55,7 @@ $(document).ready(function() {
                                     <p>'+val['deskripsi']+'</p>\
                                 </div>\
                                 <div class="card-action">\
-                                    <h3 class="card-title">RP.'+val['jumlah']+'</h3>\
+                                    <h3 class="card-title">RP.'+val['jumlahx`']+'</h3>\
                                     <div class="progress">\
                                         <div class="determinate" style="width: 70%"></div>\
                                     </div>\
@@ -59,8 +80,5 @@ $(document).ready(function() {
 
                     $('.data').append($content);
             });
-    	});
-    	
-    });
-
-});
+        });
+}

@@ -1,6 +1,8 @@
 <?php 
 	include 'lib/lib.php';
 
+	$db->get_tbl('project');
+	$data = $db->result();
 
 	$assets = array(
 		'css' 	=> array('parent.css', 'explore.css', 'materialize.min.css', 'material-icon.css', 'font-awesome.min.css'),
