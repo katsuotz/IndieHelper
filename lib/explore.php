@@ -4,7 +4,7 @@
 	if($_SERVER['REQUEST_METHOD'] == 'POST'){
 		$data = $input->post('search');
 		
-		if(empty($data)) {
+		if($data == '') {
 			$db->get_tbl('project');
 			$result = $db->result();
 			echo json_encode($result);

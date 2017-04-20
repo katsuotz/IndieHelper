@@ -19,14 +19,16 @@ $(document).ready(function() {
     $('.chips').on('chip.delete', function(e, chip){
         $data = $(this).material_chip('data');
         a = [];
-        $.each($data, function(index, val) {
-             a.push(val.tag);
-        });
-
+        console.log(a);
+        if($data.length > 0){
+            $.each($data, function(index, val) {
+                 a.push(val.tag);
+            });
+        }else{
+            ajax('');
+        }
 
         // $dsad = JSON.stringify(as);
-        console.log(a);
-        ajax(a);
 
     });
 });
@@ -55,7 +57,7 @@ function ajax(as){
                                     <p>'+val['deskripsi']+'</p>\
                                 </div>\
                                 <div class="card-action">\
-                                    <h3 class="card-title">RP.'+val['jumlahx`']+'</h3>\
+                                    <h3 class="card-title">RP.'+val['jumlah`']+'</h3>\
                                     <div class="progress">\
                                         <div class="determinate" style="width: 70%"></div>\
                                     </div>\

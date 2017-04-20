@@ -39,11 +39,11 @@
                             <div class="card">
                                 <div class="card-image"> <img src=""> </div>
                                 <div class="card-content">
-                                    <div class="font14 title-category">Travel</div> <span class="card-title">ggwp</span>
+                                    <div class="font14 title-category">Travel</div> <span class="card-title"><?= $value->nama ?></span>
                                     <p></p>
                                 </div>
                                 <div class="card-action">
-                                    <h3 class="card-title">RP.undefined</h3>
+                                    <h3 class="card-title">RP. <?=$value->jumlah?></h3>
                                     <div class="progress">
                                         <div class="determinate" style="width: 70%"></div>
                                     </div>
