@@ -8,10 +8,24 @@
 <?php endforeach; ?>
 
 <?php
+	
+	$sn = $session->get_session('sidenav');
+
+	if ($session->get_session('sidenav') != 0) {
+		$sn = 1;
+	}
+
+	if ($sn != 1) {
+		// $sn = 3;
+	} elseif ($sn != 0) {
+		// $sn = 3;
+	} else {
+		$sn = $sn;
+	}
 
 	echo "<script>";
-	echo "window.base_url = '".baseurl()."';";
-	// echo "window.sideNavChecker = '" . $session->get_session('sidenav') . "';";
+	echo "window.base_url = '" . baseurl() . "';";
+	echo "window.sideNavChecker = '" . $sn . "';";
 	echo "</script>";
 
 ?>

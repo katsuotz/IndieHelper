@@ -1,3 +1,7 @@
+.side-nav {
+    left: -300px;
+}
+
 .side-nav a {
     text-transform: capitalize;
 }

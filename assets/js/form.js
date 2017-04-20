@@ -40,15 +40,13 @@ $(document).ready(function() {
 	$('#form-project').submit(function(e) {
 		e.preventDefault();
 		var chips = $('.chips').material_chip('data');
-		var array = new Array();
+		var array = [];
 		var $data = new FormData($(this)[0]);
-		var chipJSON = ' { '
 		for (var i = 0; i < chips.length; i++) {
-			array['tags' + i] = chips[i].tag;
-			chipJSON += ' "tags ' + i + '" : "' + chips[i].tag + '", '; 
+			array.push(chips[i].tag);
 		}
-		chipJSON += ' } ';
-		$data.append('tags', JSON.stringify(chipJSON));
+		console.log(array);
+		$data.append('tags', JSON.stringify(array));
 		$.ajax({
 			url: $(this).attr('action'),
 			type: $(this).attr('method'),
@@ -57,7 +55,7 @@ $(document).ready(function() {
     		processData: false,
 		})
 		.done(function(result) {
-			Materialize.toast(result + " menambah project")
+			Materialize.toast(result + " menambah project", 400)
 		})
 
 	});

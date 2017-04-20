@@ -20,7 +20,6 @@ $(document).ready(function() {
 	});
 
 	$('#form-log-in').submit(function(e) {
-		console.log(1);
 		e.preventDefault();
 		$.ajax({
 			url: $(this).attr('action'),
@@ -28,6 +27,21 @@ $(document).ready(function() {
 			data: $(this).serialize(),
 		})
 		.done(function(result) {
+			result = result.trim();
+			console.log(result);
+			console.log('aa');
+			if (result) {
+				if (result == 'admin') {
+					$(location).attr('href', base_url + 'admin.php');
+				}
+
+				if (result == 'user') {
+					$(location).attr('href', base_url + 'admin.php');
+				}
+
+			} else {
+				result = "Gagal";
+			}
 			Materialize.toast('Log In ' + result, 4000);
 		});
 	});

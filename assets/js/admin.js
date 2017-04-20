@@ -25,7 +25,9 @@ $(document).ready(function() {
 		stopPropagation: false
 	});
 
-	checkerSideNav(sideNavChecker);
+	console.log(sideNavChecker);
+
+	checkerSideNav();
 
 	function checkerSideNav() {
 		if (sideNavChecker == 0) {
@@ -39,7 +41,6 @@ $(document).ready(function() {
 		}
 	}
 
-
 	$('.side-nav-trigger').click(function(e) {
 		e.preventDefault();
 		if (sideNavChecker == 1) {
@@ -51,14 +52,14 @@ $(document).ready(function() {
 			$('.all').css('padding-left', '300px');
 			sideNavChecker = 1;
 		}
-
+		console.log(sideNavChecker);
 		$.ajax({
 			url: base_url + 'lib/sidenavadmin.php',
 			type: 'POST',
 			data: {sidenav: sideNavChecker},
 		})
 		.done(function(result) {
-			console.log(result);
+			console.log(result.trim());
 		})
 		
 	});
