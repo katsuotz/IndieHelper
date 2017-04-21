@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2017 at 03:49 PM
+-- Generation Time: Apr 21, 2017 at 04:55 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 7.0.9
 
@@ -58,14 +58,13 @@ CREATE TABLE `akun` (
 --
 
 INSERT INTO `akun` (`id_akun`, `username`, `password`, `status`) VALUES
-(1, 'admin', 'admin', 'user'),
+(1, 'admin', 'admin', 'admin'),
 (2, 'user', 'user', 'user'),
 (3, 'user', 'user', 'user'),
 (4, 'qwerty', 'b1b3773a05c0ed0176787a4f1574ff0075f7521e', 'user'),
 (5, 'baba', 'b78b647728101ba462182b4c7e5b2ca57b9f5a99', 'user'),
 (6, 'qwerty', 'b1b3773a05c0ed0176787a4f1574ff0075f7521e', 'user'),
-(7, 'user', '12dea96fec20593566ab75692c9949596833adc9', 'user'),
-(8, 'ierjogrj', '270ef37afd75ceb9772cc838422cdd39eb909878', 'user');
+(7, 'user', '12dea96fec20593566ab75692c9949596833adc9', 'user');
 
 -- --------------------------------------------------------
 
@@ -125,8 +124,10 @@ CREATE TABLE `project` (
   `foto` text NOT NULL,
   `deskripsi` text NOT NULL,
   `tgl` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  `jumlah` double NOT NULL,
+  `target` double NOT NULL,
+  `income` double NOT NULL,
   `id_kategori` int(11) NOT NULL,
+  `id_user` int(11) NOT NULL,
   `tags` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -134,24 +135,8 @@ CREATE TABLE `project` (
 -- Dumping data for table `project`
 --
 
-INSERT INTO `project` (`id_project`, `nama`, `foto`, `deskripsi`, `tgl`, `jumlah`, `id_kategori`, `tags`) VALUES
-(11, 'aaaa', '', '', '2017-04-14 22:30:37', 0, 1, ''),
-(12, 'aaaaaaaaaaa', '', '', '2017-04-14 22:31:44', 0, 1, ''),
-(33, 'ggwp', '', '', '2017-04-15 10:42:24', 1000000, 1, ' {  "tags 0" : "gg",  "tags 1" : "wp",  } '),
-(34, 'drtyuio', '', '', '2017-04-15 10:57:46', 623023, 1, ' {  "tags 0" : "jiewjf",  "tags 1" : "wefwef",  } '),
-(35, 'ea', '["6512.jpg"]', '', '2017-04-15 13:16:06', 0, 1, ''),
-(36, 'ea', '["6512.jpg"]', '', '2017-04-15 13:17:08', 0, 1, ''),
-(37, 'ea', '["6512.jpg"]', '', '2017-04-15 13:17:13', 234234, 1, ' {  "tags 0" : "ewf",  } '),
-(38, '', '[]', 'aa', '2017-04-15 13:30:29', 0, 1, ' {  } '),
-(39, '', '[]', 'aa', '2017-04-15 13:30:44', 0, 1, ' {  } '),
-(40, '', 'Array', 'aa', '2017-04-15 13:32:10', 0, 1, ' {  } '),
-(42, '', 'Array', 'aa', '2017-04-15 13:33:31', 0, 1, ' {  } '),
-(43, '', '', 'aa', '2017-04-15 13:33:59', 0, 1, ' {  } '),
-(44, '', '["35177.jpg"]', 'aa', '2017-04-16 10:30:01', 0, 1, ' {  } '),
-(45, '', '["DOTO.jpg"]', 'aa', '2017-04-16 10:31:02', 0, 1, ' {  } '),
-(46, '', '["DOTO.jpg","fav-rate-tweet-1920x1080-games.png"]', 'aa', '2017-04-16 10:31:28', 0, 1, ' {  } '),
-(47, '', '["DOTO.jpg","fav-rate-tweet-1920x1080-games.png","22068.jpg","153961.jpg","IMG_20161128_172849.jpg"]', 'aa', '2017-04-16 10:31:56', 0, 1, ' {  } '),
-(48, '', '["812.jpg","671da0ac7207539415ce73059a475a43.jpg","903f5496a6a71ebf3d0e07724d63b7a1.jpg"]', 'aa', '2017-04-16 13:35:31', 0, 1, ' {  } ');
+INSERT INTO `project` (`id_project`, `nama`, `foto`, `deskripsi`, `tgl`, `target`, `income`, `id_kategori`, `id_user`, `tags`) VALUES
+(1, 'My Project', '["92624.jpg","13813.jpg"]', 'Ntaps', '2017-04-21 02:44:01', 100, 0, 1, 2, 'ff, jj');
 
 -- --------------------------------------------------------
 
@@ -166,18 +151,16 @@ CREATE TABLE `user` (
   `foto` text NOT NULL,
   `alamat` text NOT NULL,
   `desc` text NOT NULL,
-  `id_akun` int(11) NOT NULL,
-  `id_project` int(11) NOT NULL
+  `id_akun` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `nama`, `jk`, `foto`, `alamat`, `desc`, `id_akun`, `id_project`) VALUES
-(1, 'qwerty', 'L', '', 'qwerty', '', 6, 0),
-(2, 'user', 'L', 'default.jpg', 'user', '', 7, 0),
-(3, 'weorihwer', 'L', 'default.jpg', 'ioerjgir', '', 8, 0);
+INSERT INTO `user` (`id_user`, `nama`, `jk`, `foto`, `alamat`, `desc`, `id_akun`) VALUES
+(1, 'qwe', 'L', '', 'qwerty', '', 6),
+(2, 'user', 'L', 'default.jpg', 'user', '', 7);
 
 --
 -- Indexes for dumped tables
@@ -205,7 +188,10 @@ ALTER TABLE `bank`
 -- Indexes for table `donasi`
 --
 ALTER TABLE `donasi`
-  ADD PRIMARY KEY (`id_donasi`);
+  ADD PRIMARY KEY (`id_donasi`),
+  ADD KEY `id_bank` (`id_bank`),
+  ADD KEY `id_project` (`id_project`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indexes for table `kategori`
@@ -218,13 +204,15 @@ ALTER TABLE `kategori`
 --
 ALTER TABLE `project`
   ADD PRIMARY KEY (`id_project`),
-  ADD KEY `id_kategori` (`id_kategori`);
+  ADD KEY `id_kategori` (`id_kategori`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`id_user`);
+  ADD PRIMARY KEY (`id_user`),
+  ADD KEY `id_akun` (`id_akun`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -239,7 +227,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `akun`
 --
 ALTER TABLE `akun`
-  MODIFY `id_akun` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id_akun` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `bank`
 --
@@ -259,21 +247,42 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `id_project` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `id_project` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --
 
 --
+-- Constraints for table `admin`
+--
+ALTER TABLE `admin`
+  ADD CONSTRAINT `admin_ibfk_1` FOREIGN KEY (`id_admin`) REFERENCES `akun` (`id_akun`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `donasi`
+--
+ALTER TABLE `donasi`
+  ADD CONSTRAINT `donasi_ibfk_1` FOREIGN KEY (`id_bank`) REFERENCES `bank` (`id_bank`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `donasi_ibfk_2` FOREIGN KEY (`id_project`) REFERENCES `project` (`id_project`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `donasi_ibfk_3` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
 -- Constraints for table `project`
 --
 ALTER TABLE `project`
-  ADD CONSTRAINT `project_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `project_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `project_ibfk_2` FOREIGN KEY (`id_user`) REFERENCES `user` (`id_user`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `user`
+--
+ALTER TABLE `user`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`id_akun`) REFERENCES `akun` (`id_akun`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

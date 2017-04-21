@@ -58,9 +58,6 @@ $(document).ready(function() {
 			type: 'POST',
 			data: {sidenav: sideNavChecker},
 		})
-		.done(function(result) {
-			console.log(result.trim());
-		})
 		
 	});
 });

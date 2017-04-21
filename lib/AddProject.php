@@ -6,7 +6,7 @@
 		$nama 		= $input->post('nama');
 		$id_kategori= $input->post('id_kategori');
 		$j_tags 	= json_decode($input->post('tags'));
-		$jumlah 	= $input->post('jumlah');
+		$target 	= $input->post('target');
 		$deskripsi 	= $input->post('deskripsi');
 		$tags = array();
 
@@ -38,7 +38,7 @@
 			'id_kategori' 	=> $id_kategori,
 			'id_user'		=> $session->get_session('id_user'),
 			'tags' 			=> $tags,
-			'jumlah'		=> $jumlah,
+			'target'		=> $target,
 			'foto'			=> $namafile,
 			'deskripsi'		=> $deskripsi
 			);
