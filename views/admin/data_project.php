@@ -26,7 +26,7 @@
 					<td><?= $value->nama_kategori ?></td>
 					<td><?= substr($value->tags, 0, 10) ?> <?php if (strlen($value->tags) >= 10) { echo "..."; } ?></td>
 					<td>
-						<a href="<?= baseurl('editproject.php?id_project=' . $value->id_project) ?>" class="waves-effect waves-shadow btn yellow darken-2"><i class="fa fa-pencil"></i></a>
+						<a href="<?= baseurl('editprojectadmin.php?id_project=' . $value->id_project) ?>" class="waves-effect waves-shadow btn yellow darken-2"><i class="fa fa-pencil"></i></a>
 						<a href="<?= baseurl('lib/deleteproject.php?id_project=' . $value->id_project) ?>" class="waves-effect waves-shadow btn red"><i class="fa fa-trash"></i></a>
 					</td>
 				</tr>
