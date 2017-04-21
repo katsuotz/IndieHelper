@@ -37,13 +37,13 @@
                     <div class="col s4 p0">
                         <div class="col s12 ">
                             <div class="card">
-                                <div class="card-image"> <img src=""> </div>
+                                <div class="card-image"> <img src="<?= baseurl()?>"> </div>
                                 <div class="card-content">
                                     <div class="font14 title-category">Travel</div> <span class="card-title"><?= $value->nama ?></span>
-                                    <p></p>
+                                    <p><?=$value->deskripsi?></p>
                                 </div>
                                 <div class="card-action">
-                                    <h3 class="card-title">RP. <?=$value->jumlah?></h3>
+                                    <h3 class="card-title">RP. <?=$value->target?></h3>
                                     <div class="progress">
                                         <div class="determinate" style="width: 70%"></div>
                                     </div>
