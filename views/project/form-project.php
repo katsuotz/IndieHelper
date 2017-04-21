@@ -23,7 +23,7 @@
                                     <div class="col s2">
                                         <div class="card white no-shadow">
                                             <div class="card-image">
-                                                <img src="<?= baseurl('assets/images/login/banner1.jpg') ?>" id="uploaded-project-image<?= $i ?>" class="uploaded-project-image">
+                                                <img src="<?= baseurl('assets/images/project/default-project.jpg') ?>" id="uploaded-project-image<?= $i ?>" class="uploaded-project-image">
                                                 <span class="card-title"></span>
                                                 <a class="btn-floating halfway-fab waves-effect waves-light red choose-file right0 bottom0 square no-shadow" id="choose-file<?= $i ?>"><i class="fa fa-plus font14"></i></a>
                                             </div>
@@ -37,11 +37,6 @@
                                     
                                     <?php endfor; ?>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <?php for ($i = 1; $i <= 5; $i++): ?>
-                                <img src="" id="uploaded-project-image<?= $i ?>" class="col s2 uploaded-project-image hidden">
-                                <?php endfor; ?>
                             </div>
                             <div class="input-field">
                                 <select name="id_kategori">
@@ -60,7 +55,7 @@
                                 <div class="form-group">
                                     <label class="control-label">Target</label>
                                     <span class="help-block"></span>
-                                    <input type="number" class="form-control" name="jumlah">
+                                    <input type="number" class="form-control" name="target">
                                 </div>
                             </div>
                             <div class="input-field"> 

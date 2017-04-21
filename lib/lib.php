@@ -166,11 +166,6 @@
 
 			$query = "UPDATE $this->tblname SET " . implode(', ', $data) . " $this->where";
 
-			if ($this->mysqli->query($query)) {
-				return 'Berhasil';
-			} else {
-				return 'Gagal';
-			}
 		}
 
 		function row_result() {

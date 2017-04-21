@@ -1,6 +1,4 @@
 .all {
-    width: auto;
-    overflow-x: scroll;
     min-height: 100vh;
 }
 
@@ -8,13 +6,13 @@
     text-transform: capitalize;
 }
 
-.dropdown-content {
+.side-nav .dropdown-content {
     width: auto !important;
     margin-left: 18px !important;
     margin-top: 10px !important;
 }
 
-.dropdown-content li { 
+.side-nav .dropdown-content li { 
     min-height: auto !important;
 }
 
@@ -44,8 +42,8 @@
 
 .card:hover {
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.28), 
-          			0 1px 5px 0 rgba(0,0,0,0.24), 
-          			0 3px 1px -2px rgba(0,0,0,0.4);
+                0 1px 5px 0 rgba(0,0,0,0.24), 
+                0 3px 1px -2px rgba(0,0,0,0.4);
 }
 
 .collapsible-header {
@@ -71,4 +69,29 @@
 
 .image-user {
     width: 80px;
+}
+
+.card-image {
+    height: 130px;
+    overflow: hidden;
+    background: #f0f0f0;
+    vertical-align: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-image img {
+    height: auto !important;
+    width: 100% !important;
+}
+
+.file-group .btn-floating {
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+}
+
+.file-group .btn-floating i {
+    line-height: 28px;
 }

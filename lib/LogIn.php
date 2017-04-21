@@ -4,7 +4,7 @@
 
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$username	= $input->post('login_username');
-		$password	= $input->post('login_password');
+		$password	= sha1($input->post('login_password'));
 
 		$where = array(
 			'username' => $username,

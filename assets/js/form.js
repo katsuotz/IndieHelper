@@ -10,8 +10,7 @@ $(document).ready(function() {
 		if (!$('#project-image' + idFile).val()) {
 			$('#project-image' + idFile).click();
 		} else {
-			alert($('#project-image' + idFile).val());
-			$('#uploaded-project-image' + idFile).attr('src', '');
+			$('#uploaded-project-image' + idFile).attr('src', base_url + 'assets/images/project/default-project.jpg');
 			$('#project-image' + idFile).val('');
 			$('#choose-file' + idFile + ' .fa').addClass('fa-plus').removeClass('fa-remove');
 		}
@@ -45,7 +44,6 @@ $(document).ready(function() {
 		for (var i = 0; i < chips.length; i++) {
 			array.push(chips[i].tag);
 		}
-		console.log(array);
 		$data.append('tags', JSON.stringify(array));
 		$.ajax({
 			url: $(this).attr('action'),
@@ -55,7 +53,7 @@ $(document).ready(function() {
     		processData: false,
 		})
 		.done(function(result) {
-			Materialize.toast(result + " menambah project", 400)
+			Materialize.toast(result + " menambah project", 4000)
 		})
 
 	});

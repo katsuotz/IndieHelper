@@ -36,7 +36,7 @@ $(document).ready(function() {
 				}
 
 				if (result == 'user') {
-					$(location).attr('href', base_url + 'admin.php');
+					$(location).attr('href', base_url + 'user.php');
 				}
 
 			} else {

@@ -20,14 +20,14 @@
 				<tr>
 					<td><?= $value->id_project ?></td>
 					<td><?= $value->nama ?></td>
-					<td><?= $value->tgl ?></td>
+					<td><?= substr($value->tgl, 0, 10) ?></td>
 					<td>$<?= $value->target ?></td>
 					<td>$<?= $value->income ?></td>
 					<td><?= $value->nama_kategori ?></td>
-					<td><?= $value->tags ?></td>
+					<td><?= substr($value->tags, 0, 10) ?> <?php if (strlen($value->tags) >= 10) { echo "..."; } ?></td>
 					<td>
-						<a href="<?= baseurl('edituser.php?id_user=' . $value->id_project) ?>" class="waves-effect waves-shadow btn yellow darken-2"><i class="fa fa-pencil"></i></a>
-						<a href="<?= baseurl('lib/deleteuser.php?id_user=' . $value->id_project) ?>" class="waves-effect waves-shadow btn red"><i class="fa fa-trash"></i></a>
+						<a href="<?= baseurl('editproject.php?id_project=' . $value->id_project) ?>" class="waves-effect waves-shadow btn yellow darken-2"><i class="fa fa-pencil"></i></a>
+						<a href="<?= baseurl('lib/deleteproject.php?id_project=' . $value->id_project) ?>" class="waves-effect waves-shadow btn red"><i class="fa fa-trash"></i></a>
 					</td>
 				</tr>
 				<?php endforeach; ?>
