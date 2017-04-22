@@ -22,7 +22,6 @@
 	$img_project = json_decode($datas->foto);
 	$tags = $datas->tags;
 	$d = json_encode(explode(',', $tags));
-	$tanggal = substr($datas->tgl, 0,10);
 	
 
 	include 'views/template/header.php';

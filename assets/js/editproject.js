@@ -1,6 +1,4 @@
 $(document).ready(function($) {
-	$date = $('.datepicker').pickadate().pickadate('picker');
-	$date.set('select',tanggal,{format: 'yyyy-mm-dd'});
 	$('.parallax').parallax();	
 	$('select').material_select();
 	$('.chips').material_chip();
@@ -8,17 +6,6 @@ $(document).ready(function($) {
 	$('.datepicker').pickadate({
 	    selectMonths: true, 
 	    selectYears: 15 
-  	});
-
-	myData = [
-		$.each(s, function(index, val) {
-			 {tag: val}
-		});
-	];
-	$('.chips-initial').material_chip({
-    	
-    	data: [{tag: s}],
-  	
   	});
 
 	

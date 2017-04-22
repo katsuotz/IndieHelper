@@ -1,4 +1,3 @@
-<?= "<script> window.tanggal = '".$tanggal."'; </script>"; ?>
 <div class="parallax-container absolute">
 	<div class="parallax"><img src="<?= baseurl('assets/images/template/plx-bg.jpg') ?>"></div>
 </div>
@@ -46,12 +45,6 @@
                             <?php endfor; ?>
                             </div>
                         </div>
-                        <div class="input-field">
-                            <div class="form-group">
-                                <input type="date" class="datepicker" name="date">
-                                <label for="icon_prefix">Tanggal Pembuatan</label>
-                            </div>
-                        </div>	
                         <div class="input-field">
                             <div class="form-group">
                                 <input type="number" class="validate" name="target" value="<?= $datas->target ?>">
