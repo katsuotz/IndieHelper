@@ -63,7 +63,8 @@
 	          	</li>
 	        </ul>
 	    </li>		
-		<li><a href="<?= baseurl('datakategori.php') ?>"><i class="fa fa-tags"></i>Category</a></li>
+		<li><a href="<?= baseurl('datauser.php') ?>"><i class="fa fa-users"></i>User</a></li>
+	    <li><a href="<?= baseurl('datakategori.php') ?>"><i class="fa fa-tags"></i>Category</a></li>
 	    <li><a href="<?= baseurl('dataproject.php') ?>"><i class="fa fa-bookmark"></i>Project</a></li>
 	    <li><a href="<?= baseurl('databank.php') ?>"><i class="fa fa-credit-card-alt"></i>Bank</a></li>
 	    <li><a href="<?= baseurl('datadonasi.php') ?>"><i class="fa fa-paypal"></i>Donation</a></li>
