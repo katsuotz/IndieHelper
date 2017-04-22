@@ -165,6 +165,7 @@
 			}
 
 			$query = "UPDATE $this->tblname SET " . implode(', ', $data) . " $this->where";
+			$this->data = $this->mysqli->query($query);
 
 		}
 
@@ -219,6 +220,8 @@
 					'ext' => strtolower(pathinfo($name,PATHINFO_EXTENSION)),
 					);
 				return $data;
+			} else {
+				return $data = array();
 			}
 		}
 	}

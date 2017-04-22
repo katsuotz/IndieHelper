@@ -36,7 +36,7 @@
 		$data_project = array(
 			'nama' 			=> $nama,
 			'id_kategori' 	=> $id_kategori,
-			'id_user'		=> $session->get_session('id_user'),
+			'id_user'		=> $session->get_session('id'),
 			'tags' 			=> $tags,
 			'target'		=> $target,
 			'foto'			=> $namafile,

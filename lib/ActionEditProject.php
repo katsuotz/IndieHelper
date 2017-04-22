@@ -32,10 +32,13 @@
 				array_push($tmpfile, $input->files('project-image' . $i)['dir']);
 				$dir = "../assets/images/project/" . $namafile[$i - 1]; 
 				move_uploaded_file($tmpfile[$i - 1], $dir);
+			} else {
+				array_push($namafile, '');
+				array_push($tmpfile, '');
 			}
 		}
 
-		for ($i = 1; $i <= 5; $i++) { 
+		for ($i = 1; $i <= 5; $i++) {
 			if (empty($namafile[$i - 1]) && !(empty($oldImages[$i - 1]))) {
 				$namafile[$i - 1] = $oldImages[$i - 1];
 			}
@@ -44,7 +47,7 @@
 		if (!empty($namafile)) {
 			$namafile = json_encode($namafile);
 		} else {
-			$namafile = ''; 
+			$namafile = []; 
 		}
 
 		$data_project = array(
@@ -58,7 +61,7 @@
 			);
 
 		$db->where($where);
-		$db->update($data_project, 'project');
+		$upd = $db->update($data_project, 'project');
 		$result = $db->affected_rows();
 		echo $result;
 	}

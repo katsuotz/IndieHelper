@@ -1,16 +1,15 @@
 $(document).ready(function() {
-
-	$('select').material_select();
-	$('.chips-initial').material_chip();
-
 	var idFile = '';
 	$('.choose-file').bind('click', function(e) {
 		idFile = $(this).attr('id');
 		idFile = idFile.charAt(11);
-		if (!$('#project-image' + idFile).val()) {
+		var defaultImage = base_url + 'assets/images/project/default-project.jpg';
+		if ($('#uploaded-project-image' + idFile).attr('src') == defaultImage) {
+			console.log(1);
 			$('#project-image' + idFile).click();
 		} else {
-			$('#uploaded-project-image' + idFile).attr('src', base_url + 'assets/images/project/default-project.jpg');
+			console.log(2);
+			$('#uploaded-project-image' + idFile).attr('src', defaultImage);
 			$('#project-image' + idFile).val('');
 			$('#choose-file' + idFile + ' .fa').addClass('fa-plus').removeClass('fa-remove');
 		}
@@ -34,30 +33,18 @@ $(document).ready(function() {
 		}
 	}
 
-	$('.chips input').attr('name', 'tags');
-	
-	$('#form-project').submit(function(e) {
+	$('#edit-project-admin').submit(function(e) {
 		e.preventDefault();
-		var chips = $('.chips').material_chip('data');
-		var array = [];
-		var $data = new FormData($(this)[0]);
-		for (var i = 0; i < chips.length; i++) {
-			array.push(chips[i].tag);
-		}
-		$data.append('tags', JSON.stringify(array));
 		$.ajax({
 			url: $(this).attr('action'),
 			type: $(this).attr('method'),
-			data: $data,
+			data: new FormData($(this)[0]),
 			contentType: false,
-    		processData: false,
+			processData: false,
 		})
 		.done(function(result) {
-			Materialize.toast(result + " menambah project", 4000);
+			console.log(result);
 		})
-
+		
 	});
-
-
-
 });
