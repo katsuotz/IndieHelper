@@ -4,8 +4,7 @@ $(document).ready(function() {
 	// Initialize collapse button
 	$('.open-slide-out').sideNav({
 		menuWidth: 300,
-		edge: 'left',
-		closeOnClick: true
+		edge: 'left'
 	});
 
 	$('.modal').modal();
@@ -24,8 +23,6 @@ $(document).ready(function() {
 		alignment: 'right',
 		stopPropagation: false
 	});
-
-	console.log(sideNavChecker);
 
 	checkerSideNav();
 
@@ -52,11 +49,22 @@ $(document).ready(function() {
 			$('.all').css('padding-left', '300px');
 			sideNavChecker = 1;
 		}
-		console.log(sideNavChecker);
 		$.ajax({
 			url: base_url + 'lib/sidenavadmin.php',
 			type: 'POST',
 			data: {sidenav: sideNavChecker},
+		})
+	});
+
+	$('.delete-btn').click(function(e) {
+		// e.preventDefault();
+		$.ajax({
+			url: $(this).attr('href'),
+			type: 'GET',
+			// data: {param1: 'value1'},
+		})
+		.done(function(result) {
+			Materialize.toast(result, 4000);
 		})
 		
 	});

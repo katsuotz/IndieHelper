@@ -69,7 +69,7 @@
 
 		function delete($tblname) {
 			$query = "DELETE FROM $tblname $this->where";
-			return $this->mysqli->query($query);
+			return $query;
 		}
 
 		function select($value) {

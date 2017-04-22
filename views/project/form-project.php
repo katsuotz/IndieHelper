@@ -38,6 +38,7 @@
                                     <?php endfor; ?>
                                 </div>
                             </div>
+                            <?= $session->get_session('id') ?>
                             <div class="input-field">
                                 <select name="id_kategori">
                                     <option value="" disabled selected>Choose your option</option>
