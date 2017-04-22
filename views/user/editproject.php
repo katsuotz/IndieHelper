@@ -1,9 +1,7 @@
 <?= "<script> window.tanggal = '".$tanggal."'; </script>"; ?>
-
 <div class="parallax-container absolute">
 	<div class="parallax"><img src="<?= baseurl('assets/images/template/plx-bg.jpg') ?>"></div>
 </div>
-
 <div class="content container">
 	<div class="row pt3">
 		<div class="col s12 mt3">
@@ -81,3 +79,6 @@
 	</div>
 </div>
 </div>
+<script>
+    var s = <?=($d) ?>;
+</script>

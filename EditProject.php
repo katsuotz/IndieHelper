@@ -20,7 +20,11 @@
 	$kategori = $db->result();
 	
 	$img_project = json_decode($datas->foto);
-	$tanggal = substr($datas->tgl, 0,10)
+	$tags = $datas->tags;
+	$d = json_encode(explode(',', $tags));
+	$tanggal = substr($datas->tgl, 0,10);
+	
+
 	include 'views/template/header.php';
 	include 'views/user/editproject.php';
 	include 'views/template/footer.php';

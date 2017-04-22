@@ -10,6 +10,18 @@ $(document).ready(function($) {
 	    selectYears: 15 
   	});
 
+	myData = [
+		$.each(s, function(index, val) {
+			 {tag: val}
+		});
+	];
+	$('.chips-initial').material_chip({
+    	
+    	data: [{tag: s}],
+  	
+  	});
+
+	
   	// $('.a').click(function(){
   	// 	var picker = $date.get('select', 'yyyy-mm-dd');
   	// 	console.log(picker);
