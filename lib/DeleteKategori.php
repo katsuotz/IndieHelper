@@ -8,8 +8,7 @@
 	$delete = $db->delete('kategori');
 	$result = $db->affected_rows();
 
-	echo $delete;
-	echo "<br>";
-	echo $result;
+	echo $delete."<br>".$result;
+	
 
 ?>

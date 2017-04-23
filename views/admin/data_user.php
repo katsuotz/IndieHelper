@@ -24,7 +24,7 @@
 					<td><?= $value->alamat ?></td>
 					<td>
 						<a href="<?= baseurl('edituser.php?id_user=' . $value->id_user) ?>" class="waves-effect waves-shadow btn yellow darken-2"><i class="fa fa-pencil"></i></a>
-						<a href="<?= baseurl('lib/deleteuser.php?id_user=' . $value->id_user) ?>" class="waves-effect waves-shadow btn red"><i class="fa fa-trash"></i></a>
+						<a href="<?= baseurl('lib/DeleteUser.php?id_akun=' . $value->id_akun) ?>" class="waves-effect waves-shadow btn delete-btn"><i class="fa fa-trash"></i></a>
 					</td>
 				</tr>
 				<?php endforeach; ?>

@@ -16,7 +16,7 @@
             </div>
             <div class="card-content white lighten-4">
                 <div id="login">
-                    <form action="<?= baseurl('lib/login.php') ?>" method="POST" id="form-log-in">
+                    <form action="<?= baseurl('lib/Login.php') ?>" method="POST" id="form-log-in">
                         <div class="input-field">
                             <div class="form-group">
                                 <input id="username_prefix" name="login_username" type="text" class="validate">
@@ -35,7 +35,7 @@
                     </form>
                 </div>
                 <div id="register">
-                    <form action="<?= baseurl('lib/signup.php') ?>" enctype="multipart/form-data" method="POST" id="form-sign-up">
+                    <form action="<?= baseurl('lib/SignUp.php') ?>" enctype="multipart/form-data" method="POST" id="form-sign-up">
                         <div class="input-field">
                             <div class="form-group">
                                 <input id="username_prefix" type="text" class="validate" name="nama">

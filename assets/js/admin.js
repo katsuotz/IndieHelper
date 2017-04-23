@@ -57,7 +57,7 @@ $(document).ready(function() {
 	});
 
 	$('.delete-btn').click(function(e) {
-		// e.preventDefault();
+		e.preventDefault();
 		$.ajax({
 			url: $(this).attr('href'),
 			type: 'GET',
@@ -65,8 +65,10 @@ $(document).ready(function() {
 		})
 		.done(function(result) {
 			Materialize.toast(result, 4000);
-		})
-		
+			
+		});
 	});
+
+
 
 });

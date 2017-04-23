@@ -6,7 +6,7 @@
 		
 		<!-- Modal Structure -->
 		<div id="modal-add-kategori" class="modal">
-			<form action="<?= baseurl('lib/addkategori.php') ?>" method="POST" id="form-add-kategori">
+			<form action="<?= baseurl('lib/AddKategori.php') ?>" method="POST" id="form-add-kategori">
 				<div class="modal-content">
 					<h4>Add Kategori</h4>
 					<legend></legend>
@@ -39,7 +39,7 @@
 					<td><?= $value->nama_kategori ?></td>
 					<td>
 						<a href="<?= baseurl('editkategori.php?id_kategori=' . $value->id_kategori) ?>" class="waves-effect waves-shadow btn yellow darken-2"><i class="fa fa-pencil"></i></a>
-						<a href="<?= baseurl('lib/deletekategori.php?id_kategori=' . $value->id_kategori) ?>" class="waves-effect waves-shadow btn red delete-btn"><i class="fa fa-trash"></i></a>
+						<a href="<?= baseurl('lib/DeleteKategori.php?id_kategori=' . $value->id_kategori) ?>" class="waves-effect waves-shadow btn red delete-btn"><i class="fa fa-trash"></i></a>
 					</td>
 				</tr>
 				<?php endforeach; ?>
