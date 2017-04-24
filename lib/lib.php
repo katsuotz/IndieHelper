@@ -175,7 +175,8 @@
 		}
 
 		function row_array() {
-			return $this->data->fetch_array();
+			$result = $this->data->fetch_object();
+			return (array) $result;
 		}
 
 		function result() {
@@ -187,11 +188,8 @@
 		}
 
 		function result_array() {
-			$res = array();
-			while ($datas = $this->data->fetch_array()) {
-				$res[] = $datas;
-			}
-			return $res;
+			$result = $this->data->fetch_object();
+			return (array) $result;
 		}
 
 		function affected_rows() {

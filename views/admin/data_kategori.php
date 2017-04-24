@@ -19,7 +19,7 @@
 					</div>
 				</div>
 				<div class="modal-footer">
-					<button type="submit" href="#" class="waves-effect waves-green btn-flat modal-action modal-close">Add</button>
+					<button type="submit" href="#" class="waves-effect waves-green btn-flat modal-action modal-close add-btn">Add</button>
 				</div>
 			</form>
 		</div>

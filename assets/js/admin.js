@@ -58,15 +58,33 @@ $(document).ready(function() {
 
 	$('.delete-btn').click(function(e) {
 		e.preventDefault();
+		var row = $(this).parent().parent();
 		$.ajax({
 			url: $(this).attr('href'),
 			type: 'GET',
-			// data: {param1: 'value1'},
 		})
 		.done(function(result) {
-			Materialize.toast(result, 4000);
-			
+			Materialize.toast(result + ' menghapus data', 4000);
+			if ($.trim(result) == 'Berhasil') {
+				row.fadeOut();
+			}
 		});
+	});
+
+	$('.add-btn').click(function(e) {
+		e.preventDefault();	
+		var idForm = $(this).parent().parent();
+		$.ajax({
+			url: idForm.attr('action'),
+			type: idForm.attr('method'),
+			data: idForm.serialize(),
+		})
+		.done(function(result) {
+			Materialize.toast(result + ' menambah data', 4000);
+			if ($.trim(result) == 'Berhasil') {
+				location.reload();
+			}
+		})
 	});
 
 
