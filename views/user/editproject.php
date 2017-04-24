@@ -73,5 +73,5 @@
 </div>
 </div>
 <script>
-    var s = <?=($d) ?>;
+    var datatags = <?=($tags_js) ?>;
 </script>

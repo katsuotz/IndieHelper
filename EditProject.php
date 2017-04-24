@@ -21,7 +21,7 @@
 	
 	$img_project = json_decode($datas->foto);
 	$tags = $datas->tags;
-	$d = json_encode(explode(',', $tags));
+	$tags_js = json_encode(explode(',', $tags));
 	
 
 	include 'views/template/header.php';
