@@ -94,8 +94,13 @@ nav#navigation{
 }
 .small{
     width: 280px !important;
+    height: auto !important;
     margin: 15px !important;
+    float: left;
 }
 .ct{
     margin: 1px !important;
+    cursor: pointer; 
+    margin: 3px !important;
 }
+
