@@ -21,7 +21,7 @@
         </div>
 
         <div class="row ">
-    <div class="card small">
+    <div class="card uk">
                                 <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
                                 <div class="card-content">
                                     <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
@@ -38,7 +38,7 @@
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
                                     </div>
         </div></div>
-            <div class="card small">
+            <div class="card uk">
                                 <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
                                 <div class="card-content">
                                     <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
@@ -55,7 +55,7 @@
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
                                     </div>
         </div></div>
-            <div class="card small">
+            <div class="card uk">
                                 <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
                                 <div class="card-content">
                                     <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
@@ -98,7 +98,7 @@
                   <div class="divider"></div>
         </div>
     <div class="row container">
-        <div class="card small">
+        <div class="card uk">
                                 <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
                                 <div class="card-content">
                                     <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
@@ -115,7 +115,7 @@
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
                                     </div>
         </div></div>
-        <div class="card small">
+        <div class="card uk">
                                 <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
                                 <div class="card-content">
                                     <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
@@ -132,7 +132,7 @@
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
                                     </div>
         </div></div>
-        <div class="card small">
+        <div class="card uk">
                                 <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
                                 <div class="card-content">
                                     <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>

@@ -92,7 +92,7 @@ nav#navigation{
   color: #59d;
   cursor: pointer;
 }
-.small{
+.uk{
     width: 280px !important;
     height: auto !important;
     margin: 15px !important;
@@ -103,4 +103,21 @@ nav#navigation{
     cursor: pointer; 
     margin: 3px !important;
 }
-
+.fot{
+    height: 480px !important;
+}
+.tom{
+    display: absolute;
+    z-index: 20;
+}
+.swip{
+    width: auto !important;
+    border-radius: 15px !imprtant;
+    z-index: 100000;
+    position: absolute;
+    background-color: rgba(255, 0, 177, 0.21);
+    border-radius: 50px;
+}
+.iss{
+    float: right;
+}
