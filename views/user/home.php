@@ -20,64 +20,58 @@
                   <div class="divider"></div>
         </div>
 
-        <div class="row">
-    <div class="card small col s12 m6">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="Medium material-icons  dropdown-btn right" data-activates='dropdown2'>reorder</i>
-</span>
-      <p>isinya tag</p>
-        <div class="progress">
-      <div class="determinate" style="width: 40%">
-            </div>
-  </div>
-    </div>
-  </div>
-            <ul id='dropdown2' class='dropdown-content'>
-    <li><a href="#!">Follow</a></li>
-    <li><a href="#!">Donate</a></li>
-    <li><a href="#!">See More</a></li>
-  </ul>
-  <div class="card small col s12 m6">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="Medium material-icons  dropdown-btn right" data-activates='dropdown3'>reorder</i>
-</span>
-      <p>isinya tag</p>
-        <div class="progress">
-      <div class="determinate" style="width: 80%">
-            </div>
-  </div>
-    </div>
-  </div>
-            <ul id='dropdown3' class='dropdown-content'>
-    <li><a href="#!">Follow</a></li>
-    <li><a href="#!">Donate</a></li>
-    <li><a href="#!">See More</a></li>
-  </ul>
-  <div class="card small col s12 m6">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="Medium material-icons  dropdown-btn right" data-activates='dropdown4'>reorder</i>
-</span>
-      <p>isinya tag</p>
-        <div class="progress">
-      <div class="determinate" style="width: 100%">
-            </div>
-  </div>
-    </div>
-  </div>
-            <ul id='dropdown4' class='dropdown-content'>
-    <li><a href="#!">Follow</a></li>
-    <li><a href="#!">Donate</a></li>
-    <li><a href="#!">See More</a></li>
-  </ul>  
+        <div class="row ">
+    <div class="card small">
+                                <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
+                                <div class="card-content">
+                                    <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
+                                    <p>Ntaps</p>
+                                </div>
+                                <div class="card-action">
+                                    <h3 class="card-title">RP. 100</h3>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 70%"></div>
+                                    </div>
+                                    <div class="row m0 py0 pl0 pr1">
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                    </div>
+        </div></div>
+            <div class="card small">
+                                <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
+                                <div class="card-content">
+                                    <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
+                                    <p>Ntaps</p>
+                                </div>
+                                <div class="card-action">
+                                    <h3 class="card-title">RP. 100</h3>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 70%"></div>
+                                    </div>
+                                    <div class="row m0 py0 pl0 pr1">
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                    </div>
+        </div></div>
+            <div class="card small">
+                                <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
+                                <div class="card-content">
+                                    <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
+                                    <p>Ntaps</p>
+                                </div>
+                                <div class="card-action">
+                                    <h3 class="card-title">RP. 100</h3>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 70%"></div>
+                                    </div>
+                                    <div class="row m0 py0 pl0 pr1">
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                    </div>
+        </div></div>
         </div>
       </div>
     </div>
@@ -90,76 +84,71 @@
             <h4 center>Category</h4>
                   <div class="divider"></div>
         </div>
-    <div class="row container">
-        <div class="ct card-panel teal lighten-2 col s6 m4 l2">desain<i class="right grey-text text-darken-2">(12)</i></div>
-        <div class="ct card-panel teal lighten-2 col s6 m4 l2">Food<i class="right grey-text text-darken-2">(12)</i></div>
-        <div class="ct card-panel teal lighten-2 col s6 m4 l2">tecnology<i class="right grey-text text-darken-2">(12)</i></div>
-        <div class="ct card-panel teal lighten-2 col s6 m4 l2 ">Inovation<i class="right grey-text text-darken-2">(12)</i></div>
-        <div class="ct card-panel teal lighten-2 col s6 m4 l2 ">gaget<i class="right grey-text text-darken-2">(12)</i></div>
-        <div class="ct card-panel teal lighten-2 col s6 m4 l2 ">gaget<i class="right grey-text text-darken-2">(12)</i></div>
+    <div class="row container ">
+        <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">desain<i class="right grey-text text-darken-2">(12)</i></div>
+        <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">Food<i class="right grey-text text-darken-2">(12)</i></div>
+        <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">Inovation<i class="right grey-text text-darken-2">(12)</i></div>
+        <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">gaget<i class="right grey-text text-darken-2">(12)</i></div>
+        <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">gaget<i class="right grey-text text-darken-2">(12)</i></div>
+        <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">gaget<i class="right grey-text text-darken-2">(12)</i></div>
+        <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">gaget<i class="right grey-text text-darken-2">(12)</i></div>
     </div>
       <div class="row center">
             <h4 center>Finished Project</h4>
                   <div class="divider"></div>
         </div>
     <div class="row container">
-        <div class="card small col s12 m6">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="Medium material-icons  dropdown-btn right" data-activates='dropdown5'>reorder</i>
-</span>
-      <p>isinya tag</p>
-        <div class="progress">
-      <div class="determinate" style="width: 100%">
-            </div>
-  </div>
-    </div>
-  </div>
-            <ul id='dropdown5' class='dropdown-content'>
-    <li><a href="#!">Follow</a></li>
-    <li><a href="#!">Donate</a></li>
-    <li><a href="#!">See More</a></li>
-  </ul>
-        <div class="card small col s12 m6">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="Medium material-icons  dropdown-btn right" data-activates='dropdown6'>reorder</i>
-</span>
-      <p>isinya tag</p>
-        <div class="progress">
-      <div class="determinate" style="width: 100%">
-            </div>
-  </div>
-    </div>
-  </div>
-            <ul id='dropdown6' class='dropdown-content'>
-    <li><a href="#!">Follow</a></li>
-    <li><a href="#!">Donate</a></li>
-    <li><a href="#!">See More</a></li>
-  </ul>
-        <div class="card small col s12 m6">
-    <div class="card-image waves-effect waves-block waves-light">
-      <img class="activator" src="images/office.jpg">
-    </div>
-    <div class="card-content">
-      <span class="card-title grey-text text-darken-4">Card Title<i class="Medium material-icons  dropdown-btn right" data-activates='dropdown7'>reorder</i>
-</span>
-      <p>isinya tag</p>
-        <div class="progress">
-      <div class="determinate" style="width: 100%">
-            </div>
-  </div>
-    </div>
-  </div>
-            <ul id='dropdown7' class='dropdown-content'>
-    <li><a href="#!">Follow</a></li>
-    <li><a href="#!">Donate</a></li>
-    <li><a href="#!">See More</a></li>
-  </ul>
+        <div class="card small">
+                                <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
+                                <div class="card-content">
+                                    <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
+                                    <p>Ntaps</p>
+                                </div>
+                                <div class="card-action">
+                                    <h3 class="card-title">RP. 100</h3>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 70%"></div>
+                                    </div>
+                                    <div class="row m0 py0 pl0 pr1">
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                    </div>
+        </div></div>
+        <div class="card small">
+                                <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
+                                <div class="card-content">
+                                    <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
+                                    <p>Ntaps</p>
+                                </div>
+                                <div class="card-action">
+                                    <h3 class="card-title">RP. 100</h3>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 70%"></div>
+                                    </div>
+                                    <div class="row m0 py0 pl0 pr1">
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                    </div>
+        </div></div>
+        <div class="card small">
+                                <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
+                                <div class="card-content">
+                                    <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
+                                    <p>Ntaps</p>
+                                </div>
+                                <div class="card-action">
+                                    <h3 class="card-title">RP. 100</h3>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 70%"></div>
+                                    </div>
+                                    <div class="row m0 py0 pl0 pr1">
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                    </div>
+        </div></div>
     </div>
       <div class="row center"><a class="waves-effect waves-light btn">More</a></div>
   </div>
@@ -169,7 +158,7 @@
         <br><br>
         <h4 class="header center teal-text -text-lighten-3"></h4>
         <div class="row center">
-          <h4 class="header col s12 light white-text " style="padding-top:180px;">sadasdasdasdadasda</h4>
+          <h4 class="header col s12 light white-text " style="padding-top:180px;">Joint whit Us</h4>
         </div>
         <div class="row center">
         <div class="col s12">
