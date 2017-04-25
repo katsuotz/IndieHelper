@@ -20,7 +20,13 @@
 	else
 		$result = "Gagal";
 
+	$result = json_encode(
+		array(
+			'msg' => $result, 
+			'tbl' => 'kategori'
+			)
+		);
+
 	echo $result;
 	
-
 ?>

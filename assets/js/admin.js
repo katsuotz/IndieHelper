@@ -58,18 +58,33 @@ $(document).ready(function() {
 
 	$('.delete-btn').click(function(e) {
 		e.preventDefault();
-		var row = $(this).parent().parent();
+		row = $(this).parent().parent();
 		$.ajax({
 			url: $(this).attr('href'),
 			type: 'GET',
 		})
 		.done(function(result) {
-			Materialize.toast(result + ' menghapus data', 4000);
-			if ($.trim(result) == 'Berhasil') {
+			result = JSON.parse(result);
+			Materialize.toast(result.msg + ' menghapus data \
+				<a href="' + base_url + 'lib/UndoDeleteKategori.php" class="btn m0 px1 undo-btn"><i class="material-icons">undo</i></a>\
+				<a href="#" class="btn m0 px1 close-toast-btn"><i class="material-icons">clear</i></a>');
+			if ($.trim(result.msg) == 'Berhasil') {
 				row.fadeOut();
 			}
 		});
 	});
+
+	// $('.undo-btn').click(function(e) {
+	// 	e.preventDefault();
+	// 	$.ajax({
+	// 		url: $(this).attr('href'),
+	// 		type: 'GET',
+	// 	})
+	// 	.done(function(result) {
+	// 		Materialize.toast(result + ' mengembalikan data');
+	// 		row.fadeIn();
+	// 	});
+	// });
 
 	$('.add-btn').click(function(e) {
 		e.preventDefault();	
