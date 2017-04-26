@@ -7,7 +7,7 @@
 
 	session_start();
 	
-	function baseurl($custom = ''){
+	function baseurl($custom = ' '){
 		$baseurl = 'http';
 		$baseurl .= "://".$_SERVER['HTTP_HOST'];
 		$baseurl .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
@@ -16,6 +16,9 @@
 		return $baseurl;
 	}
 
+	function redirect($url = '') {
+		header("location: " . $url);
+	}
 
 	class Database
 	{
@@ -35,16 +38,16 @@
 		public $join = array();
 		public $data = '';
 
-		function __construct()
+		public function __construct()
 		{	
 			$this->mysqli = new mysqli('localhost','root','','db_indie');
 		}
 
-		function select_tbl($value) {
+		public function select_tbl($value) {
 			return $this->tblname = $value;
 		}
 
-		function insert($data) {
+		public function insert($data) {
 			foreach ($data as $key => $value) {
 				$this->infield[] = $key;
 				$this->invalues[] = "'" . $value . "'";		
@@ -62,26 +65,26 @@
 			}
 		}
 
-		function return_id() {
+		public function return_id() {
 			$result = $this->mysqli->insert_id;
 			return $result;
 		}
 
-		function delete($tblname) {
+		public function delete($tblname) {
 			$query = "DELETE FROM $tblname $this->where";
 			$this->mysqli->query($query);
 			return $query;
 		}
 
-		function select($value) {
+		public function select($value) {
 			$this->select = implode(',', $value);
 		}
 
-		function from($value) {
+		public function from($value) {
 			$this->tblname = $value;
 		}
 
-		function where($value) {
+		public function where($value) {
 			$row = array();
 			$col = array();
 
@@ -104,7 +107,7 @@
 
 		}
 
-		function where_explore($value){
+		public function where_explore($value){
 			$row = 'nama';
 			$col = array();
 
@@ -121,16 +124,16 @@
 			 $this->where = 'WHERE '.implode(' OR ', $data);
 		}
 
-		function logic_where($logic = 'AND'){
+		public function logic_where($logic = 'AND'){
 			$this->logic = $logic;
 		}
 
-		function join($tbljoin, $jointype = '', $column1, $column2) {
+		public function join($tbljoin, $jointype = '', $column1, $column2) {
 			$join = $jointype . ' JOIN ' . $tbljoin . ' ON (' . $column1 . ' = ' . $column2 . ') ';
 			array_push($this->join, $join);
 		}
 
-		function get_tbl($tblname = '') {
+		public function get_tbl($tblname = '') {
 			if ($tblname)
 				$this->tblname = $tblname;
 
@@ -148,7 +151,7 @@
 			$this->join = array();
 		}
 
-		function update($value, $tblname = '') {
+		public function update($value, $tblname = '') {
 			if ($tblname)
 				$this->tblname = $tblname;
 			$row = array();
@@ -170,16 +173,16 @@
 
 		}
 
-		function row_result() {
+		public function row_result() {
 			return $this->data->fetch_object();
 		}
 
-		function row_array() {
+		public function row_array() {
 			$result = $this->data->fetch_object();
 			return (array) $result;
 		}
 
-		function result() {
+		public function result() {
 			$res = array();
 			while ($datas = $this->data->fetch_object()) {
 				$res[] = $datas;
@@ -187,12 +190,12 @@
 			return $res;
 		}
 
-		function result_array() {
+		public function result_array() {
 			$result = $this->data->fetch_object();
 			return (array) $result;
 		}
 
-		function affected_rows() {
+		public function affected_rows() {
 			return $this->mysqli->affected_rows;
 		}
 	}
@@ -201,15 +204,15 @@
 	class Input extends Database
 	{
 		
-		function post($post){
+		public function post($post){
 			return $_POST[$post];
 		}
 
-		function get($get){
+		public function get($get){
 			return $_GET[$get];
 		}
 
-		function files($file){
+		public function files($file){
 			if ($_FILES[$file]['name']) {
 				$name = $_FILES[$file]['name'];
 				$data = array(
@@ -227,20 +230,34 @@
 
 	class Session extends Database
 	{
-		function set_session($session) {
+		public function set_session($session) {
 			foreach ($session as $key => $value) {
 				$_SESSION["$key"] = $value;
 			}
 		}
 
-		function get_session($keyname) {
+		public function get_session($keyname) {
 			return $_SESSION["$keyname"];
 		}
 
+		public function unset_session($session) {
+			foreach ($session as $key => $value) {
+				unset($_SESSION["$value"]);
+			}
+		}
 	}
 
-	$session = new Session();
-	$input = new Input();
-	$db = new Database();
+	class Login_Checker extends Database
+	{
+		public function check_login()
+		{
+
+		}
+	}
+
+	$lc 		= new Login_Checker();
+	$session 	= new Session();
+	$input 		= new Input();
+	$db 		= new Database();
 
  ?>

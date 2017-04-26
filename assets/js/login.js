@@ -4,6 +4,9 @@ $(document).ready(function() {
 
 	$('#form-sign-up').submit(function(e) {
 		e.preventDefault();
+
+		
+		
 		$data = new FormData($(this)[0]);
 
 		$.ajax({

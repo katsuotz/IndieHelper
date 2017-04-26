@@ -8,9 +8,12 @@
 		$password	= sha1($input->post('password'));
 		$alamat		= $input->post('alamat');
 		$jk			= $input->post('jk');
-		$namafile 	= $input->files('photo')['name'];
-		$tmpfile 	= $input->files('photo')['dir'];
-		$dir		= "../assets/images/user/$namafile";
+		if ($input->files('photo')) {
+			$namafile 	= $input->files('photo')['name'];
+			$tmpfile 	= $input->files('photo')['dir'];
+			$dir		= "../assets/images/user/$namafile";
+			move_uploaded_file($tmpfile, $dir);
+		}
 
 		$data_akun = array(
 			'username' 	=> $username,
@@ -21,7 +24,6 @@
 		$db->select_tbl('akun');
 		$db->insert($data_akun);
 		$id_akun = $db->return_id();
-
 
 		if(empty($namafile)){
 			$data_user = array(
@@ -40,7 +42,6 @@
 				'id_akun'	=> $id_akun
 				);
 		}
-		move_uploaded_file($tmpfile, $dir);
 		$db->select_tbl('user');
 		$result = $db->insert($data_user);
 		$id_user = $db->return_id();

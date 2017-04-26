@@ -16,7 +16,7 @@
 						
 						<ul id='dropdown-profile' class='dropdown-content'>
 							<li><a href="#" class="pr3"><i class="fa fa-gear p0 m0"></i> Setting</a></li>
-							<li><a href="#" class="pr3"><i class="fa fa-sign-out p0 m0"></i> Log Out</a></li>
+							<li><a href="<?= baseurl('lib/logout.php') ?>" class="pr3"><i class="fa fa-sign-out p0 m0"></i> Log Out</a></li>
 						</ul>
 
 						<!-- Dropdown Structure -->
