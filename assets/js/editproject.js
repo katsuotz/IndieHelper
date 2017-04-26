@@ -9,9 +9,4 @@ $(document).ready(function($) {
   	});
 
 	
-  	// $('.a').click(function(){
-  	// 	var picker = $date.get('select', 'yyyy-mm-dd');
-  	// 	console.log(picker);
-  	// });
-       
 });

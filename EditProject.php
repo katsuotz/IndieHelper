@@ -1,6 +1,6 @@
 <?php 
-
 	include 'lib/lib.php';
+
 	$assets = array(
 		'css' => array('parent.css','editproject.css','materialize.min.css','material-icon.css','font-awesome.min.css'),
 		'js' => array('jquery.min.js','materialize.min.js','parent.js','edit-project.js'),

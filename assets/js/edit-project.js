@@ -1,4 +1,5 @@
 $(document).ready(function($) {
+
 	$chipstags = [];
 	$('.parallax').parallax();	
 	$('select').material_select();
