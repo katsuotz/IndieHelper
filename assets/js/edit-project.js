@@ -4,11 +4,6 @@ $(document).ready(function($) {
 	$('select').material_select();
 	$('.chips').material_chip();
 
-	$('.datepicker').pickadate({
-	    selectMonths: true, 
-	    selectYears: 15 
-  	});
-
   	for (var i = 0; i < datatags.length; i++) {
   		$chipstags.push({tag:datatags[i]});
   	}
@@ -17,10 +12,27 @@ $(document).ready(function($) {
     	data: $chipstags
 	});
 
+	$('#update-project').submit(function(e) {
+		e.preventDefault();
 
-  	// $('.a').click(function(){
-  	// 	var picker = $date.get('select', 'yyyy-mm-dd');
-  	// 	console.log(picker);
-  	// });
-       
+		var chips = $('.chips').material_chip('data');
+		var array = [];
+		var $data = new FormData($(this)[0]);
+		for (var i = 0; i < chips.length; i++) {
+			array.push(chips[i].tag);
+		}
+		$data.append('tags', JSON.stringify(array));
+		$.ajax({
+			url: $(this).attr('action'),
+			type: 'POST',
+			data: $data,
+			contentType: false,
+    		processData: false,
+		})
+		.done(function(result) {
+			Materialize.toast(result, 4000);
+		});
+		
+	});
+
 });
