@@ -54,7 +54,7 @@
                         </div>
                         <div class="input-field">
                             <div class="form-group">
-                                <input id="username_prefix" type="text" class="validate" name="username">
+                                <input id="username_prefix" type="text" class="validate" name="username" required>
                                 <label for="icon_prefix">Username</label>
                             </div>
                         </div>
@@ -71,8 +71,8 @@
                             </div>
                         </div>
                         <div class="input-field">
-                            <select name="jk">
-                                <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                            <select name="jk" required>
+                                <option disabled selected>Pilih Jenis Kelamin</option>
                                 <option value="L">Laki - Laki</option>
                                 <option value="P">Perempuan</option>
                             </select>

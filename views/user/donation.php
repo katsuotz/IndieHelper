@@ -10,33 +10,26 @@
 						<form action="" method="POST">
 							<div class="input-field">
 								<div class="form-group">
-									<input id="username_prefix" name="nama" type="text" class="validate">
-									<label for="icon_prefix">Nama</label>
+									<input name="jumlah" type="number" class="form-control">
+									<label>Jumlah Donasi</label>
 								</div>
 							</div>
 							<div class="input-field">
 								<div class="form-group">
-									<input id="username_prefix" name="jumlah" type="number" class="validate">
-									<label for="icon_prefix">Jumlah Donasi</label>
+									<textarea name="feedback" class="materialize-textarea" id="textarea1"></textarea>
+									<label>Feedback</label>
 								</div>
 							</div>
-							<div class="col s6 p0">
-								<div class="input-field">
-									<div class="form-group">
-										<input id="username_prefix" name="pembayaran" type="text" class="validate">
-										<label for="icon_prefix">nama pembayaran</label>
-									</div>
-								</div>
-							</div>
-							<div class="col s6">
-								<div class="input-field">
-									<div class="form-group">
-										<input id="username_prefix" name="nokredit" type="number" class="validate">
-										<label for="icon_prefix">Number kredit</label>
-									</div>
-								</div>
-							</div>
-							
+							<div class="input-field">
+	                            <select name="jk" required>
+	                                <option disabled selected>Pilih Bank</option>
+	                                <?php foreach ($bank as $key => $value): ?>
+	                                <option value="<?= $value->id_bank ?>"><?= $value->nama_bank ?></option>
+									<?php endforeach; ?>
+	                            </select>
+	                            <label>Bank</label>
+	                        </div>
+
 							<button type="submit" class="btn">submit</button>
 						</form>
 					</div>
