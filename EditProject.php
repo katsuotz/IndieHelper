@@ -13,6 +13,7 @@
 		);
 
 	$db->where($where);
+	$db->join('kategori', '', 'project.id_kategori', 'project.id_project');
 	$db->get_tbl('project');
 	$datas = $db->row_result();
 	$db->get_tbl('kategori');

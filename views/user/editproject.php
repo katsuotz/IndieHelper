@@ -27,22 +27,22 @@
                         <div class="file-group">
                             <div class="row">
                             <?php for ($i = 1; $i <= 5; $i++): ?>
-                            <div class="col s2">
-                                <div class="card white no-shadow">
-                                    <div class="card-image">
-                                        <?php if (empty($img_project[$i - 1])) { array_push($img_project, 'default-project.jpg'); } ?>
-                                        <img src="<?= baseurl('assets/images/project/' . $img_project[$i - 1]) ?>" id="uploaded-project-image<?= $i ?>" class="uploaded-project-image">
-                                        <span class="card-title"></span>
-                                        <a class="btn-floating halfway-fab waves-effect waves-light red choose-file right0 bottom0 square no-shadow" id="choose-file<?= $i ?>"><i class="fa <?php if ($img_project[$i - 1] != 'default-project.jpg') { echo 'fa-remove'; } else echo 'fa-plus'; ?> font14"></i></a>
-                                    </div>
-                                    <div class="card-content hidden">
-                                        <div class="file-field input-field m0 p0" id="file-field<?= $i ?>">
-                                            <input type="file" name="project-image<?= $i ?>" class="hidden project-image<?= $i ?> project-image" id="project-image<?= $i ?>">
-                                        </div>
-                                    </div>
+                    <div class="col s2">
+                        <div class="card white no-shadow">
+                            <div class="card-image">
+                                <?php if (empty($img_project[$i - 1])) { $img_project[$i - 1] = 'default-project.jpg'; } ?>
+                                <img src="<?= baseurl('assets/images/project/' . $img_project[$i - 1]) ?>" id="uploaded-project-image<?= $i ?>" class="uploaded-project-image">
+                                <span class="card-title"></span>
+                                <a class="btn-floating halfway-fab waves-effect waves-light red choose-file right0 bottom0 square no-shadow" id="choose-file<?= $i ?>"><i class="fa <?php if ($img_project[$i - 1] != 'default-project.jpg') { echo 'fa-remove'; } else echo 'fa-plus'; ?> font14"></i></a>
+                            </div>
+                            <div class="card-content hidden">
+                                <div class="file-field input-field m0 p0" id="file-field<?= $i ?>">
+                                    <input type="file" name="project-image<?= $i ?>" class="hidden project-image<?= $i ?> project-image" id="project-image<?= $i ?>">
                                 </div>
                             </div>
-                            <?php endfor; ?>
+                        </div>
+                    </div>
+                    <?php endfor; ?>
                             </div>
                         </div>
                         <div class="input-field">
@@ -53,9 +53,9 @@
                         </div>
                         <div class="input-field">
                             <select name="id_kategori" required>
-                                    <option value="" disabled selected>Choose your option</option>
+                                    <option value="" disabled>Choose your option</option>
                                     <?php for ($i = 0; $i < count($kategori); $i++): ?>
-                                    <option value="<?= $kategori[$i]->nama_kategori ?>"><?= $kategori[$i]->nama_kategori ?></option>
+                                    <option <?php if($datas->nama_kategori == $kategori[$i]->nama_kategori) echo 'selected' ?> value="<?= $kategori[$i]->nama_kategori ?>"><?= $kategori[$i]->nama_kategori ?></option>
                                     <?php endfor; ?>
                                 </select>
                                 <label>Select Category</label>
