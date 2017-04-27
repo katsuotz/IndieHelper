@@ -1,5 +1,5 @@
 
-	<ul id="slide-out" class="side-nav fixed">
+	<ul id="slide-out" class="side-nav desktop fixed">
 		<li>
 			<div class="userView">
 		      	<div class="background">
@@ -87,17 +87,25 @@
 		<nav>
 			<div class="nav-wrapper">
 				<div class="container-fluid">
-					<a href="#" class="white-text left mr1 side-nav-trigger"><i class="material-icons">reorder</i></a>
+					<a href="#" class="white-text left mr1 side-nav-trigger hide-on-med-and-down"><i class="material-icons">menu</i></a>
 					<a href="#!" class="brand-logo white-text">Indie Helper</a>
-					<!-- activate side-bav in mobile view -->
-					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-					<ul class="right hide-on-med-and-down">
+					<ul class="right">
 						<li><a href="<?= baseurl('lib/logout.php') ?>" class="waves-effect waves-shadow">Log Out</a></li>
 					</ul>
+					<!-- activate side-bav in mobile view -->
+					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 					<!-- navbar for mobile -->
-					<ul class="side-nav" id="mobile-demo">
-						<li><a href="sass.html">Sass</a></li>
-						<li><a href="components.html">Components</a></li>
+					<ul class="side-nav fixed hide-on-large-only" id="mobile-demo">
+						<li><a href="<?= baseurl('datauser.php') ?>"><i class="fa fa-users"></i>User</a></li>
+					    <li><a href="<?= baseurl('datakategori.php') ?>"><i class="fa fa-tags"></i>Category</a></li>
+					    <li><a href="<?= baseurl('dataproject.php') ?>"><i class="fa fa-bookmark"></i>Project</a></li>
+					    <li><a href="<?= baseurl('databank.php') ?>"><i class="fa fa-credit-card-alt"></i>Bank</a></li>
+					    <li><a href="<?= baseurl('datadonasi.php') ?>"><i class="fa fa-paypal"></i>Donation</a></li>
+					    <li>
+							<div class="container-fluid center-align copyright">
+								<a href="">IndieHelper</a> &copy; 2017
+							</div>
+						</li>
 					</ul>
 				</div>
 			</div>

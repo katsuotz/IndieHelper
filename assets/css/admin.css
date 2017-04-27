@@ -2,17 +2,23 @@
     min-height: 100vh;
 }
 
-.side-nav a {
+@media only screen and (max-width: 992px) {
+    .all {
+        padding-left: 0 !important;
+    }
+}
+
+.side-nav.desktop a {
     text-transform: capitalize;
 }
 
-.side-nav .dropdown-content {
+.side-nav.desktop .dropdown-content {
     width: auto !important;
     margin-left: 18px !important;
     margin-top: 10px !important;
 }
 
-.side-nav .dropdown-content li { 
+.side-nav.desktop .dropdown-content li { 
     min-height: auto !important;
 }
 

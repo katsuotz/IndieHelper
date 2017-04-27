@@ -43,7 +43,7 @@ $(document).ready(function() {
 			processData: false,
 		})
 		.done(function(result) {
-			console.log(result);
+			Materialize.toast(result + ' mengubah project');
 		})
 		
 	});

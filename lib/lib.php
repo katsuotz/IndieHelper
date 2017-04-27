@@ -7,7 +7,7 @@
 
 	session_start();
 	
-	function baseurl($custom = ''){
+	function baseurl($custom = '') {
 		$baseurl = 'http';
 		$baseurl .= "://".$_SERVER['HTTP_HOST'];
 		$baseurl .= str_replace(basename($_SERVER['SCRIPT_NAME']),"",$_SERVER['SCRIPT_NAME']);
@@ -16,6 +16,9 @@
 		return $baseurl;
 	}
 
+	function location($url) {
+		header('Location: ' . $url);
+	}
 
 	class Database
 	{
@@ -239,7 +242,6 @@
 		function get_session($keyname) {
 			return $_SESSION["$keyname"];
 		}
-
 	}
 
 	$session = new Session();

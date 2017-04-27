@@ -1,8 +1,8 @@
 $(document).ready(function() {
 
 	$('select').material_select();
-	// Initialize collapse button
-	$('.open-slide-out').sideNav({
+
+	$('.button-collapse').sideNav({
 		menuWidth: 300,
 		edge: 'left'
 	});
@@ -28,11 +28,11 @@ $(document).ready(function() {
 
 	function checkerSideNav() {
 		if (sideNavChecker == 0) {
-			$('.side-nav').css('left', '-300px');
+			$('.side-nav.desktop').css('left', '-300px');
 			$('.all').css('padding-left', '0');
 			sideNavChecker = 0;
 		} else {
-			$('.side-nav').css('left', '0');
+			$('.side-nav.desktop').css('left', '0');
 			$('.all').css('padding-left', '300px');
 			sideNavChecker = 1;
 		}
@@ -41,11 +41,11 @@ $(document).ready(function() {
 	$('.side-nav-trigger').click(function(e) {
 		e.preventDefault();
 		if (sideNavChecker == 1) {
-			$('.side-nav').css('left', '-300px');
+			$('.side-nav.desktop').css('left', '-300px');
 			$('.all').css('padding-left', '0');
 			sideNavChecker = 0;
 		} else {
-			$('.side-nav').css('left', '0');
+			$('.side-nav.desktop').css('left', '0');
 			$('.all').css('padding-left', '300px');
 			sideNavChecker = 1;
 		}
