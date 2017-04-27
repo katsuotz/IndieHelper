@@ -242,6 +242,12 @@
 		function get_session($keyname) {
 			return $_SESSION["$keyname"];
 		}
+
+		function unset_session($session) {
+			foreach ($session as $key => $value) {
+				unset($_SESSION["$value"]);
+			}
+		}
 	}
 
 	$session = new Session();

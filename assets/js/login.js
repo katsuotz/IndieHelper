@@ -4,8 +4,6 @@ $(document).ready(function() {
 
 	$('#form-sign-up').submit(function(e) {
 		e.preventDefault();
-
-		
 		
 		$data = new FormData($(this)[0]);
 
@@ -31,15 +29,13 @@ $(document).ready(function() {
 		})
 		.done(function(result) {
 			result = result.trim();
-			console.log(result);
-			console.log('aa');
 			if (result) {
 				if (result == 'admin') {
 					$(location).attr('href', base_url + 'admin.php');
 				}
 
 				if (result == 'user') {
-					$(location).attr('href', base_url + 'user.php');
+					$(location).attr('href', base_url + 'home.php');
 				}
 
 			} else {
