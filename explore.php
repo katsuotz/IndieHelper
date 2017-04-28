@@ -6,7 +6,7 @@
 	$foto =array();
 	foreach ($data as $key => $value) {
 		array_push($foto, json_decode($value->foto));
-		// $foto = ;
+
 	}
 	$assets = array(
 		'css' 	=> array('parent.css', 'explore.css', 'materialize.min.css', 'material-icon.css', 'font-awesome.min.css'),

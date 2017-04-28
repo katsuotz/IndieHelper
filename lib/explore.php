@@ -17,11 +17,12 @@
 			foreach ($data as $key => $value) {
 				array_push($wh,$value);
 			}
-			  
+
 			$db->logic_where('OR');
 			$db->where_explore($wh);
 			$db->get_tbl('project');
 			$result = $db->result();
+			
 			echo json_encode($result);
 		}
 	}

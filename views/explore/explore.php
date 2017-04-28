@@ -8,7 +8,7 @@
                 <div class="card-title">Lorem Ipsum Dolor Sit Amet</div>
 
                 <div class="input-field mt2">
-                    <div class="chips"></div>
+                    <div class="chips chips-placeholder"></div>
                 </div>
             </div>
         </div>
@@ -23,7 +23,6 @@
 
                     </div>
                     <div class="col s6 pt1">
-
                         <button type="button" class="waves-effect waves-light btn right">Add Project</button>
                     </div>
                 </div>

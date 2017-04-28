@@ -1,8 +1,9 @@
 $(document).ready(function() {
-    $('.carousel.carousel-slider').carousel({fullWidth: true});
-    
 	$('.chips').material_chip();
-
+    $('.chips-placeholder').material_chip({
+        placeholder: '+Tag',
+        secondaryPlaceholder: 'Search',
+    });
 	var ss = $('.chip').material_chip('data');
     var as = [];
 
@@ -13,15 +14,12 @@ $(document).ready(function() {
     		 as.push(val.tag);
     	});
 
-    	// $dsad = JSON.stringify(as);
-        console.log(as);
     	ajax(as);
     });
 
     $('.chips').on('chip.delete', function(e, chip){
         $data = $(this).material_chip('data');
         a = [];
-        console.log(a);
         if($data.length > 0){
             $.each($data, function(index, val) {
                  a.push(val.tag);
@@ -29,8 +27,6 @@ $(document).ready(function() {
         }else{
             ajax('');
         }
-
-        // $dsad = JSON.stringify(as);
 
     });
 });
@@ -44,13 +40,19 @@ function ajax(as){
         .done(function(as) {
             var a = JSON.parse(as);
             // console.log(""+as);
+            $i = 0;
+            $arr = [];
             $('.data').html('');
             $.each(a, function(index, val) {
+                $data = JSON.parse(val['foto']);
+                $arr.push($data);
                 $content = '<div class="col s4 p0">\
                         <div class="col s12 ">\
                             <div class="card">\
                                 <div class="card-image">\
-                                    <img src="">\
+                                    <div class="material-placeholder">\
+                                        <div class="materialboxed initialized" style="background-image: url('+base_url+"assets/images/project/"+$arr[$i][0]+');"></div>\
+                                    </div>\
                                 </div>\
                                 <div class="card-content">\
 \
@@ -83,6 +85,7 @@ function ajax(as){
                     </div>';
 
                     $('.data').append($content);
+                    $i += 1;
             });
         });
 }
