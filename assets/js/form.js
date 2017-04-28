@@ -54,7 +54,7 @@ $(document).ready(function() {
 		})
 		.done(function(result) {
 			Materialize.toast(result + " menambah project", 4000);
-		})
+		});
 
 	});
 

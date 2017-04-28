@@ -14,7 +14,7 @@
 			array_push($tags, $value);
 		}
 
-		$tags = json_encode($tags);
+		$tags =	implode($tags, ',');
 
 		$namafile 	= array();
 		$tmpfile  	= array();
