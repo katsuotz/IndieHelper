@@ -33,11 +33,17 @@
 
             <div class="section">
                 <div class="row m0 py0 pl0 pr1 data">
-                    <?php foreach ($data as $key => $value):?>
+                    <?php
+                        $i = 0;
+                        foreach ($data as $value):
+                    ?>
+
                     <div class="col s4 p0">
                         <div class="col s12 ">
                             <div class="card">
-                                <div class="card-image"> <img src="<?= baseurl()?>"> </div>
+                                <div class="card-image">
+                                    <div class="materialboxed" style="background-image: url('<?= baseurl('assets/images/project/').$foto[$i][0]; ?>');"></div>
+                                </div>
                                 <div class="card-content">
                                     <div class="font14 title-category">Travel</div> <span class="card-title"><?= $value->nama ?></span>
                                     <p><?=$value->deskripsi?></p>
@@ -56,7 +62,7 @@
                             </div>
                         </div>
                     </div>
-                <?php endforeach; ?>
+                <?php $i++; endforeach; ?>
                 </div>
             </div>
 

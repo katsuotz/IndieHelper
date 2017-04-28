@@ -2,6 +2,17 @@ body {
     background-color: #F5F5F5 !important;
 }
 
+.card-image{	
+	height: 185px !important;
+}
+
+.card-image div{
+	height: 100%;
+	width: 100%;
+	background-size: cover;
+
+}
+
 .back-banner {
     width: 100%;
     height: 40vh;

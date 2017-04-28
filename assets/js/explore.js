@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+    
 	$('.chips').material_chip();
 
 	var ss = $('.chip').material_chip('data');
