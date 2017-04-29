@@ -1,4 +1,4 @@
-<nav id="navigation">
+    <nav id="navigation">
         <div class="nav-wrapper"> 
         <a href="#" class="brand-logo center purple-text text-lighten-1">IndieHelper</a>
             <ul id="nav-mobile" class="left">

@@ -24,12 +24,12 @@
 				$result_admin = $db->row_result();
 
 				$data = array(
-					'id'		=> $result_admin->id_admin,
-					'id_akun' 	=> $result_admin->id_akun,
-					'username' 	=> $result_admin->username,
-					'status'	=> $result_admin->status,
-					'nama'		=> $result_admin->nama,
-					'foto'		=> $result_admin->foto
+					'ID'		=> $result_admin->id_admin,
+					'ID_AKUN' 	=> $result_admin->id_akun,
+					'USERNAME' 	=> $result_admin->username,
+					'STATUS'	=> $result_admin->status,
+					'NAMA'		=> $result_admin->nama,
+					'FOTO'		=> $result_admin->foto
 					);
 			} elseif ($result->status == 'user') {
 				$where = array('akun.id_akun' => $result->id_akun);
@@ -39,18 +39,18 @@
 				$result_user = $db->row_result();
 				
 				$data = array(
-					'id'		=> $result_user->id_user,
-					'id_akun' 	=> $result_user->id_akun,
-					'username' 	=> $result_user->username,
-					'status'	=> $result_user->status,
-					'nama'		=> $result_user->nama,
-					'foto'		=> $result_user->foto
+					'ID'		=> $result_user->id_user,
+					'ID_AKUN' 	=> $result_user->id_akun,
+					'USERNAME' 	=> $result_user->username,
+					'STATUS'	=> $result_user->status,
+					'NAMA'		=> $result_user->nama,
+					'FOTO'		=> $result_user->foto
 					);
 			}
 			$session->set_session($data);
-			echo $session->get_session('status');
+			echo $session->get_session('STATUS');
 		} else {
-			echo $session->get_session('status');
+			echo $session->get_session('STATUS');
 		}
 
 	}

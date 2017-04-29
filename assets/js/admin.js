@@ -66,7 +66,8 @@ $(document).ready(function() {
 		.done(function(result) {
 			result = JSON.parse(result);
 			Materialize.toast(result.msg + ' menghapus data \
-				<a href="' + base_url + 'lib/UndoDeleteKategori.php" class="btn m0 px1 undo-btn"><i class="material-icons">undo</i></a>\
+				<a href="' + base_url + 'lib/undodelete' + result.tbl + 
+				'.php" class="btn m0 px1 undo-btn"><i class="material-icons">undo</i></a>\
 				<a href="#" class="btn m0 px1 close-toast-btn"><i class="material-icons">clear</i></a>');
 			if ($.trim(result.msg) == 'Berhasil') {
 				row.fadeOut();
@@ -74,17 +75,17 @@ $(document).ready(function() {
 		});
 	});
 
-	// $('.undo-btn').click(function(e) {
-	// 	e.preventDefault();
-	// 	$.ajax({
-	// 		url: $(this).attr('href'),
-	// 		type: 'GET',
-	// 	})
-	// 	.done(function(result) {
-	// 		Materialize.toast(result + ' mengembalikan data');
-	// 		row.fadeIn();
-	// 	});
-	// });
+	$('.undo-btn').click(function(e) {
+		e.preventDefault();
+		$.ajax({
+			url: $(this).attr('href'),
+			type: 'GET',
+		})
+		.done(function(result) {
+			Materialize.toast(result + ' mengembalikan data');
+			row.fadeIn();
+		});
+	});
 
 	$('.add-btn').click(function(e) {
 		e.preventDefault();	
