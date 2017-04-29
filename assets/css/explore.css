@@ -1,6 +1,9 @@
 body {
     background-color: #F5F5F5 !important;
 }
+.clicked{
+    cursor: pointer;
+}
 
 .card-image{	
 	height: 185px !important;
@@ -34,4 +37,13 @@ body {
 
 .chips .input {
 	color: #fff !important
+}
+
+.modal.bottom-sheet{
+    max-height: 90% !important
+}
+
+.modal-footer{
+    box-shadow: 1px -5px 45px -6px rgba(0,0,0,0.45);
+    height: 63px !important
 }

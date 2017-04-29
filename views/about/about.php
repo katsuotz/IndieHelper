@@ -18,7 +18,7 @@
                         <div class="indie">
                         <h3 class="center-align title">Our Team</h3>
                             <div class="row mt3 pt1">
-                                <div class="col s4 center-align">
+                                <div class="col s12 xl4 mt3 center-align">
                                     <div class="card team-card white darken-1">
                                         <div class="card-content black-text">
                                             <div class="avatar">
@@ -42,7 +42,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col s4 center-align">
+                                <div class="col s12 xl4 mt3 center-align">
                                     <div class="card team-card white darken-1">
                                         <div class="card-content black-text">
                                             <div class="avatar">
@@ -66,7 +66,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col s4 center-align">
+                                <div class="col s12 xl4 mt3 center-align">
                                     <div class="card team-card white darken-1">
                                         <div class="card-content black-text">
                                             <div class="avatar">
