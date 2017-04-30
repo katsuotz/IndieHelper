@@ -1,3 +1,6 @@
+body{
+    background-color: #F5F5F5 !important;
+}
 .back-login {
     height: 50vh;
     position: absolute;

@@ -1,5 +1,4 @@
 <div class="back-login purple darken-3">
-    
 </div>
 <div class="row p0">
     <div class="col s4 offset-s4 mt3">
@@ -19,13 +18,13 @@
                     <form action="<?= baseurl('lib/Login.php') ?>" method="POST" id="form-log-in">
                         <div class="input-field">
                             <div class="form-group">
-                                <input id="username_prefix" name="login_username" type="text" class="validate">
+                                <input id="username_prefix" name="login_username" type="text" class="validate" required>
                                 <label for="icon_prefix">Username</label>
                             </div>
                         </div>
                         <div class="input-field">
                             <div class="form-group">
-                                <input id="password_prefix" type="password" class="validate" name="login_password">
+                                <input id="password_prefix" type="password" class="validate" name="login_password" required>
                                 <label for="icon_prefix">Password</label>
                             </div>
                         </div>

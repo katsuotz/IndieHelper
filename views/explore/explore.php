@@ -1,13 +1,11 @@
 <div class="all">
 
-
-
-    <div class="back-banner purple white-text">
+    <div class="back-banner blue darken-2 white-text">
         <div class="container">
             <div class="row">
 
-                <h4 class="m0 pt3 title">IndieHelper</h4>
-                <div class="card-title">Lorem Ipsum Dolor Sit Amet</div>
+                <h4 class="m0 pt3 center-align title">IndieHelper</h4>
+                <div class="card-title  center-align">Explore</div>
 
                 <div class="input-field mt2">
                     <div class="chips chips-placeholder"></div>
@@ -15,7 +13,10 @@
             </div>
         </div>
     </div>
-
+    <div class="row">
+        
+    <div class="content">
+        
     <div class="container">
         <div class="row">
             <div class="section">
@@ -25,7 +26,7 @@
 
                     </div>
                     <div class="col s6 pt1">
-                        <a href="FormProject.php"><button type="button" class="waves-effect waves-light btn right">Add Project</button></a>
+                        <a href="FormProject.php"><button type="button" class="waves-effect blue darken- waves-light btn right">Add Project</button></a>
                     </div>
                 </div>
             </div>
@@ -69,6 +70,8 @@
                 </div>
             </div>
 
+            </div>
+    </div>
         </div>
     </div>
     <div class="test"></div>

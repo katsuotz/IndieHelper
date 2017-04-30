@@ -1,6 +1,6 @@
 <?php 
 	include 'lib/lib.php';
-
+error_reporting(0);
 	$db->get_tbl('project');
 	$data = $db->result();
 	$foto =array();

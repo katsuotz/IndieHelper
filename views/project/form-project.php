@@ -1,6 +1,4 @@
-<div class="back-project purple darken-3">
-    
-</div>
+<div class="back-project blue darken-2"></div>
     <div class="container mt2">
         <div class="row">
             <div class="col s12">
