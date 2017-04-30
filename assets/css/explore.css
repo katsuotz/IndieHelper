@@ -1,10 +1,12 @@
 body {
     background-color: #F5F5F5 !important;
 }
-.clicked{
-    cursor: pointer;
+.chips{
+    border-bottom: 1px solid #fff !important;
 }
-
+.chip.selected{
+    background-color: #1976d2 !important;
+}
 .card-image{	
 	height: 185px !important;
 }
@@ -13,7 +15,9 @@ body {
 	height: 100%;
 	width: 100%;
 	background-size: cover;
-
+    border-bottom: 1px solid rgba(160,160,160,0.2);
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .back-banner {
@@ -32,7 +36,7 @@ body {
 .title-category {
     color: #a8a8a8;
     line-height: 20px;
-    text-transform: uppercase;
+    text-transform: capitalize;
 }
 
 .chips .input {
