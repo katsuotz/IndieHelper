@@ -1,6 +1,6 @@
 <div class="all">
 
-    <div class="back-banner blue darken-2 white-text">
+    <div class="back-banner blue darken-1 white-text">
         <div class="container">
             <div class="row">
 
@@ -26,7 +26,7 @@
 
                     </div>
                     <div class="col s6 pt1">
-                        <a href="FormProject.php"><button type="button" class="waves-effect blue darken- waves-light btn right">Add Project</button></a>
+                        <a href="FormProject.php"><button type="button" class="waves-effect blue darken-1 waves-light btn right">Add Project</button></a>
                     </div>
                 </div>
             </div>
@@ -44,12 +44,11 @@
                         <div class="col s12">
                             <div class="card">
                                 <div class="card-image">
-                                    <div class="materialboxed" style="background-image: url('<?= baseurl('assets/images/project/').$foto[$i][0]; ?>');"></div>
+                                    <div class="materialboxed" data-caption="<?= $value->nama ?>" style="background-image: url('<?= baseurl('assets/images/project/').$foto[$i][0]; ?>');"></div>
                                 </div>
                                 <div class="clicked">
-                                    <div class="card-content">
-                                        <div class="font14 title-category">Travel</div> <span class="card-title"><?= $value->nama ?></span>
-                                        <p><?=$value->deskripsi?></p>
+                                    <div class="card-content"> <span class="card-title"><?= $value->nama ?></span>
+                                        <p class="font12 title-category"><?=$value->deskripsi?></p>
                                     </div>
                                     <div class="card-action">
                                         <h3 class="card-title">RP. <?=$value->target?></h3>
@@ -57,9 +56,9 @@
                                             <div class="determinate" style="width: 70%"></div>
                                         </div>
                                         <div class="row m0 py0 pl0 pr1">
-                                            <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
-                                            <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
-                                            <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                                            <div class="col s4 center-align"> <span>80</span> <span>Donation</span> </div>
+                                            <div class="col s4 center-align"> <span>70%</span> <span>Progress</span> </div>
+                                            <div class="col s4 center-align"> <div>20</div> <span > Ipsum</span> </div>
                                         </div>
                                     </div>
                                 </div>

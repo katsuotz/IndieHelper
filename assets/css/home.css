@@ -1,0 +1,27 @@
+html, body {
+    height: 100%;
+}
+.nav{
+	box-shadow: none 
+}
+.warna{
+	background-color: #3F51B5
+}
+section {
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top:0;
+}
+
+#push {
+    position:relative;
+    height: 100%;
+}
+
+#main {
+    background-color:white;
+    position:relative;
+    z-index:990;
+}

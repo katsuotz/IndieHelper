@@ -1,7 +1,7 @@
 <div class="back-login purple darken-3">
 </div>
 <div class="row p0">
-    <div class="col s4 offset-s4 mt3">
+    <div class="col xl4 m4 offset-xl4 offset-m2 mt3">
         <div class="card">
             <div class="card-image center-align"> 
               <img class="activator" src="<?= baseurl('assets/images/login/banner1.jpg')?>"> 

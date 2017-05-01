@@ -57,8 +57,8 @@ function ajax(as){
                                 </div>\
                                 <div class="clicked">\
                                     <div class="card-content">\
-                                        <div class="font14 title-category">Travel</div> <span class="card-title">'+val['nama']+'</span>\
-                                        <p>'+val['deskripsi']+'</p>\
+                                     <span class="card-title">'+val['nama']+'</span>\
+                                        <p class="font12 title-category">'+val['deskripsi']+'</p>\
                                     </div>\
                                     <div class="card-action">\
                                         <h3 class="card-title">RP. '+val['target']+'</h3>\
@@ -66,9 +66,9 @@ function ajax(as){
                                             <div class="determinate" style="width: 70%"></div>\
                                         </div>\
                                         <div class="row m0 py0 pl0 pr1">\
-                                            <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>\
-                                            <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>\
-                                            <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>\
+                                            <div class="col s4 center-align"> <span>80</span> <span>Donation</span> </div>\
+                                            <div class="col s4 center-align"> <span>70%</span> <span>Progress</span> </div>\
+                                            <div class="col s4 center-align"> <div>20</div> <span > Ipsum</span> </div>\
                                         </div>\
                                     </div>\
                                 </div>\

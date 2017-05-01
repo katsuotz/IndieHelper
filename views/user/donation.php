@@ -2,7 +2,7 @@
 	
 	<div class="container-fluid col s12">
 		<div class="row">
-			<div class="col s8">
+			<div class="col m12 xl8">
 				
 				<div class="card ">
 					<div class="card-content black-text">
@@ -36,12 +36,12 @@
 					
 				</div>
 			</div>
-			<div class="col s4">
+			<div class="col m12 xl4">
 				<div class="card">
 					<div class="card-image"> <img src="<?= baseurl('assets/images/login/banner.jpg')?>"> </div>
 					<div class="card-content">
-						<div class="font14 title-category">Travel</div> <span class="card-title">nama Project</span>
-						<p>Lorem Ipsum Dolor Sit Amet</p>
+					<span class="card-title">nama Project</span>
+						<p class="font12 title-category">Lorem Ipsum Dolor Sit Amet</p>
 					</div>
 					<div class="card-action">
 						<h3 class="card-title">RP. 900000</h3>
