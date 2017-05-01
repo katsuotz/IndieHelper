@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Indie Helper</title>
 <?php foreach ($assets['css'] as $key => $value): ?>
 	<link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
@@ -10,18 +11,10 @@
 
 <?php
 	
-	$sn = $session->get_session('sidenav');
-
-	if ($session->get_session('sidenav') != 0) {
-		$sn = 1;
-	}
-
-	if ($sn != 1) {
-		// $sn = 3;
-	} elseif ($sn != 0) {
-		// $sn = 3;
+	if (!$session->get_session('sidenav')) {
+		$sn = 0;
 	} else {
-		$sn = $sn;
+		$sn = $session->get_session('sidenav');
 	}
 
 	echo "<script>";
