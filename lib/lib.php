@@ -217,12 +217,13 @@
 
 		function files($file){
 			if ($_FILES[$file]['name']) {
-				$name = $_FILES[$file]['name'];
+				$ext  = strtolower(pathinfo($_FILES[$file]['name'],PATHINFO_EXTENSION));
+				$name = md5(time().$_FILES[$file]['name']).".$ext";
 				$data = array(
 					'name' => $name,
 					'dir' => $_FILES[$file]['tmp_name'],
 					'size' => $_FILES[$file]['size'],
-					'ext' => strtolower(pathinfo($name,PATHINFO_EXTENSION)),
+					'ext' => $ext,
 					);
 				return $data;
 			} else {
