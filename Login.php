@@ -1,5 +1,6 @@
 <?php 
 	include 'lib/lib.php';
+	
 	error_reporting(0);
 
 	$assets = array(

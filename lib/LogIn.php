@@ -1,7 +1,6 @@
 <?php 
 
 	include 'lib.php';
-
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$username	= $input->post('login_username');
 		$password	= sha1($input->post('login_password'));

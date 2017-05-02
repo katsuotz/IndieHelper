@@ -27,16 +27,15 @@
                                             <div class="row m0">
                                                 <p class="pt1"> <b>Irvan Lutfi Gunawan</b></p>
                                                 <p class="pb1">Front End & Back End</p>
-                                                <p>I am a very simple card. I am good at containing small bits of information.</p>
 
                                             </div>
                                         </div>
                                         <div class="card-action">
                                             <div class="container-fluid">
                                                 <div class="row">
-                                                    <div class="col s2 offset-s3"><i class="fa fa-facebook fa-2x waves-effect"></i></div>
-                                                    <div class="col s2"><i class="fa fa-instagram fa-2x waves-effect"></i></div>
-                                                    <div class="col s2"><i class="fa fa-twitter fa-2x waves-effect"></i></div>
+                                                    <div class="col s2 offset-s3"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-facebook fa-2x "></i></a></div>
+                                                    <div class="col s2"><a href="https://www.instagram.com/irvan_lg" target="_blank"><i class="fa fa-instagram fa-2x "></i></a></div>
+                                                    <div class="col s2"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-twitter fa-2x "></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -51,16 +50,15 @@
                                             <div class="row m0">
                                                 <p class="pt1"> <b>Jalu Nugroho</b></p>
                                                 <p class="pb1">Front End</p>
-                                                <p>I am a very simple card. I am good at containing small bits of information.</p>
 
                                             </div>
                                         </div>
                                         <div class="card-action">
                                             <div class="container-fluid">
                                                 <div class="row">
-                                                    <div class="col s2 offset-s3"><i class="fa fa-facebook fa-2x waves-effect"></i></div>
-                                                    <div class="col s2"><i class="fa fa-instagram fa-2x waves-effect"></i></div>
-                                                    <div class="col s2"><i class="fa fa-twitter fa-2x waves-effect"></i></div>
+                                                    <div class="col s2 offset-s3"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-facebook fa-2x "></i></a></div>
+                                                    <div class="col s2"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-instagram fa-2x "></i></a></div>
+                                                    <div class="col s2"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-twitter fa-2x "></i></a></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -75,16 +73,15 @@
                                             <div class="row m0">
                                                 <p class="pt1"> <b>M. Irfan Fakhri</b></p>
                                                 <p class="pb1">Front End , Designer & Back End</p>
-                                                <p>I am a very simple card. I am good at containing small bits of information.</p>
 
                                             </div>
                                         </div>
                                         <div class="card-action">
                                             <div class="container-fluid">
                                                 <div class="row">
-                                                    <div class="col s2 offset-s3"><i class="fa fa-facebook fa-2x waves-effect"></i></div>
-                                                    <div class="col s2"><i class="fa fa-instagram fa-2x waves-effect"></i></div>
-                                                    <div class="col s2"><i class="fa fa-twitter fa-2x waves-effect"></i></div>
+                                                    <div class="col s2 offset-s3"><a href="https://web.facebook.com/irfanfakhri66" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></div>
+                                                    <div class="col s2"><a href="https://www.instagram.com/irfanfakhri66/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></div>
+                                                    <div class="col s2"><a href="https://web.facebook.com/irfanfakhri66" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></div>
                                                 </div>
                                             </div>
                                         </div>

@@ -1,3 +1,4 @@
+ 
 <div class="all">
 
     <div class="back-banner blue darken-1 white-text">
@@ -46,7 +47,7 @@
                                 <div class="card-image">
                                     <div class="materialboxed" data-caption="<?= $value->nama ?>" style="background-image: url('<?= baseurl('assets/images/project/').$foto[$i][0]; ?>');"></div>
                                 </div>
-                                <div class="clicked">
+                                <div data-target="modal1" class="clicked">
                                     <div class="card-content"> <span class="card-title"><?= $value->nama ?></span>
                                         <p class="font12 title-category"><?=$value->deskripsi?></p>
                                     </div>
