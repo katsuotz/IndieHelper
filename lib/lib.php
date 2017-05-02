@@ -241,7 +241,8 @@
 		}
 
 		function get_session($keyname) {
-			return $_SESSION["$keyname"];
+			$data = @$_SESSION["$keyname"];
+			return $data;
 		}
 
 		function unset_session($session) {

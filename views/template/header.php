@@ -11,7 +11,7 @@
 
 <?php
 	
-	if (!$session->get_session('sidenav')) {
+	if ($session->get_session('sidenav')) {
 		$sn = 0;
 	} else {
 		$sn = $session->get_session('sidenav');

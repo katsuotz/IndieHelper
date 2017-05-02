@@ -32,7 +32,6 @@
 						'NAMA'		=> $result_admin->nama,
 						'FOTO'		=> $result_admin->foto
 						);
-					$session->set_session($data);
 				}
 
 			} elseif ($result->status == 'user') {
@@ -50,10 +49,13 @@
 						'STATUS'	=> $result_user->status,
 						'NAMA'		=> $result_user->nama,
 						'FOTO'		=> $result_user->foto
-						);
-					$session->set_session($data);
+						);	
 				}
 			}
+		}
+
+		if (!empty($data)) {
+			$session->set_session($data);
 		}
 
 		echo $session->get_session('STATUS');
