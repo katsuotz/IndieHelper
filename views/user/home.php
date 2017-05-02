@@ -13,8 +13,8 @@
                                 </div>
                                 <div class="card-action">
                                     <h3 class="card-title">RP. 100</h3>
-                                    <div class="progress">
-                                        <div class="determinate" style="width: 70%"></div>
+                                    <div class="progress purple lighten-4">
+                                        <div class="determinate purple lighten-3 " style="width: 70%"></div>
                                     </div>
                                     <div class="row m0 py0 pl0 pr1">
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
@@ -30,8 +30,8 @@
                                 </div>
                                 <div class="card-action">
                                     <h3 class="card-title">RP. 100</h3>
-                                    <div class="progress">
-                                        <div class="determinate" style="width: 70%"></div>
+                                    <div class="progress purple lighten-4">
+                                        <div class="determinate purple lighten-3 " style="width: 70%"></div>
                                     </div>
                                     <div class="row m0 py0 pl0 pr1">
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
@@ -47,8 +47,8 @@
                                 </div>
                                 <div class="card-action">
                                     <h3 class="card-title">RP. 100</h3>
-                                    <div class="progress">
-                                        <div class="determinate" style="width: 70%"></div>
+                                    <div class="progress purple lighten-4">
+                                        <div class="determinate purple lighten-3 " style="width: 70%"></div>
                                     </div>
                                     <div class="row m0 py0 pl0 pr1">
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
@@ -88,8 +88,8 @@
                                 </div>
                                 <div class="card-action">
                                     <h3 class="card-title">RP. 100</h3>
-                                    <div class="progress">
-                                        <div class="determinate" style="width: 70%"></div>
+                                    <div class="progress purple lighten-4">
+                                        <div class="determinate purple lighten-3 " style="width: 70%"></div>
                                     </div>
                                     <div class="row m0 py0 pl0 pr1">
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
@@ -105,10 +105,10 @@
                                 </div>
                                 <div class="card-action">
                                     <h3 class="card-title">RP. 100</h3>
-                                    <div class="progress">
-                                        <div class="determinate" style="width: 70%"></div>
+                                    <div class="progress purple lighten-4">
+                                        <div class="determinate purple lighten-3 " style="width: 70%"></div>
                                     </div>
-                                    <div class="row m0 py0 pl0 pr1">
+                                       <div class="row m0 py0 pl0 pr1">
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
@@ -122,8 +122,8 @@
                                 </div>
                                 <div class="card-action">
                                     <h3 class="card-title">RP. 100</h3>
-                                    <div class="progress">
-                                        <div class="determinate" style="width: 70%"></div>
+                                    <div class="progress purple lighten-4">
+                                        <div class="determinate purple lighten-3 " style="width: 70%"></div>
                                     </div>
                                     <div class="row m0 py0 pl0 pr1">
                                         <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>

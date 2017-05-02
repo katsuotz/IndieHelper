@@ -1,7 +1,9 @@
 .nav-item, .nav-item * {
     line-height: 54px;
 }
-
+a,h1,h2,h3,h4,h5,body{
+    color: #6a1b9a !important;
+}
 .foto{
     height: 70%;
 }
