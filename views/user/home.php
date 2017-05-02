@@ -1,26 +1,10 @@
-<div class="parallax">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <h4 class="header center teal-text -text-lighten-3"></h4>
-        <div class="row center">
-          <h4 class="header col s12 light white-text" style="padding-top:80px;">sadasgaadgags</h4>
-        </div>
-        <div class="row center">
-          <h5 class="header col s12 white-text">zcjksbkjbakjsnckjnasjkclnasnckancskna</h5>
-        </div>
-      </div>
-    </div>
-    </div>
-
-<div class="isi">
-     <div class="container">
-    <div class="section">
+  <div class="parallax-container">
+    <div class="parallax"><img src="assets/images/gal/asd.jpg"></div>
+  </div>
+<div class="section white">
+    <div class="row container">
+      <h2 class="header center">Rcently</h2>
       <div class="row center">
-            <h4 center>Popular</h4>
-                  <div class="divider"></div>
-        </div>
-
-        <div class="row ">
     <div class="card uk">
                                 <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
                                 <div class="card-content">
@@ -74,7 +58,6 @@
         </div></div>
         </div>
       </div>
-    </div>
   </div>
   <div class="parallax-container">
     <div class="parallax"><img src="images/parallax1.jpg"></div>
@@ -87,7 +70,6 @@
     <div class="row container ">
         <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">desain<i class="right grey-text text-darken-2">(12)</i></div>
         <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">Food<i class="right grey-text text-darken-2">(12)</i></div>
-        <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">Inovation<i class="right grey-text text-darken-2">(12)</i></div>
         <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">gaget<i class="right grey-text text-darken-2">(12)</i></div>
         <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">gaget<i class="right grey-text text-darken-2">(12)</i></div>
         <div class="ct card-panel teal lighten-2 col s6 m4 l2 btn">gaget<i class="right grey-text text-darken-2">(12)</i></div>
@@ -152,22 +134,3 @@
     </div>
       <div class="row center"><a class="waves-effect waves-light btn">More</a></div>
   </div>
-    <div class="parallax1">
-        <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        <h4 class="header center teal-text -text-lighten-3"></h4>
-        <div class="row center">
-          <h4 class="header col s12 light white-text " style="padding-top:180px;">Joint whit Us</h4>
-        </div>
-        <div class="row center">
-        <div class="col s12">
-            <button id="A" class="waves-effect waves-light btn btn-info">Login</button>
-        </div>
-        <div class="col s12">
-            <button id="A" class="waves-effect waves-light btn btn-info">Sigen Up mow</button>
-        </div>
-    </div>
-        </div>
-      </div>
-    </div>

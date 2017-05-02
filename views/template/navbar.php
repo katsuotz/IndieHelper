@@ -1,13 +1,13 @@
-   <nav id="navigation">
-        <div class="nav-wrapper"> 
+   <nav>
+        <div class="nav-wrapper purple lighten-3"> 
         <a href="#" class="brand-logo center purple-text text-lighten-1">IndieHelper</a>
             <ul id="nav-mobile" class="left">
-                <li>
+                <li class="nav-item">
                     <a data-activates="slide-out" class="waves-effect waves-shadow"> <i data-activates="slide-out"  class="button-sid  purple-text text-lighten-1 fa fa-bars fa-2x" aria-hidden="true"></i> </a>
                 </li>
                 <li class="waves-effect waves-shadow"> <a href="Explore.html" class="purple-text text-lighten-1">Explore</a> </li>
             </ul>
-            <ul class="right">
+            <ul class="right nav-item">
                 <li>
                     <a data-activates='dropdown1' class="waves-effect waves-shadow dropdown-btn"> <i class="valign-wrapper">
                                 <img class="foto circle center" src="assets/images/admin/account.png">

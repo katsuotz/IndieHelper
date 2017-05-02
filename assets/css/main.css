@@ -1,3 +1,7 @@
+.nav-item, .nav-item * {
+    line-height: 54px;
+}
+
 .foto{
     height: 70%;
 }
