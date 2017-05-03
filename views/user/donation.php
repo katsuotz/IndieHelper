@@ -6,23 +6,23 @@
 				
 				<div class="card ">
 					<div class="card-content black-text">
-						<span class="card-title">Judul Project Donasi</span>
-						<form action="" method="POST">
+						<span class="card-title">Project Donations</span>
+						<form action="<?=baseurl('lib/ActionDonation.php?id_project=').$idproject?>" method="POST" id="projectdonation">
 							<div class="input-field">
 								<div class="form-group">
-									<input name="jumlah" type="number" class="form-control">
-									<label>Jumlah Donasi</label>
+									<input name="jumlah" type="number" required class="form-control">
+									<label>Donations</label>
 								</div>
 							</div>
 							<div class="input-field">
 								<div class="form-group">
-									<textarea name="feedback" class="materialize-textarea" id="textarea1"></textarea>
+									<textarea name="feedback" required class="materialize-textarea" id="textarea1"></textarea>
 									<label>Feedback</label>
 								</div>
 							</div>
 							<div class="input-field">
-	                            <select name="jk" required>
-	                                <option disabled selected>Pilih Bank</option>
+	                            <select name="bank" required>
+	                                <option disabled selected>Bank</option>
 	                                <?php foreach ($bank as $key => $value): ?>
 	                                <option value="<?= $value->id_bank ?>"><?= $value->nama_bank ?></option>
 									<?php endforeach; ?>
@@ -38,13 +38,16 @@
 			</div>
 			<div class="col m12 xl4">
 				<div class="card">
-					<div class="card-image"> <img src="<?= baseurl('assets/images/login/banner.jpg')?>"> </div>
+					<div class="card-image">
+					<div class="materialboxed" data-caption="<?= $datas->nama ?>" style="background-image: url('<?= baseurl('assets/images/project/').$foto[0][0]; ?>');"></div>
+						 
+					</div>
 					<div class="card-content">
-					<span class="card-title">nama Project</span>
-						<p class="font12 title-category">Lorem Ipsum Dolor Sit Amet</p>
+					<span class="card-title"><?=$datas->nama?></span>
+						<p class="font12 title-category"><?=$datas->deskripsi?></p>
 					</div>
 					<div class="card-action">
-						<h3 class="card-title">RP. 900000</h3>
+						<h3 class="card-title">RP. <?=$datas->target?></h3>
 						<div class="progress">
 							<div class="determinate" style="width: 70%"></div>
 						</div>

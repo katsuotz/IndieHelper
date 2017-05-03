@@ -1,4 +1,4 @@
-$(document).ready(function() {
+ $(document).ready(function() {
 
 	$('select').material_select();
 	$('.chips-initial').material_chip();

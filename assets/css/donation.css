@@ -1,0 +1,21 @@
+
+body{
+    background-color: #F5F5F5 !important;
+}
+
+.card-image{	
+	height: 285px !important;
+}
+
+.card-image div{
+	height: 100%;
+	width: 100%;
+	border-bottom: 1px solid rgba(160,160,160,0.2);
+    
+}
+
+.card-image div div{
+	background-size: cover;
+	background-position: center center;
+    background-repeat: no-repeat;
+}

@@ -132,5 +132,5 @@
                                     </div>
         </div></div>
     </div>
-      <div class="row center"><a class="waves-effect waves-light btn">More</a></div>
+      <div class="row center"><a class="waves-effect waves-dark btn purple darken-1">More</a></div>
   </div>

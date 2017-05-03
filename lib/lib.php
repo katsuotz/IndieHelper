@@ -151,7 +151,7 @@
 			$this->join = array();
 		}
 
-		function update($value, $tblname = '') {
+		function update($value,$kutip = true, $tblname = '') {
 			if ($tblname)
 				$this->tblname = $tblname;
 			$row = array();
@@ -164,12 +164,19 @@
 
 			$data = array();
 
-			for ($i = 0; $i < count($row); $i++) {
-				array_push($data, ($row[$i] . " = '" . $col[$i]) . "'");
+			if($kutip == true){
+				for ($i = 0; $i < count($row); $i++) {
+					array_push($data, ($row[$i] . " = '" . $col[$i]). "'" );
+				}
+			}else{
+				for ($i = 0; $i < count($row); $i++) {
+					array_push($data, ($row[$i] . " = " . $col[$i]) );
+				}
 			}
 
 			$query = "UPDATE $this->tblname SET " . implode(', ', $data) . " $this->where";
 			
+
 			if($this->mysqli->query($query))
 				return 'Berhasil';
 			else

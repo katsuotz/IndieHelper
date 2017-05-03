@@ -1,5 +1,5 @@
    <nav>
-        <div class="nav-wrapper purple lighten-3"> 
+        <div class="nav-wrapper purple darken-2 "> 
         <a href="#" class="brand-logo center blue-grey-text text-lighten-5">IndieHelper</a>
             <ul id="nav-mobile" class="left">
                 <li class="nav-item">
