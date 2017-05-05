@@ -1,27 +1,55 @@
-html, body {
-    height: 100%;
+.parallax-container{
+    /*clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%) !important;*/
+    width: 100%;
+    height: 520px !important
 }
-.nav{
-	box-shadow: none 
+
+.margin-custom{
+    margin-top: 9em !important
 }
-.warna{
-	background-color: #3F51B5
+
+.card-image{    
+    height: 185px !important;
 }
-section {
+
+.card-image-explore{    
+    height: 185px !important;
+
+    cursor: pointer;
+}
+
+.image-project div{
     height: 100%;
     width: 100%;
-    min-height: 100%;
-    position: fixed;
-    top:0;
+    background-size: cover;
+    border-bottom: 1px solid rgba(160,160,160,0.2);
+    /*background-position: center ;*/
+    background-repeat: no-repeat;
 }
 
-#push {
-    position:relative;
+.font-title{
+    font-size: 1.3em
+}
+
+.data-colec a{
+    color: #000 !important;
+}
+
+.data-colec a.active{
+    color: #039be5 !important;
+}
+
+.back-overlay{
+        position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
     height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 0;
+    transition: .3s ease-in-out;
 }
 
-#main {
-    background-color:white;
-    position:relative;
-    z-index:990;
+.card-image-explore:hover .back-overlay{
+    background-color: rgba(0,0,0,0.25);
 }

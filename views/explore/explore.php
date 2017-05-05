@@ -1,4 +1,14 @@
- 
+
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+    </div>
+  </div>
+
 <div class="all">
 
     <div class="back-banner blue darken-1 white-text">
@@ -17,25 +27,24 @@
     <div class="row">
         
     <div class="content">
-        
-    <div class="container">
-        <div class="row">
-            <div class="section">
-                <div class="row m0 py0 pl0 pr1">
-                    <div class="col s6">
-                        <h5>Explore Project</h5>
+        <div class="container">
+            <div class="row">
+                <div class="section">
+                    <div class="row m0 py0 pl0 pr1">
+                        <div class="col s6">
+                            <h5>Explore Project</h5>
 
-                    </div>
-                    <div class="col s6 pt1">
-                        <a href="FormProject.php"><button type="button" class="waves-effect blue darken-1 waves-light btn right">Add Project</button></a>
+                        </div>
+                        <div class="col s6 pt1">
+                            <a href="FormProject.php"><button type="button" class="waves-effect blue darken-1 waves-light btn right">Add Project</button></a>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="divider"></div>
+                <div class="divider"></div>
 
-            <div class="section">
-                <div class="row m0 py0 pl0 pr1 data">
+                <div class="section">
+                    <div class="row m0 py0 pl0 pr1 data">
                     <?php
                         $i = 0;
                         foreach ($data as $value):
@@ -67,11 +76,8 @@
                         </div>
                     </div>
                 <?php $i++; endforeach; ?>
+                    </div>
                 </div>
             </div>
-
-            </div>
-    </div>
         </div>
     </div>
-    <div class="test"></div>

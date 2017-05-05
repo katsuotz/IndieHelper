@@ -8,7 +8,7 @@ $assets = array(
 	);
 
 include 'views/template/header.php';
-include 'views/template/nanavbaran.php';
+// include 'views/template/nanavbaran.php';
 include 'views/home/home.php';
 include 'views/template/footer_admin.php';
 

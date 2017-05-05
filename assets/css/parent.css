@@ -1,7 +1,7 @@
-html {
+/*html {
    font-family: 'Noto Sans', sans-serif !important;
   }
-      
+      */
 body {
     background-color: #E9EAED;
 }
@@ -427,6 +427,10 @@ body {
 	padding-bottom: 3rem !important;
 }
 
+.pt4{
+	padding-top: 4rem !important;
+}
+
 .container-fluid {
   margin-left: auto;
   margin-right: auto;
@@ -598,6 +602,14 @@ body {
 
 .fontsize1 {
 	font-size: 1em !important;
+}
+
+.fontsize2 {
+	font-size: 2em !important;
+}
+
+.fontsize3 {
+	font-size: 3em !important;
 }
 
 .hidden {
