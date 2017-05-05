@@ -1,21 +1,24 @@
 body {
     background-color: #F5F5F5 !important;
 }
-.chips{
+
+.chips {
     border-bottom: 1px solid #fff !important;
 }
-.chip.selected{
+
+.chip.selected {
     background-color: #1976d2 !important;
 }
-.card-image{	
-	height: 185px !important;
+
+.card-image {
+    height: 185px !important;
 }
 
-.card-image div{
-	height: 100%;
-	width: 100%;
-	background-size: cover;
-    border-bottom: 1px solid rgba(160,160,160,0.2);
+.card-image div {
+    height: 100%;
+    width: 100%;
+    background-size: cover;
+    border-bottom: 1px solid rgba(160, 160, 160, 0.2);
     /*background-position: center ;*/
     background-repeat: no-repeat;
 }
@@ -40,6 +43,5 @@ body {
 }
 
 .chips .input {
-	color: #fff !important
+    color: #fff !important
 }
-

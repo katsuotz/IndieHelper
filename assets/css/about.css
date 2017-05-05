@@ -9,8 +9,9 @@
 .profile-card {
     min-height: 80vh;
 }
-.title{
-	line-height: 102px
+
+.title {
+    line-height: 102px
 }
 
 .avatar img {
@@ -24,29 +25,34 @@
     padding: 5px;
 }
 
-.circle{
-        border-radius: 100px 100px 100px 0 !important;
+.circle {
+    border-radius: 100px 100px 100px 0 !important;
 }
-.fa-facebook{
+
+.fa-facebook {
     color: #3b5998;
 }
-.fa-instagram{
-    color:#bc2a8d;
+
+.fa-instagram {
+    color: #bc2a8d;
 }
-.fa-instagram:hover{
-    color:#cd486b;
+
+.fa-instagram:hover {
+    color: #cd486b;
 }
-.fa-twitter{
+
+.fa-twitter {
     color: #1dcaff;
 }
-.fa-twitter:hover{
-    color: #00aced  
+
+.fa-twitter:hover {
+    color: #00aced
 }
 
-.card .card-content p{
-        color: rgba(0, 0, 0, 0.81) !important;
+.card .card-content p {
+    color: rgba(0, 0, 0, 0.81) !important;
 }
 
-.team-card {    
-  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 9px 0 rgba(0, 0, 0, 0.19) !important;
+.team-card {
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.2), 0 2px 9px 0 rgba(0, 0, 0, 0.19) !important;
 }

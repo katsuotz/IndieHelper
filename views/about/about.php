@@ -16,7 +16,7 @@
                             </div>
                         </div>
                         <div class="indie">
-                        <h3 class="center-align title">Our Team</h3>
+                            <h3 class="center-align title">Our Team</h3>
                             <div class="row mt3 pt1">
                                 <div class="col s12 xl4 mt3 center-align">
                                     <div class="card team-card white darken-1">

@@ -1,75 +1,77 @@
-$(document).ready(function() {
+$(document).ready(function () {
     $('.modal').modal({
-         startingTop: '4%', // Starting top style attribute
-      endingTop: '10%', // Ending top style attribute
+        startingTop: '4%', // Starting top style attribute
+        endingTop: '10%', // Ending top style attribute
     });
     $('.slider').slider({
-        indicators:false,
-        height:800
+        indicators: false,
+        height: 800
     });
     $('.materialboxed').materialbox();
-	$('.chips').material_chip();
-	var ss = $('.chip').material_chip('data');
+    $('.chips').material_chip();
+    var ss = $('.chip').material_chip('data');
     var as = [];
 
-    
+
     $('.chips-placeholder').material_chip({
         placeholder: '+Tag',
         secondaryPlaceholder: 'Search',
     });
 
 
-   	$('.chips').on('chip.add', function(e, chip){
-    	as = [];
-    	$.each($(this).material_chip('data'), function(index, val) {
-    		 as.push(val.tag);
-    	});
+    $('.chips').on('chip.add', function (e, chip) {
+        as = [];
+        $.each($(this).material_chip('data'), function (index, val) {
+            as.push(val.tag);
+        });
 
-    	ajax(as);
-   });
+        ajax(as);
+    });
 
-    $('.chips').on('chip.delete', function(e, chip){
+    $('.chips').on('chip.delete', function (e, chip) {
         $data = $(this).material_chip('data');
         a = [];
-        if($data.length > 0){
-            $.each($data, function(index, val) {
-                 a.push(val.tag);
+        if ($data.length > 0) {
+            $.each($data, function (index, val) {
+                a.push(val.tag);
             });
-        }else{
+        } else {
             ajax('');
         }
     });
 });
 
-function ajax(as){
-            $.ajax({
-            url: base_url+"lib/explore.php",
+function ajax(as) {
+    $.ajax({
+            url: base_url + "lib/explore.php",
             type: 'POST',
-            data: {search : as},
+            data: {
+                search: as
+            },
         })
-        .done(function(as) {
+        .done(function (as) {
             var a = JSON.parse(as);
             // console.log(""+as);
             $i = 0;
             $arr = [];
             $('.data').html('');
-            $.each(a, function(index, val) {
+            $.each(a, function (index, val) {
                 $data = JSON.parse(val['foto']);
                 $arr.push($data);
                 console.log(val);
-                    $content = '<div class="col s12 xl4 p0 ">\
+                $content = '<div class="col s12 xl4 p0 ">\
                         <div class="col s12">\
                             <div class="card">\
                                 <div class="card-image">\
-                                <div class="material-placeholder"><div class="materialboxed initialized" style="background-image: url('+base_url+"assets/images/project/"+$arr[$i][0]+');"></div></div>\
+                                <div class="material-placeholder"><div class="materialboxed initialized" style="background-image: url(' + base_url + "assets/images/project/" + $arr[$i][0] + ');"></div></div>\
                                 </div>\
                                 <div class="clicked">\
                                     <div class="card-content">\
-                                     <span class="card-title">'+val['nama']+'</span>\
-                                        <p class="font12 title-category">'+val['deskripsi']+'</p>\
+                                     <span class="card-title">' + val['nama'] + '</span>\
+                                        <p class="font12 title-category">' + val['deskripsi'] + '</p>\
                                     </div>\
                                     <div class="card-action">\
-                                        <h3 class="card-title">RP. '+val['target']+'</h3>\
+                                        <h3 class="card-title">RP. ' + val['target'] + '</h3>\
                                         <div class="progress">\
                                             <div class="determinate" style="width: 70%"></div>\
                                         </div>\
@@ -84,8 +86,8 @@ function ajax(as){
                         </div>\
                     </div>';
 
-                    $('.data').append($content);
-                    $i += 1;
+                $('.data').append($content);
+                $i += 1;
             });
         });
 }

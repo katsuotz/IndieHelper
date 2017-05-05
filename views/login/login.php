@@ -3,9 +3,9 @@
 <div class="row p0">
     <div class="col xl4 m4 offset-xl4 offset-m2 mt3">
         <div class="card">
-            <div class="card-image center-align"> 
-              <img class="activator" src="<?= baseurl('assets/images/login/banner1.jpg')?>"> 
-              <h3 class="card-title center col s12 top50 font42">IndieHelper</h3>
+            <div class="card-image center-align">
+                <img class="activator" src="<?= baseurl('assets/images/login/banner1.jpg')?>">
+                <h3 class="card-title center col s12 top50 font42">IndieHelper</h3>
             </div>
             <div class="card-tabs">
                 <ul class="tabs tabs-fixed-width">

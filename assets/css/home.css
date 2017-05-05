@@ -1,55 +1,54 @@
-.parallax-container{
+.parallax-top {
     /*clip-path: polygon(0 0, 1600px 0, 1600px 87%, 0 100%) !important;*/
     width: 100%;
     height: 520px !important
 }
 
-.margin-custom{
+.margin-custom {
     margin-top: 9em !important
 }
 
-.card-image{    
+.card-image {
     height: 185px !important;
 }
 
-.card-image-explore{    
+.card-image-explore {
     height: 185px !important;
-
     cursor: pointer;
 }
 
-.image-project div{
+.image-project div {
     height: 100%;
     width: 100%;
     background-size: cover;
-    border-bottom: 1px solid rgba(160,160,160,0.2);
+    border-bottom: 1px solid rgba(160, 160, 160, 0.2);
     /*background-position: center ;*/
     background-repeat: no-repeat;
 }
 
-.font-title{
+.font-title {
     font-size: 1.3em
 }
 
-.data-colec a{
+.data-colec a {
     color: #000 !important;
 }
 
-.data-colec a.active{
+.data-colec a.active {
     color: #039be5 !important;
 }
 
-.back-overlay{
-        position: absolute;
+.back-overlay {
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.6);
+    background-color: rgba(0, 0, 0, 0.6);
     z-index: 0;
     transition: .3s ease-in-out;
 }
 
-.card-image-explore:hover .back-overlay{
-    background-color: rgba(0,0,0,0.25);
+.card-image-explore:hover .back-overlay {
+    background-color: rgba(0, 0, 0, 0.25);
 }
