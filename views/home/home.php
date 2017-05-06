@@ -30,27 +30,56 @@
                 <?php for ($i=0; $i < 6 ; $i++) : ?>
                 <div class="col s12 xl4 p0 ">
                     <div class="col s12">
-                        <div class="card">
-                            <div class="card-image image-project">
-                                <div class="materialboxed" data-caption="<?= $value->nama ?>" style="background-image: url('<?= baseurl('assets/images/template/plx-bg.jpg'); ?>');"></div>
-                            </div>
-                            <div data-target="modal1" class="clicked">
-                                <div class="card-content"> <span class="card-title">Google Project</span>
-                                    <p class="font12 title-category">This Is Spartan</p>
+                        <div class="card grey lighten-5 z-depth-1" style="padding: 24px;">
+                            <div class="row mb0">
+                                <div class="col s12">
+                                    <p>Lorem Ipsum Dolor Sit Amet</p>
                                 </div>
-                                <div class="card-action">
-                                    <h3 class="card-title">RP. 900000</h3>
+                                <div class="col s12">
+                                    <div class="row valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="<?=baseurl('assets/images/user/irvan.jpg')?>" alt="" class="circle responsive-img">
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text font17">Irvan Lutfi Gunawan</span>
+                                            <p class="m0 font12">Bandung, Indonesia</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="card-image"> -->
+                            <div class="container-fluid">
+                                <div class="row valign-wrapper">
+                                    <div class="carousel">
+                                        <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/250/250/nature/5"></a>
+                                        <a class="carousel-item" href="#two!"><img src="<?=baseurl('assets/images/user/irvan.jpg')?>"></a>
+                                        <a class="carousel-item" href="#three!"><img src="<?=baseurl('assets/images/user/irvan.jpg')?>"></a>
+                                        <a class="carousel-item" href="#four!"><img src="<?=baseurl('assets/images/user/irvan.jpg')?>"></a>
+                                        <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/nature/5"></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row valign-wrapper mb0">
+
+                                <div class="col s12">
+
+                                    <h3 class="card-title">RP. 80000</h3>
                                     <div class="progress">
                                         <div class="determinate" style="width: 70%"></div>
                                     </div>
-                                    <div class="row m0 py0 pl0 pr1">
-                                        <div class="col s4 center-align"> <span>80</span> <span>Donation</span> </div>
-                                        <div class="col s4 center-align"> <span>70%</span> <span>Progress</span> </div>
-                                        <div class="col s4 center-align">
-                                            <div>20</div> <span> Ipsum</span> </div>
+                                    <div class="col s2">
+                                        <img src="<?=baseurl('assets/images/user/irvan.jpg')?>" alt="" class="circle responsive-img">
+                                    </div>
+                                    <div class="col s2">
+                                        <img src="<?=baseurl('assets/images/user/irvan.jpg')?>" alt="" class="circle responsive-img">
+                                    </div>
+                                    <div class="col s8">
+                                        <p>+ 200 People Join</p>
                                     </div>
                                 </div>
+
                             </div>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>
@@ -118,14 +147,14 @@
         </div>
     </div>
 </div>
-<div class="parallax-container">
+<div class="parallax-container parallax-footer">
     <div class="parallax">
         <img src="<?=baseurl('assets/images/template/bg.jpg')?>">
         <div class="back-overlay"></div>
     </div>
     <div class="parallax-content py3">
         <div class="container white-text">
-            <div class="row center-align" style="margin-top: 28vh">
+            <div class="row center-align" style="margin-top: 13vh">
                 <h2 class="m0">Get Started</h2>
                 <p>Lorem Ipsum Dolor Sit Amet</p>
                 <a class="waves-effect waves-light btn indigo darken-1">Start a project</a>

@@ -4,6 +4,10 @@
     height: 520px !important
 }
 
+.parallax-footer {
+    height: 400px !important;
+}
+
 .margin-custom {
     margin-top: 9em !important
 }
@@ -44,11 +48,21 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
+    background-color: rgba(0, 0, 0, 0.4);
     z-index: 0;
     transition: .3s ease-in-out;
 }
 
 .card-image-explore:hover .back-overlay {
     background-color: rgba(0, 0, 0, 0.25);
+}
+
+.card-panel {
+    margin: .1rem 0 1rem 0 !important;
+}
+
+.circle {
+    width: 45px !important;
+    height: 45px !important;
+    max-width: 45px !important;
 }
