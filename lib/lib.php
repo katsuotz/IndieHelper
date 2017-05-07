@@ -133,7 +133,7 @@
 			array_push($this->join, $join);
 		}
 
-		function get_tbl($tblname = '') {
+		function get_tbl($tblname = '',$limit = false,$count = 0) {
 			if ($tblname)
 				$this->tblname = $tblname;
 
@@ -143,12 +143,17 @@
 				$this->join = '';
 			}
 
-			$query = "SELECT $this->select FROM $this->tblname $this->join $this->where";
+			if($limit)
+				$query = "SELECT $this->select FROM $this->tblname $this->join $this->where LIMIT $count";
+			else
+				$query = "SELECT $this->select FROM $this->tblname $this->join $this->where";
+
 			$this->data = $this->mysqli->query($query);
 			$this->select = '*';
 			$this->tblname = '';
 			$this->where = '';
 			$this->join = array();
+			
 		}
 
 		function update($value,$kutip = true, $tblname = '') {

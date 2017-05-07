@@ -27,43 +27,40 @@
         <div class="content-card pt2">
             <div class="row">
 
-                <?php for ($i=0; $i < 6 ; $i++) : ?>
+                <?php $i = 0; foreach ($data as $key => $value){ ?>
                 <div class="col s12 xl4 p0 ">
                     <div class="col s12">
-                        <div class="card grey lighten-5 z-depth-1" style="padding: 24px;">
+                        <div class="card grey lighten-5 z-depth-1" style="padding: 6px 24px 24px 24px;">
+                                <div class="carousel">
+                                    <?php
+                                        $ah = count($foto[1]);
+                                        for ($i=0; $i < 3; $i++) { 
+                                    ?>
+                                    <a class="carousel-item" href="<?=$fotohref[$i]?>"><img src="http://localhost:8080/IndieHelper/assets/images/user/irvan.jpg"></a>
+                                    <?php } ?>
+                                </div>
                             <div class="row mb0">
                                 <div class="col s12">
-                                    <p>Lorem Ipsum Dolor Sit Amet</p>
+                                    <p class="font24"><?=$value->nama_project?></p>
                                 </div>
                                 <div class="col s12">
                                     <div class="row valign-wrapper">
                                         <div class="col s2">
-                                            <img src="<?=baseurl('assets/images/user/irvan.jpg')?>" alt="" class="circle responsive-img">
+                                            <img src="<?=baseurl('assets/images/user/').$value->foto_user?>" alt="" class="circle responsive-img">
                                         </div>
                                         <div class="col s10">
-                                            <span class="black-text font17">Irvan Lutfi Gunawan</span>
-                                            <p class="m0 font12">Bandung, Indonesia</p>
+                                            <span class="black-text font17"><?= $value->nama ?></span>
+                                            <p class="m0 font12"><?= $value->alamat ?></p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <!-- <div class="card-image"> -->
-                            <div class="container-fluid">
-                                <div class="row valign-wrapper">
-                                    <div class="carousel">
-                                        <a class="carousel-item" href="#one!"><img src="http://lorempixel.com/250/250/nature/5"></a>
-                                        <a class="carousel-item" href="#two!"><img src="<?=baseurl('assets/images/user/irvan.jpg')?>"></a>
-                                        <a class="carousel-item" href="#three!"><img src="<?=baseurl('assets/images/user/irvan.jpg')?>"></a>
-                                        <a class="carousel-item" href="#four!"><img src="<?=baseurl('assets/images/user/irvan.jpg')?>"></a>
-                                        <a class="carousel-item" href="#five!"><img src="http://lorempixel.com/250/250/nature/5"></a>
-                                    </div>
-                                </div>
-                            </div>
+
                             <div class="row valign-wrapper mb0">
 
                                 <div class="col s12">
 
-                                    <h3 class="card-title">RP. 80000</h3>
+                                    <h3 class="card-title">Rp. <?=$value->target?></h3>
                                     <div class="progress">
                                         <div class="determinate" style="width: 70%"></div>
                                     </div>
@@ -83,7 +80,7 @@
                         </div>
                     </div>
                 </div>
-                <?php endfor; ?>
+                <?php $i++; } ?>
             </div>
         </div>
         <div class="content-explore">
