@@ -67,13 +67,16 @@
     max-width: 45px !important;
 }
 
-.carousel .carousel-item>img{
+.carousel .carousel-item>.image {
+    height: 200px !important;
+    width: 100%;
+    background-size: cover
+}
+
+.carousel.carousel-slider {
     height: 200px !important;
 }
-/*.carousel.initialized{
-    height: 170px !important;
-}*/
-/*.carousel .carousel-item>img{
-    width: 200px !important;
-    height: 170px !important;
-}*/
+
+.custom-padding {
+    padding: 6px 24px 24px 24px;
+}

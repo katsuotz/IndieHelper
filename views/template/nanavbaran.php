@@ -1,26 +1,28 @@
-<div id="nav">
-    <div class="navbar-fixed">
-        <nav class="nav warna">
-            <div class="nav-wrapper container-fluid">
-                <a href="#!" class="brand-logo">&nbsp;IndieHelper</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
-                <ul class="right hide-on-med-and-down">
-                    <li><a href="#modalLogin" class="modal-trigger"><i class="mdi-action-perm-identity"></i></a></li>
-                    <li><a href="#"><i class="mdi-navigation-refresh"></i></a></li>
-                    <li><a href="#"><i class="mdi-navigation-more-vert"></i></a></li>
-                </ul>
-                <ul class="side-nav" id="mobile-demo">
-                    <li>
-                        <a href="#">
-                            <input id="search" type="search" placeholder="search">
-                        </a>
-                    </li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                    <li><a href="#">Link</a></li>
-                </ul>
-            </div>
-        </nav>
-    </div>
+<div class="navbar-fixed">
+    <nav class="white">
+        <!-- <div class="container-fluid"> -->
+
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo black-text center">Indie<span style="color: #3949ab  ">Helper</span></a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down black-text">
+                <li><a href="Explore.php" class="black-text"><i class="material-icons left">language</i>Explore</a></li>
+                <li><a href="#" class="black-text">Start a Project</a></li>
+                <li><a href="About.php" class="black-text">About</a></li>
+            </ul>
+            <ul id="nav-mobile" class="right hide-on-med-and-down black-text">
+                <li><a href="#" class="black-text nav-search"><i class="material-icons">search</i></a></li>
+                <li><a href="Login.php" class="black-text">Login</a></li>
+            </ul>
+        </div>
+        <div class="nav-wrapper wrapper-search" style="transform: translateX(-90em)">
+            <form method="GET" action="Explore.php">
+                <div class="input-field">
+                    <input id="search" type="search" name="search" required>
+                    <label class="label-icon" for="search"><i class="material-icons icons-nav">search</i></label>
+                    <i class="material-icons icons-nav icons-close">close</i>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <!-- </div> -->
 </div>

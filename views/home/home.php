@@ -4,7 +4,7 @@
         <div class="back-overlay"></div>
     </div>
     <div class="container-fluid">
-        <div class="row pt3">
+        <div class="row pt3" style="margin-top: 18vh">
             <div class="parallax-title">
                 <h2 class="center-align">IndieHelper</h2>
             </div>
@@ -30,16 +30,15 @@
                 <?php $i = 0; foreach ($data as $key => $value){ ?>
                 <div class="col s12 xl4 p0 ">
                     <div class="col s12">
-                        <div class="card grey lighten-5 z-depth-1" style="padding: 6px 24px 24px 24px;">
-                                <div class="carousel">
+                        <div class="card grey lighten-5 z-depth-1"">
+                                <div class="carousel carousel-slider">
                                     <?php
-                                        $ah = count($foto[1]);
-                                        for ($i=0; $i < 3; $i++) { 
+                                        for ($j=0; $j < count($foto[$i]); $j++) { 
                                     ?>
-                                    <a class="carousel-item" href="<?=$fotohref[$i]?>"><img src="http://localhost:8080/IndieHelper/assets/images/user/irvan.jpg"></a>
+                                    <a class="carousel-item" href="<?=$fotohref[$j]?>"><div class="image" style="background-image: url('<?=baseurl('assets/images/project/').$foto[$i][$j]?>')"></div></a>
                                     <?php } ?>
                                 </div>
-                            <div class="row mb0">
+                            <div class="row mb0" style="padding-left:24px; padding-right: 24px; padding-top: 8px">
                                 <div class="col s12">
                                     <p class="font24"><?=$value->nama_project?></p>
                                 </div>
@@ -56,7 +55,7 @@
                                 </div>
                             </div>
 
-                            <div class="row valign-wrapper mb0">
+                            <div class="row valign-wrapper mb0 custom-padding">
 
                                 <div class="col s12">
 
