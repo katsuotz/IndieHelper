@@ -1,3 +1,4 @@
+
 <div class="parallax-container parallax-top white-text">
     <div class="parallax">
         <img src="<?=baseurl('assets/images/template/bg.jpg')?>">

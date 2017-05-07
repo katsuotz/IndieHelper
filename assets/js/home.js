@@ -10,14 +10,16 @@ $(document).ready(function () {
     	e.preventDefault();
 
     	$('.wrapper-search').css({
-    		transform: 'translateX(0px)'
+    		transform: 'translateY(-64px)'
     	});
+
     });
 
     $('.icons-close').click(function() {
     	$('.wrapper-search').css({
-    		transform: 'translateX(-90em)'
+    		transform: 'translateY(-130px)'
     	});
+    
     });
 });
 
