@@ -5,7 +5,7 @@ include 'lib/lib.php';
 
 $assets = array(
 	'css' 	=> array('parent.css', 'home.css', 'materialize.min.css', 'material-icon.css', 'font-awesome.min.css','navbar.css'),
-	'js'	=> array('jquery.min.js', 'materialize.min.js', 'parent.js', 'home.js')
+	'js'	=> array('jquery.min.js', 'materialize.min.js', 'parent.js', 'home.js','navbar.js')
 	);
 
 $fotohref = array('#one!','#two!','#three!','#four!','#five!');
