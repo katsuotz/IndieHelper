@@ -85,3 +85,13 @@
 i.size{
     font-size: 1.3rem !important
 }
+
+footer nav {
+  box-shadow: 0 0 0 !important;
+  background: #f2f2f2 !important;
+}
+
+footer .social-icons ul li {
+    display: inline-block;
+    text-align: right;
+}

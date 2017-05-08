@@ -17,7 +17,7 @@
 <div class="content container" style="width: 85%">
     <div class="row pt1">
         <div class="col s12 py1">
-            <span class="font-title">Lates Project</span>
+            <span class="font-title">Latest Project</span>
             <div class="right data-colec">
                 <a href="#" class="active"><span class="mr1 font15">All Category</span></a>
                 <a href="#" class="p1"><span class="mr1 font15">Tech</span></a>
@@ -88,58 +88,23 @@
                 <div class="col s12 py1">
                     <span class="font-title">Category Explore</span>
                 </div>
+                <?php foreach ($kategori as $key => $value): ?>
                 <div class="col l3 pl1 pr1">
-                    <div class="card">
-                        <div class="card-image card-image-explore">
-                            <img src="<?=baseurl('assets/images/template/bg1.jpg')?>" style="height: 100%">
-                            <div class="back-overlay"></div>
-                            <div class="card-title center-align pt4" style="top: 0; right: 0;">
-                                <div class="title pt1">
-                                    <span>Tech</span>
+                    <a href="explore.php?ktg=<?= $value->id_kategori ?>">
+                        <div class="card">
+                            <div class="card-image card-image-explore">
+                                <img src="<?=baseurl('assets/images/template/bg1.jpg')?>" style="height: 100%">
+                                <div class="back-overlay"></div>
+                                <div class="card-title center-align pt4" style="top: 0; right: 0;">
+                                    <div class="title pt1">
+                                        <span><?= $value->nama_kategori ?></span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col l3 pl1 pr1">
-                    <div class="card">
-                        <div class="card-image card-image-explore">
-                            <img src="<?=baseurl('assets/images/template/bg1.jpg')?>" style="height: 100%">
-                            <div class="back-overlay"></div>
-                            <div class="card-title center-align pt4" style="top: 0; right: 0;">
-                                <div class="title pt1">
-                                    <span>Art</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l3 pl1 pr1">
-                    <div class="card">
-                        <div class="card-image card-image-explore">
-                            <img src="<?=baseurl('assets/images/template/bg1.jpg')?>" style="height: 100%">
-                            <div class="back-overlay"></div>
-                            <div class="card-title center-align pt4" style="top: 0; right: 0;">
-                                <div class="title pt1">
-                                    <span>Tech</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col l3 pl1 pr1">
-                    <div class="card">
-                        <div class="card-image card-image-explore">
-                            <img src="<?=baseurl('assets/images/template/bg1.jpg')?>" style="height: 100%">
-                            <div class="back-overlay"></div>
-                            <div class="card-title center-align pt4" style="top: 0; right: 0;">
-                                <div class="title pt1">
-                                    <span>Fashion</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach ?>
             </div>
         </div>
     </div>

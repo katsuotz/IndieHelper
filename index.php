@@ -17,6 +17,9 @@ $data = $db->result();
 
 $foto = array();
 
+$db->get_tbl('kategori');
+$kategori = $db->result();
+
 foreach ($data as $value) {
 	array_push($foto, json_decode($value->foto));
 }
@@ -24,6 +27,6 @@ foreach ($data as $value) {
 include 'views/template/header.php';
 include 'views/template/nanavbaran.php';
 include 'views/home/home.php';
-include 'views/template/footer_admin.php';
+include 'views/template/footer.php';
 
 ?>

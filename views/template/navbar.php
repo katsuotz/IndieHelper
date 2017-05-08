@@ -1,6 +1,6 @@
    <nav>
         <div class="nav-wrapper purple darken-2 "> 
-        <a href="#" class="brand-logo center blue-grey-text text-lighten-5">IndieHelper</a>
+            <a href="#" class="brand-logo center blue-grey-text text-lighten-5">IndieHelper</a>
             <ul id="nav-mobile" class="left">
                 <li class="nav-item">
                     <a data-activates="slide-out" class="waves-effect waves-shadow"> <i data-activates="slide-out"  class="button-sid  blue-grey-text text-lighten-5 fa fa-bars fa-2x" aria-hidden="true"></i> </a>
@@ -15,7 +15,7 @@
                 </li>
             </ul>
             <ul id='dropdown1' class='dropdown-content'>
-                <li><a href="#!">Profil</a></li>
+                <li><a href="#!">Profile</a></li>
                 <li><a href="#!">My Project</a></li>
                 <li class="divider"></li>
                 <li><a href="#!">Setting</a></li>
