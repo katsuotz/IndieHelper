@@ -2,7 +2,7 @@
 
 include 'lib.php';
 
-$data = array('id', 'id_akun', 'username', 'status', 'nama', 'foto');
+$data = array('ID', 'ID_AKUN', 'USERNAME', 'STATUS', 'NAMA', 'FOTO');
 $session->unset_session($data);
 
 location(baseurl('../login.php'));

@@ -12,21 +12,21 @@
 
     <div class="back-banner blue darken-1 white-text">
         <div class="container">
-            <div class="row">
+            <div class="row pt2">
 
-                <h4 class="m0 pt3 center-align title">IndieHelper</h4>
-                <div class="card-title  center-align">Explore</div>
+                <h4 class="m0 pt3 center-align title">Explore</h4>
+                <div class="card-title  center-align">Lorem Ipsum Dolor Sit Amet</div>
 
-                <div class="input-field mt2">
+                <!-- <div class="input-field mt2">
                     <div class="chips chips-placeholder"></div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
     <div class="row">
 
         <div class="content">
-            <div class="container">
+            <div class="container" style="width: 85%">
                 <div class="row">
                     <div class="section">
                         <div class="row m0 py0 pl0 pr1">
@@ -43,42 +43,63 @@
                     <div class="divider"></div>
 
                     <div class="section">
-                        <div class="row m0 py0 pl0 pr1 data">
+                        <div class="row data">
                             <?php
                         $i = 0;
                         foreach ($data as $value):
                     ?>
 
-                                <div class="col s12 xl4 p0 ">
-                                    <div class="col s12">
-                                        <div class="card">
-                                            <div class="card-image">
-                                                <div class="materialboxed" data-caption="<?= $value->nama ?>" style="background-image: url('<?= baseurl('assets/images/project/').$foto[$i][0]; ?>');"></div>
-                                            </div>
-                                            <div data-target="modal1" class="clicked">
-                                                <div class="card-content"> <span class="card-title"><?= $value->nama ?></span>
-                                                    <p class="font12 title-category">
-                                                        <?=$value->deskripsi?>
-                                                    </p>
-                                                </div>
-                                                <div class="card-action">
-                                                    <h3 class="card-title">RP.
-                                                        <?=$value->target?>
-                                                    </h3>
-                                                    <div class="progress">
-                                                        <div class="determinate" style="width: 70%"></div>
-                                                    </div>
-                                                    <div class="row m0 py0 pl0 pr1">
-                                                        <div class="col s4 center-align"> <span>80</span> <span>Donation</span> </div>
-                                                        <div class="col s4 center-align"> <span>70%</span> <span>Progress</span> </div>
-                                                        <div class="col s4 center-align">
-                                                            <div>20</div> <span> Ipsum</span> </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                    <div class="col s12 xl4 p0 ">
+                    <div class="col s12">
+                        <div class="card grey lighten-5 z-depth-1"">
+                                <div class="carousel carousel-slider">
+                                    <?php
+                                        for ($j=0; $j < count($foto[$i]); $j++) { 
+                                    ?>
+                                    <a class="carousel-item" href="<?=$fotohref[$j]?>"><div class="image" style="background-image: url('<?=baseurl('assets/images/project/').$foto[$i][$j]?>')"></div></a>
+                                    <?php } ?>
+                                </div>
+                            <div class="row mb0" style="padding-left:24px; padding-right: 24px; padding-top: 8px">
+                                <div class="col s12">
+                                    <p class="font24"><?=$value->nama_project?></p>
+                                </div>
+                                <div class="col s12">
+                                    <div class="row valign-wrapper">
+                                        <div class="col s2">
+                                            <img src="<?=baseurl('assets/images/user/').$value->foto_user?>" alt="" class="circle responsive-img">
+                                        </div>
+                                        <div class="col s10">
+                                            <span class="black-text font17"><?= $value->nama ?></span>
+                                            <p class="m0 font12"><?= $value->alamat ?></p>
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+
+                            <div class="row valign-wrapper mb0 custom-padding">
+
+                                <div class="col s12">
+
+                                    <h3 class="card-title">Rp. <?=$value->target?></h3>
+                                    <div class="progress">
+                                        <div class="determinate" style="width: 70%"></div>
+                                    </div>
+                                    <div class="col s2">
+                                        <img src="<?=baseurl('assets/images/user/irvan.jpg')?>" alt="" class="circle responsive-img">
+                                    </div>
+                                    <div class="col s2">
+                                        <img src="<?=baseurl('assets/images/user/irvan.jpg')?>" alt="" class="circle responsive-img">
+                                    </div>
+                                    <div class="col s8">
+                                        <p>+ 200 People Join</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
                                 <?php $i++; endforeach; ?>
                         </div>
                     </div>

@@ -12,17 +12,18 @@ $fotohref = array('#one!','#two!','#three!','#four!','#five!');
 
 $db->select(array('project.id_project', 'project.nama AS nama_project', 'project.foto', 'target', 'user.nama', 'alamat','user.foto AS foto_user'));
 $db->join('user','','project.id_user','user.id_user');
-$db->get_tbl('project',true,6);
+$db->get_tbl('project',true,6);	
 $data = $db->result();
 
 $foto = array();
 
-$db->get_tbl('kategori');
-$kategori = $db->result();
 
 foreach ($data as $value) {
 	array_push($foto, json_decode($value->foto));
 }
+
+$db->get_tbl('kategori');
+$kategori = $db->result();
 
 include 'views/template/header.php';
 include 'views/template/nanavbaran.php';

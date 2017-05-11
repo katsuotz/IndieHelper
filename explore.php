@@ -2,6 +2,7 @@
 	include 'lib/lib.php';
 	// error_reporting(0);
 	$foto =array();
+	$fotohref = array('#one!','#two!','#three!','#four!','#five!');
 
 	$assets = array(
 		'css' 	=> array('parent.css', 'explore.css', 'materialize.min.css', 'material-icon.css', 'font-awesome.min.css','navbar.css'),
@@ -11,28 +12,29 @@
 	if(isset($_GET['ktg'])){
 		$ktg = $input->get('ktg');
 		$where = array('id_kategori' => $ktg);
-		$db->logic_where('OR');
-		$db->where_explore($where);
+		$db->select(array('project.id_project', 'project.nama AS nama_project', 'project.foto', 'target', 'user.nama', 'alamat','user.foto AS foto_user'));
+		$db->where($where);
+		$db->join('user','','project.id_user','user.id_user');
 		$db->get_tbl('project');
 		$data = $db->result();
-	}
-	if(isset($_GET['search'])){
+	}elseif(isset($_GET['search'])){
 		$search		= $input->get('search');
-		$where		= array('nama' => $search);
+		$where		= array('project.nama' => $search);
+		$db->select(array('project.id_project', 'project.nama AS nama_project', 'project.foto', 'target', 'user.nama', 'alamat','user.foto AS foto_user'));
 		$db->logic_where('OR');
 		$db->where_explore($where);
+		$db->join('user','','project.id_user','user.id_user');
 		$db->get_tbl('project');
 		$data = $db->result();
-	}
-	else{
+	} else{
+		$db->join('user','','project.id_user','user.id_user');
+		$db->select(array('project.id_project', 'project.nama AS nama_project', 'project.foto', 'target', 'user.nama', 'alamat','user.foto AS foto_user'));
 		$db->get_tbl('project');
 		$data = $db->result();
 	}
 	foreach ($data as $key => $value) {
 		array_push($foto, json_decode($value->foto));
 	}
-
-
 	include 'views/template/header.php';
 	include 'views/template/nanavbaran.php';
 	include 'views/explore/explore.php';

@@ -45,3 +45,23 @@ body {
 .chips .input {
     color: #fff !important
 }
+
+.circle {
+    width: 45px !important;
+    height: 45px !important;
+    max-width: 45px !important;
+}
+
+.carousel .carousel-item>.image {
+    height: 200px !important;
+    width: 100%;
+    background-size: cover
+}
+
+.carousel.carousel-slider {
+    height: 200px !important;
+}
+
+.custom-padding {
+    padding: 6px 24px 24px 24px;
+}

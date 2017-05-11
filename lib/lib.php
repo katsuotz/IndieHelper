@@ -108,11 +108,11 @@
 		}
 
 		function where_explore($value){
-			$row = 'nama';
 			$col = array();
 
-			foreach ($value as $value) {
-				array_push($col, $value);			
+			foreach ($value as $key => $values) {
+				array_push($col, $values);
+				$row = $key;			
 			}
 
 			$data = array();

@@ -1,13 +1,9 @@
 $(document).ready(function () {
-    $('.modal').modal({
-        startingTop: '4%', // Starting top style attribute
-        endingTop: '10%', // Ending top style attribute
+    $('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        padding:20
     });
-    $('.slider').slider({
-        indicators: false,
-        height: 800
-    });
-    $('.materialboxed').materialbox();
+
     $('.chips').material_chip();
     var ss = $('.chip').material_chip('data');
     var as = [];
