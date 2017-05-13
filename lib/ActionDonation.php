@@ -25,7 +25,13 @@
 			$where 	= array('id_project' => $id_project);
 			$db->where($where);
 			$db->select_tbl('project');
-			echo $db->update($update,false);
+			$check = $db->update($update,false);
+			if($check == "Berhasil"){
+				location('../detailproject.php?id='.$id_project);
+			}
+		}
+		else{
+			echo "Error";
 		}
 	}
  ?>

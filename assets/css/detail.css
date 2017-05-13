@@ -1,0 +1,36 @@
+body{
+	background-color: #FBFBFA !important;
+}
+
+.circle {
+    width: 55px !important;
+    height: 55px !important;
+    max-width: 55px !important;
+}
+.select-dropdown.active{
+	left: 0px !important
+}
+.other-images{
+	bottom: 0;
+    color: #fff;
+    width: 100%;
+}
+
+.kotak{
+	height: 50px;
+	width: 100%;
+	border: 1px solid #333;
+	cursor: pointer;
+}
+
+.kotak .img-other{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-size: cover;
+	background-position: center;
+}
+
+.pl6{
+	padding-left: 6rem !important;
+}

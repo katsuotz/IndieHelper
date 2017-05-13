@@ -93,6 +93,9 @@
                                     <div class="col s8">
                                         <p>+ 200 People Join</p>
                                     </div>
+                                    <div class="col s12 my1">
+                                        <a href="detailproject.php?id=<?=$value->id_project?>"><button type="button" class="full-width waves-effect darken-1 waves-light btn">Contribute</button></a>
+                                    </div>
                                 </div>
 
                             </div>

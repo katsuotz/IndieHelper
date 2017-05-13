@@ -38,7 +38,7 @@
                         <div class="input-field">
                             <div class="form-group">
                                 <input id="username_prefix" type="text" class="validate" name="nama">
-                                <label for="icon_prefix">Nama</label>
+                                <label for="icon_prefix">Name</label>
                             </div>
                         </div>
                         <div class="input-field">
@@ -66,16 +66,16 @@
                         <div class="input-field">
                             <div class="form-group">
                                 <textarea id="textarea1" class="materialize-textarea" name="alamat"></textarea>
-                                <label for="textarea1">Alamat</label>
+                                <label for="textarea1">Address ex: (Bandung, Indonesia)</label>
                             </div>
                         </div>
                         <div class="input-field">
                             <select name="jk" required>
-                                <option disabled selected>Pilih Jenis Kelamin</option>
+                                <option disabled selected>Gender</option>
                                 <option value="L">Laki - Laki</option>
                                 <option value="P">Perempuan</option>
                             </select>
-                            <label>Jenis Kelamin</label>
+                            <label>Gender</label>
                         </div>
                         <div class="right-align">
                             <button type="submit" class="btn waves-effect waves-light purple lighten-1">Sign Up</button>

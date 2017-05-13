@@ -1,7 +1,6 @@
  $(document).ready(function() {
 
 	$('select').material_select();
-	$('.chips-initial').material_chip();
 
 	var idFile = '';
 	$('.choose-file').bind('click', function(e) {
@@ -34,17 +33,11 @@
 		}
 	}
 
-	$('.chips input').attr('name', 'tags');
 	
 	$('#form-project').submit(function(e) {
 		e.preventDefault();
-		var chips = $('.chips').material_chip('data');
 		var array = [];
 		var $data = new FormData($(this)[0]);
-		for (var i = 0; i < chips.length; i++) {
-			array.push(chips[i].tag);
-		}
-		$data.append('tags', JSON.stringify(array));
 		$.ajax({
 			url: $(this).attr('action'),
 			type: $(this).attr('method'),

@@ -1,103 +1,142 @@
-<div class="carousel carousel-slider fot">
-    <div class="swip">
-        <i class="tom small material-icons">fast_rewind</i>
-        <i class="tom small material-icons">fast_forward</i>
-    </div>
-    <a class="carousel-item absolute" href="#one!"><img src="http://lorempixel.com/800/400/food/1"></a>
-    <a class="carousel-item " href="#two!"><img src="http://lorempixel.com/800/400/food/2"></a>
-    <a class="carousel-item" href="#three!"><img src="http://lorempixel.com/800/400/food/3"></a>
-    <a class="carousel-item" href="#four!"><img src="http://lorempixel.com/800/400/food/4"></a>
-</div>
-<div class="section white">
-    <div class="row container">
-        <div class="col s12 m8 l6 ban">
-            <div class="card-panel grey lighten-5 z-depth-1">
-                <div class="row valign-wrapper">
-                    <div class="col s2">
-                        <img src="../../assets/images/user/default.jpg" alt="" class="circle responsive-img">
-                    </div>
-                    <div class="col s10">
-                        <span class="black-text">
-                 <h4>About project</h4>
-      <p class="grey-text text-darken-3 lighten-3">Parallax is an effect where the background content or image in this case, is moved at a different speed than the foreground content while scrolling.</p>
-              </span>
-                    </div>
+<div id="modal1" class="modal modal-fixed-footer">
+    <div class="modal-content">
+        <h4>Donation</h4>
+        <form action="<?=baseurl('lib/ActionDonation.php?id_project=').$input->get('id')?>" method="POST" id="projectdonation">
+            <div class="input-field">
+                <div class="form-group">
+                    <input name="jumlah" type="number" required class="form-control">
+                    <label>Donations</label>
                 </div>
             </div>
-        </div>
-        <h2 class="header">Project name</h2>
+            <div class="input-field">
+                <div class="form-group">
+                    <textarea name="feedback" required class="materialize-textarea" id="textarea1"></textarea>
+                    <label>Feedback</label>
+                </div>
+            </div>
+            <div class="input-field">
+                <select name="bank" required>
+                    <option disabled selected>Bank</option>
+                    <?php foreach ($bank as $key => $value): ?>
+                    <option value="<?= $value->id_bank ?>"><?= $value->nama_bank ?></option>
+                    <?php endforeach; ?>
+                </select>
+                <label>Bank</label>
+            </div>
 
-        <div class="chip">
-            Tag
-        </div>
-        <div class="chip">
-            Tag
-        </div>
-        <div class="chip">
-            Tag
-        </div>
-        <div class="btn">donate</div>
-        <div class="progress">
-            <div class="determinate" style="width: 70%"></div>
-        </div>
-        <div class="row center">
-            <h4 center>Same project</h4>
-            <div class="divider"></div>
-        </div>
-        <div class="row center">
-            <div class="card uk">
-                <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
-                <div class="card-content">
-                    <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
-                    <p>Ntaps</p>
-                </div>
-                <div class="card-action">
-                    <h3 class="card-title">RP. 100</h3>
-                    <div class="progress">
-                        <div class="determinate" style="width: 70%"></div>
-                    </div>
-                    <div class="row m0 py0 pl0 pr1">
-                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
-                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
-                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
-                    </div>
+            <button type="submit" class="btn">submit</button>
+        </form>
+    </div>
+</div>
+
+
+<div class="content my2">
+    <div class="container" style="width: 85%">
+        <div class="row m0">
+            <div class="col s12">
+
+                <div class="col s12">
+                    <span class="fontsize2"><?=$data->nama_project?></span>
                 </div>
             </div>
-            <div class="card uk">
-                <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
-                <div class="card-content">
-                    <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
-                    <p>Ntaps</p>
-                </div>
-                <div class="card-action">
-                    <h3 class="card-title">RP. 100</h3>
-                    <div class="progress">
-                        <div class="determinate" style="width: 70%"></div>
-                    </div>
-                    <div class="row m0 py0 pl0 pr1">
-                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
-                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
-                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+            <div class="col s12">
+                <div class="col s12 x8 l8 relative">
+                    <img class="responsive-img image-project" src="<?=baseurl('assets/images/project/').$foto[0][0]?>">
+                    <div class="absolute other-images pl6">
+                        <div class="row">
+                        <?php for ($k=0; $k < count($foto[0]); $k++){?>
+                            <div class="col s2">
+                                <div class="kotak">
+                                    <div class="img-other" get-image="<?=baseurl('assets/images/project/').$foto[0][$k]?>" style="background-image: url('<?=baseurl('assets/images/project/').$foto[0][$k]?>')"></div>
+                                </div>
+                            </div>
+                        <?php } ?>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card uk">
-                <div class="card-image"> <img src="http://localhost/IndieHelper/"> </div>
-                <div class="card-content">
-                    <div class="font14 title-category">Travel</div> <span class="card-title">My Project</span>
-                    <p>Ntaps</p>
-                </div>
-                <div class="card-action">
-                    <h3 class="card-title">RP. 100</h3>
-                    <div class="progress">
-                        <div class="determinate" style="width: 70%"></div>
+                <div class="col s12 x4 l4">
+                    <div class="col s12">
+                        <div class="card mb1">
+                            <div class="card-content black-text" style="padding: 21px 0px 1px">
+                                <div class="row">
+                                    <div class="col s12 valign-wrapper">
+                                        <img src="<?=baseurl('assets/images/user/').$data->foto_user?>" alt="" class="margin-center circle responsive-img">
+                                    </div>
+                                    <div class="col s12 center-align">
+                                        <span class="black-text font17"><?=$data->nama?></span>
+                                        <p class="m0 font12">
+                                            <?=$data->alamat?>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="row m0 py0 pl0 pr1">
-                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
-                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
-                        <div class="col s4 center-align"> <span>80</span> <span>Backer</span> </div>
+                    <div class="col s12 x12">
+                        <div class="collection">
+                            <a href="#!" class="collection-item">
+                                <div class="row m0">
+                                    <div class="col s6">
+                                        <span>Target</span>
+                                    </div>
+                                    <div class="col s6">
+                                        <span><?= money($data->target)?></span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#!" class="collection-item">
+                                <div class="row m0">
+                                    <div class="col s6">
+                                        <span>Income</span>
+                                    </div>
+                                    <div class="col s6">
+                                        <span><?=money($data->income)?></span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#!" class="collection-item">
+                                <div class="row m0">
+                                    <div class="col s6">
+                                        <span>Date</span>
+                                    </div>
+                                    <div class="col s6">
+                                        <span><?=substr("$data->tgl",0,10)?></span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#!" class="collection-item">
+                                <div class="row m0">
+                                    <div class="col s6">Category</div>
+                                    <div class="col s6">
+                                        <span class="new badge left ml0" data-badge-caption="<?=$data->nama_kategori?>"></span></div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <div class="progress">
+                            <div class="determinate" style="width:<?= percent($data->income,$data->target) ?>%"></div>
+                        </div>
+                    </div>
+                    <div class="col s12">
+                        <?php if(!empty($session->get_session('ID'))){ ?>
+                        <a class="waves-effect waves-light btn btn-large modal-trigger" href="#modal1" style="width: 100%">CONTRIBUTE</a>
+                        <?php } else{ ?>
+                        <a class="waves-effect waves-light btn btn-large" href="login.php" style="width: 100%">CONTRIBUTE</a>
+                        <?php } ?>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content black-text">
+                            <span class="card-title">Description</span>
+                            <p>
+                                <?=$data->deskripsi?>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>

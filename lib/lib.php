@@ -20,6 +20,20 @@
 		header('Location: ' . $url);
 	}
 
+	function money($uang){
+		return "Rp. ".number_format($uang,2,',','.');
+	}
+
+	function percent($income,$target){
+		$percent = ($income / $target) * 100;
+
+		if($percent >= 100)
+			return 100;
+		else
+			return $percent;
+
+	}
+
 	class Database
 	{
 		

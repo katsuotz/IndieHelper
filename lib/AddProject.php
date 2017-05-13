@@ -5,17 +5,9 @@
 	if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$nama 		= $input->post('nama');
 		$id_kategori= $input->post('id_kategori');
-		$j_tags 	= json_decode($input->post('tags'));
 		$target 	= $input->post('target');
 		$deskripsi 	= $input->post('deskripsi');
-		$tags = array();
-
-		foreach ($j_tags as $key => $value) {
-			array_push($tags, $value);
-		}
-
-		$tags =	implode($tags, ',');
-
+		
 		$namafile 	= array();
 		$tmpfile  	= array();
 		for ($i = 1; $i <= 5; $i++) {
@@ -37,7 +29,6 @@
 			'nama' 			=> $nama,
 			'id_kategori' 	=> $id_kategori,
 			'id_user'		=> $session->get_session('ID'),
-			'tags' 			=> $tags,
 			'target'		=> $target,
 			'foto'			=> $namafile,
 			'deskripsi'		=> $deskripsi

@@ -57,7 +57,7 @@ i.size {
     height: 60px
 }
 
-.dropdown-content.active {
+.navbar-dropdown.active {
     /*top: 60px !important;*/
     left: 1242px !important
 }

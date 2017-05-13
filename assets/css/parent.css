@@ -623,3 +623,21 @@ body {
 .no-shadow {
 	box-shadow: 0 0 0 !important;
 }
+
+.full-width{
+	width: 100% !important;
+}
+
+footer nav {
+  box-shadow: 0 0 0 !important;
+  background: #f2f2f2 !important;
+}
+
+footer .social-icons ul li {
+    display: inline-block;
+    text-align: right;
+}
+
+.margin-center{
+	margin: 0 auto !important;
+}

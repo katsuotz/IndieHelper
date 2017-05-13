@@ -8,15 +8,15 @@
 
 				<div class="row">
 					<div class="col s4">
-						<a href="#"><img class="circle" src="<?= baseurl('assets/images/admin/admin.jpg') ?>"></a>
+						<a href="#"><img class="circle" src="<?= baseurl('assets/images/admin/').$session->get_session('FOTO') ?>"></a>
 					</div>
 					<div class="col s8">
 						<!-- Dropdown Trigger -->
-						<a class='dropdown-button' href='#'><span class="white-text name">Azunyan <i class="pl1 fa fa-ellipsis-v dropdown-button right" data-activates='dropdown-profile'></i></span></a>
+						<a class='dropdown-button' href='#'><span class="white-text name"><?=$session->get_session("NAMA")?> <i class="pl1 fa fa-ellipsis-v dropdown-button right" data-activates='dropdown-profile'></i></span></a>
 						
 						<ul id='dropdown-profile' class='dropdown-content'>
 							<li><a href="#" class="pr3"><i class="fa fa-gear p0 m0"></i> Setting</a></li>
-							<li><a href="<?= baseurl('logout.php') ?>" class="pr3"><i class="fa fa-sign-out p0 m0"></i> Log Out</a></li>
+							<li><a href="<?= baseurl('Logout.php') ?>" class="pr3"><i class="fa fa-sign-out p0 m0"></i> Log Out</a></li>
 						</ul>
 
 						<!-- Dropdown Structure -->
@@ -48,21 +48,7 @@
 	    	</div>
 	    </li>
 		<li><a href="<?= baseurl('admin.php') ?>"><i class="fa fa-dashboard"></i>Dashboard</a></li>
-	    <li>
-	        <ul class="collapsible collapsible-accordion">
-	          	<li>
-	            	<a class="collapsible-header"><i class="fa fa-users fontsize1"></i><span>User</span><i class="material-icons right">arrow_drop_down</i></a>
-	            	<div class="collapsible-body">
-	              		<ul>
-	                		<li><a href="#!">First</a></li>
-	                		<li><a href="#!">Second</a></li>
-	                		<li><a href="#!">Third</a></li>
-	                		<li><a href="#!">Fourth</a></li>
-	              		</ul>
-	            	</div>
-	          	</li>
-	        </ul>
-	    </li>		
+	    
 		<li><a href="<?= baseurl('datauser.php') ?>"><i class="fa fa-users"></i>User</a></li>
 	    <li><a href="<?= baseurl('datakategori.php') ?>"><i class="fa fa-tags"></i>Category</a></li>
 	    <li><a href="<?= baseurl('dataproject.php') ?>"><i class="fa fa-bookmark"></i>Project</a></li>
@@ -88,7 +74,7 @@
 			<div class="nav-wrapper">
 				<div class="container-fluid">
 					<a href="#" class="white-text left mr1 side-nav-trigger hide-on-med-and-down"><i class="material-icons">menu</i></a>
-					<a href="#!" class="brand-logo white-text">Indie Helper</a>
+					<a href="#!" class="brand-logo white-text">IndieHelper</a>
 					<ul class="right">
 						<li><a href="<?= baseurl('lib/logout.php') ?>" class="waves-effect waves-shadow">Log Out</a></li>
 					</ul>

@@ -10,7 +10,6 @@
 					<th data-field="target">Target</th>
 					<th data-field="income">Income</th>
 					<th data-field="ktg">Kategori</th>
-					<th data-field="tags">Tags</th>
 					<th data-field="action">Action</th>
 				</tr>
 			</thead>
@@ -24,7 +23,6 @@
 					<td>$<?= $value->target ?></td>
 					<td>$<?= $value->income ?></td>
 					<td><?= $value->nama_kategori ?></td>
-					<td><?= substr($value->tags, 1, count($value->tags) - 1) ?> <?php if (strlen($value->tags) >= 10) { echo "..."; } ?></td>
 					<td>
 						<a href="<?= baseurl('editprojectadmin.php?id_project=' . $value->id_project) ?>" class="waves-effect waves-shadow btn yellow darken-2"><i class="fa fa-pencil"></i></a>
 						<a href="<?= baseurl('lib/deleteproject.php?id_project=' . $value->id_project) ?>" class="waves-effect waves-shadow btn red"><i class="fa fa-trash"></i></a>

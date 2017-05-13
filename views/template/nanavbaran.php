@@ -1,5 +1,5 @@
 <!-- <div class="navbar-fixed"> -->
-<ul id="dropdown1" class="dropdown-content">
+<ul id="dropdown1" class="dropdown-content navbar-dropdown">
     <li><a href="#!">Profile</a></li>
     <li class="divider"></li>
     <li><a href="Logout.php">Logout</a></li>
@@ -9,11 +9,11 @@
 
 
     <div class="nav-wrapper wrapper-nav">
-        <a href="#" class="brand-logo black-text center">Indie<span style="color: #3949ab  ">Helper</span></a>
+        <a href="<?=baseurl()?>" class="brand-logo black-text center">Indie<span style="color: #3949ab  ">Helper</span></a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons black-text">menu</i></a>
         <ul id="nav-mobile" class="left hide-on-med-and-down black-text">
             <li><a href="Explore.php" class="black-text"><i class="size material-icons left">language</i>Explore</a></li>
-            <li><a href="#" class="black-text">Start a Project</a></li>
+            <li><a href="formproject.php" class="black-text">Start a Project</a></li>
             <li><a href="About.php" class="black-text">About</a></li>
         </ul>
         <ul id="nav-mobile" class="valign-wrapper right hide-on-med-and-down black-text">
@@ -24,7 +24,11 @@
             <li>
                 <a href="#" class="dropdown-button" data-activates='dropdown1'>
                     <div class="fotos valign-wrapper">
+                        <?php if($session->get_session('STATUS') == 'admin'){ ?>
+                        <div class="responsive-img img-user" style="background-image: url('<?=baseurl('assets/images/admin/').$session->get_session('FOTO')?>')"></div>
+                        <?php }else{ ?>
                         <div class="responsive-img img-user" style="background-image: url('<?=baseurl('assets/images/user/').$session->get_session('FOTO')?>')"></div>
+                        <?php } ?>
                     </div>
                 </a>
             </li>
@@ -48,7 +52,11 @@
             <li>
                 <a href="Login.php" class="black-text">
                     <div class="fotos valign-wrapper pb1">
+                       <?php if($session->get_session('STATUS') == 'admin'){ ?>
+                        <div class="responsive-img img-user" style="background-image: url('<?=baseurl('assets/images/admin/').$session->get_session('FOTO')?>')"></div>
+                        <?php }else{ ?>
                         <div class="responsive-img img-user" style="background-image: url('<?=baseurl('assets/images/user/').$session->get_session('FOTO')?>')"></div>
+                        <?php } ?>
                         <span class="pl1"><?= $session->get_session('NAMA')?></span>
                     </div>
                 </a>

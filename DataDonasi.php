@@ -12,6 +12,7 @@ $db->join('project', '', 'donasi.id_project', 'project.id_project');
 $db->get_tbl('donasi');
 $donasi = $db->result();
 
+
 include 'views/template/header.php';
 include 'views/template/navbar_admin.php';
 include 'views/admin/data_donasi.php';
