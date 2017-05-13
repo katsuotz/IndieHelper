@@ -31,8 +31,8 @@
 			return 100;
 		else
 			return $percent;
-
 	}
+
 
 	class Database
 	{
@@ -281,5 +281,11 @@
 	$session = new Session();
 	$input = new Input();
 	$db = new Database();
+
+	function checkLogin(){
+		if(empty($_SESSION['STATUS'])){
+			location('Login.php');
+		}
+	}
 
  ?>

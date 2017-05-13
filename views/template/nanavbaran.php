@@ -1,6 +1,6 @@
 <!-- <div class="navbar-fixed"> -->
 <ul id="dropdown1" class="dropdown-content navbar-dropdown">
-    <li><a href="#!">Profile</a></li>
+    <li><a href="Profile.php">Profile</a></li>
     <li class="divider"></li>
     <li><a href="Logout.php">Logout</a></li>
 </ul>
@@ -50,7 +50,7 @@
             <li><a href="Login.php" class="black-text">Login</a></li>
             <?php } else{ ?>
             <li>
-                <a href="Login.php" class="black-text">
+                <a href="Profile.php" class="black-text">
                     <div class="fotos valign-wrapper pb1">
                        <?php if($session->get_session('STATUS') == 'admin'){ ?>
                         <div class="responsive-img img-user" style="background-image: url('<?=baseurl('assets/images/admin/').$session->get_session('FOTO')?>')"></div>
@@ -62,6 +62,9 @@
                 </a>
             </li>
             <?php } ?>
+            <li class="divider"></li>
+            <li><a href="Logout.php">Logout</a></li>
+
         </ul>
     </div>
     <div class="nav-wrapper wrapper-search" style="transform: translateY(-130px);">

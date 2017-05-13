@@ -9,17 +9,10 @@
 		$desc		= $input->post('desc');
 		$donation	= $input->post('donation');
 		$kategori 	= $input->post('id_kategori');
-		$j_tags 	= json_decode($input->post('tags'));
-		$tags = array();
 		$db->get_tbl('project');
 		$result 	= $db->row_result();
 		$oldImages 	= json_decode($result->foto);
  
-		foreach ($j_tags as $key => $value) {
-			array_push($tags, $value);
-		}
-		$taga = implode($tags, ',');
-
 
 		$namafile 	= array();
 		$tmpfile  	= array();
@@ -53,7 +46,6 @@
 			'deskripsi' => $desc,
 			'target'	=> $donation,
 			'foto'		=> $namafile,
-			'tags'		=> $taga,
 			);
 
 		$db->where($where);

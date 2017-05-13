@@ -44,7 +44,7 @@
                         <div class="input-field">
                             <div class="form-group">
                                 <div class="file-field input-field">
-                                    <div class="btn purple lighten-1"> <span>File</span>
+                                    <div class="btn purple lighten-1"> <span>Photo</span>
                                         <input type="file" multiple accept="image/*" name="photo"> </div>
                                     <div class="file-path-wrapper">
                                         <input class="file-path validate" type="text" placeholder="Upload Foto"> </div>
@@ -61,6 +61,12 @@
                             <div class="form-group">
                                 <input id="username_prefix" type="password" class="validate" name="password">
                                 <label for="icon_prefix">Password</label>
+                            </div>
+                        </div>
+                        <div class="input-field">
+                            <div class="form-group">
+                                <input id="email_prefix" type="email" class="validate" name="email">
+                                <label for="email_prefix">Email</label>
                             </div>
                         </div>
                         <div class="input-field">

@@ -30,3 +30,17 @@
 .see-details {
 	text-transform: capitalize !important;
 }
+
+
+.carousel .carousel-item>.image {
+    height: 200px !important;
+    width: 100%;
+    background-size: cover
+}
+
+.carousel.carousel-slider {
+    height: 200px !important;
+}
+.custom-padding {
+    padding: 6px 24px 24px 24px;
+}

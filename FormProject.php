@@ -1,7 +1,7 @@
 <?php
 
 include 'lib/lib.php';
-
+checkLogin();
 $assets = array(
 	'css' 	=> array('parent.css', 'form.css','navbar.css', 'materialize.min.css', 'material-icon.css', 'font-awesome.min.css'),
 	'js'	=> array('jquery.min.js', 'materialize.min.js','navbar.js','parent.js', 'form.js')

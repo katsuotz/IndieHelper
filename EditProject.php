@@ -1,6 +1,6 @@
 <?php 
 	include 'lib/lib.php';
-
+checkLogin();
 	$assets = array(
 		'css' => array('parent.css','editproject.css','materialize.min.css','material-icon.css','font-awesome.min.css'),
 		'js' => array('jquery.min.js','materialize.min.js','parent.js','edit-project.js'),
@@ -23,8 +23,6 @@
 	}
 	else{
 		$img_project = json_decode($datas->foto);
-		$tags = $datas->tags;
-		$tags_js = json_encode(explode(',', $tags));
 
 		include 'views/template/header.php';
 		include 'views/user/editproject.php';

@@ -13,9 +13,9 @@
 		$where = array('id_kategori' => $id_kategori);
 
 		$db->where($where);
-		$db->update($data_kategori, 'kategori');
-		$result = $db->affected_rows();
-		echo $result;
+		$db->select_tbl('kategori');
+		echo $db->update($data_kategori);
+		
 	}
 
 ?>

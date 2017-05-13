@@ -65,15 +65,6 @@
                                     <div class="progress">
                                         <div class="determinate" style="width: <?=percent($value->income,$value->target)?>%"></div>
                                     </div>
-                                    <div class="col s2">
-                                        <img src="<?=baseurl('assets/images/user/irvan.jpg')?>" alt="" class="circle responsive-img">
-                                    </div>
-                                    <div class="col s2">
-                                        <img src="<?=baseurl('assets/images/user/irvan.jpg')?>" alt="" class="circle responsive-img">
-                                    </div>
-                                    <div class="col s8">
-                                        <p>+ 200 People Join</p>
-                                    </div>
                                     <div class="col s12 my1">
                                         <a href="detailproject.php?id=<?=$value->id_project?>"><button type="button" class="full-width waves-effect darken-1 waves-light btn">Contribute</button></a>
                                     </div>

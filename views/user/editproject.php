@@ -60,10 +60,7 @@
                                 </select>
                                 <label>Select Category</label>
                         </div>
-                        <div class="input-field">
-                            <div class="chips chips-initial"></div>
-                            <label for="icon_prefix">Tags</label>
-                        </div>
+                        
 					</div>
 				        </div>
                             <button type="submit" class="update waves-light waves-effect btn" name="update">Update</button>
@@ -74,5 +71,4 @@
 </div>
 </div>
 <script>
-    var datatags = <?=($tags_js) ?>;
 </script>

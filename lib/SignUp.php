@@ -8,6 +8,8 @@
 		$password	= sha1($input->post('password'));
 		$alamat		= $input->post('alamat');
 		$jk			= $input->post('jk');
+		$email 		= $input->post('email');
+
 		if ($input->files('photo')) {
 			$namafile 	= $input->files('photo')['name'];
 			$tmpfile 	= $input->files('photo')['dir'];
@@ -31,7 +33,8 @@
 				'jk'		=> $jk,
 				'foto'		=> 'default.jpg',
 				'alamat'	=> $alamat,
-				'id_akun'	=> $id_akun
+				'id_akun'	=> $id_akun,
+				'email'		=> $email
 				);
 		}else{
 			$data_user = array(
@@ -39,7 +42,8 @@
 				'jk'		=> $jk,
 				'foto'		=> $namafile,
 				'alamat'	=> $alamat,
-				'id_akun'	=> $id_akun
+				'id_akun'	=> $id_akun,
+				'email'		=> $email
 				);
 		}
 		$db->select_tbl('user');

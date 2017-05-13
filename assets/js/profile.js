@@ -1,4 +1,8 @@
 $(document).ready(function() {
+	$('.carousel.carousel-slider').carousel({
+        fullWidth: true,
+        padding:20
+    });
 	$('.parallax').parallax();
 	x = 1;
 	$('.follow-btn').click(function() {

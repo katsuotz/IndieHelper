@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 13, 2017 at 07:10 AM
+-- Generation Time: May 14, 2017 at 01:30 AM
 -- Server version: 10.1.10-MariaDB
 -- PHP Version: 7.0.4
 
@@ -89,7 +89,7 @@ CREATE TABLE `bank` (
 --
 
 INSERT INTO `bank` (`id_bank`, `nama_bank`, `nama_rekening`, `rekening`) VALUES
-(1, 'Mandiri', 'NJul', '912389012'),
+(1, 'Mandiri Lagih', 'NJul Kipli', '9123890132'),
 (2, 'BCA', 'Kipli', '02341354');
 
 -- --------------------------------------------------------
@@ -113,15 +113,10 @@ CREATE TABLE `donasi` (
 --
 
 INSERT INTO `donasi` (`id_donasi`, `feedback`, `jumlah`, `id_bank`, `id_project`, `id_user`, `status`) VALUES
-(2, 'Kurang Bagus Loh', 60000, 1, 2, 11, 'Sudah'),
-(3, 'Lebih Bagus Lagih Yah..', 800000, 2, 2, 11, 'Sudah'),
-(4, 'Lebih Bagus Lagih Yah..', 800000, 2, 2, 11, 'Belum'),
-(5, 'Lebih Bagus Lagih Yah..', 800000, 2, 2, 11, 'Belum'),
-(6, 'qwerty', 800000, 1, 3, 2, 'Belum'),
-(7, 'Haluuuu', 80000, 2, 2, 2, 'Belum'),
-(8, 'Bandung Jakarta Surabaya', 399999, 2, 2, 2, 'Belum'),
-(9, 'haskdhkasjh', 200000, 1, 2, 2, 'Belum'),
-(14, 'Bagus', 90000, 2, 17, 2, 'Belum');
+(14, 'Bagus', 90000, 2, 17, 2, 'Sudah'),
+(15, 'kasjdljda', 8000, 2, 17, 2, 'Sudah'),
+(16, 'sdfghjkl;', 9000000, 1, 17, 2, 'Belum'),
+(17, '800000', 100, 2, 17, 2, 'Sudah');
 
 -- --------------------------------------------------------
 
@@ -140,7 +135,7 @@ CREATE TABLE `kategori` (
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
 (1, 'Art'),
-(2, 'Tech');
+(2, 'Technology');
 
 -- --------------------------------------------------------
 
@@ -157,24 +152,20 @@ CREATE TABLE `project` (
   `target` double NOT NULL,
   `income` double NOT NULL,
   `id_kategori` int(11) NOT NULL,
-  `id_user` int(11) NOT NULL,
-  `tags` text NOT NULL
+  `id_user` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `project`
 --
 
-INSERT INTO `project` (`id_project`, `nama`, `foto`, `deskripsi`, `tgl`, `target`, `income`, `id_kategori`, `id_user`, `tags`) VALUES
-(2, 'Bandung', '["geek-theme-hn9.jpg","free_space_galaxy_texture_by_lyshastra-d77gh18.jpg"]', 'qwertyuiop', '2017-05-13 01:12:26', 90000, 4749999, 2, 2, 'Bandung,a'),
-(3, 'Google Project', '["geek-theme-hn9.jpg","free_space_galaxy_texture_by_lyshastra-d77gh18.jpg"]', 'Bandung Jow', '2017-04-28 14:52:23', 9000000, 0, 2, 2, 'Tech,Nature'),
-(7, 'Asus Expire', '["TheRestaurant.jpg"]', 'Asus....', '2017-04-28 14:58:41', 8000000, 0, 1, 2, 'ad,s'),
-(8, 'Hantu', '["attachment.png"]', 'alkdjasl', '2017-04-28 15:12:45', 80000, 0, 1, 2, 'art'),
-(10, 'Muter', '["YAL-Home.png"]', 'Bandung', '2017-04-28 15:18:42', 900000, 0, 1, 2, 'bandung'),
-(17, 'Baba', '["0s1jArn.jpg","character302.jpg"]', 'aasds', '2017-05-12 23:26:43', 80000, 90000, 1, 2, 'art'),
-(18, 'Baba', '["depan.jpg"]', 'aasds', '2017-04-28 15:40:21', 80000, 0, 1, 2, 'art'),
-(19, 'a', '["samping1.jpg"]', 'asasa', '2017-04-28 15:40:59', 9000, 0, 1, 2, 'a'),
-(21, 'This Is Spartant', '["5d64395cb8a01b0c55c88408ea08314f.jpg","5aff5c6ac0af009d05c2f0cb7a355bfc.jpg"]', 'Bandung', '2017-05-13 04:22:11', 800000, 0, 2, 2, '');
+INSERT INTO `project` (`id_project`, `nama`, `foto`, `deskripsi`, `tgl`, `target`, `income`, `id_kategori`, `id_user`) VALUES
+(7, 'Asus Expire', '["TheRestaurant.jpg"]', 'Asus....', '2017-04-28 14:58:41', 8000000, 0, 1, 2),
+(8, 'Hantu', '["attachment.png"]', 'alkdjasl', '2017-04-28 15:12:45', 80000, 0, 1, 2),
+(10, 'Muter Lagih', '["9b2ccf2e7081c465b731c88c28c04ec6.jpg","","","",""]', 'Bandung', '2017-05-13 13:17:59', 900000, 0, 1, 2),
+(17, 'Baba', '["6f8e63ddea3eb543a7f3f168434a6275.jpg","da259bf1a13efbdffac6741de7e2efb4.jpg","","",""]', 'aasds', '2017-05-13 14:13:22', 8000000, 9196100, 1, 2),
+(18, 'Baba', '["depan.jpg"]', 'aasds', '2017-04-28 15:40:21', 80000, 0, 1, 2),
+(19, 'a', '["samping1.jpg"]', 'asasa', '2017-04-28 15:40:59', 9000, 0, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -189,25 +180,26 @@ CREATE TABLE `user` (
   `foto` text NOT NULL,
   `alamat` text NOT NULL,
   `deskripsi` text NOT NULL,
-  `id_akun` int(11) NOT NULL
+  `id_akun` int(11) NOT NULL,
+  `email` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `nama`, `jk`, `foto`, `alamat`, `deskripsi`, `id_akun`) VALUES
-(2, 'Irvan Lutfi Gunawan', 'L', 'irvan.jpg', 'Bandung, Indonesia', '', 7),
-(3, 'Hantuuu', 'L', 'ReminderLogo.png', 'han', '', 8),
-(4, 'jujun', 'L', '1493637608irvan.jpg', 'Babakan Ciparay', '', 9),
-(5, 'Sunda', 'L', '7527d938919cb032773c585937d7f5ed', 'sunda', '', 10),
-(6, 'as', 'L', '1079532ca1d97e65cf2004c913699c2e', 'ui', '', 11),
-(7, 'zxczxc', 'L', 'default.jpg', 'zxc', '', 12),
-(8, 'asd', 'L', 'jpg', 'asd', '', 13),
-(9, 'uio', 'L', '531d566709c5049d56bba9bdfe1f18b5jpg', 'uio', '', 14),
-(10, 'fdg', 'L', 'e4b43fbedfc40f5be5b7d1de8af17c86.jpg', 'dfg', '', 15),
-(11, 'Asal', '', 'a5eb1c43c6eb91b889584baca750b47f.jpg', '', '', 16),
-(12, 'asal', 'P', '7a1a763e4164cced508f8e19777f0d10.jpg', 'asal', '', 17);
+INSERT INTO `user` (`id_user`, `nama`, `jk`, `foto`, `alamat`, `deskripsi`, `id_akun`, `email`) VALUES
+(2, 'Irvan Lutfi Gunawan', 'L', 'irvan.jpg', 'Bandung, Indonesia', '', 7, 'irvan@gmial.com'),
+(3, 'Hantuuu', 'L', 'ReminderLogo.png', 'han', '', 8, ''),
+(4, 'jujun', 'L', '1493637608irvan.jpg', 'Babakan Ciparay', '', 9, ''),
+(5, 'Sunda', 'L', '7527d938919cb032773c585937d7f5ed', 'sunda', '', 10, ''),
+(6, 'as', 'L', '1079532ca1d97e65cf2004c913699c2e', 'ui', '', 11, ''),
+(7, 'zxczxc', 'L', 'default.jpg', 'zxc', '', 12, ''),
+(8, 'asd', 'L', 'jpg', 'asd', '', 13, ''),
+(9, 'uio', 'L', '531d566709c5049d56bba9bdfe1f18b5jpg', 'uio', '', 14, ''),
+(10, 'fdg', 'L', 'e4b43fbedfc40f5be5b7d1de8af17c86.jpg', 'dfg', '', 15, ''),
+(11, 'Asal', '', 'a5eb1c43c6eb91b889584baca750b47f.jpg', 'Bandung,Indonesia', '', 16, ''),
+(12, 'asal', 'P', '7a1a763e4164cced508f8e19777f0d10.jpg', 'asal', '', 17, '');
 
 --
 -- Indexes for dumped tables
@@ -284,7 +276,7 @@ ALTER TABLE `bank`
 -- AUTO_INCREMENT for table `donasi`
 --
 ALTER TABLE `donasi`
-  MODIFY `id_donasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_donasi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `kategori`
 --
@@ -294,7 +286,7 @@ ALTER TABLE `kategori`
 -- AUTO_INCREMENT for table `project`
 --
 ALTER TABLE `project`
-  MODIFY `id_project` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id_project` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `user`
 --

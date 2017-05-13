@@ -15,6 +15,10 @@ $db->join('user','INNER','project.id_user','user.id_user');
 $db->get_tbl('project',true,6);	
 $data = $db->result();
 
+$db->join('user','','donasi.id_user','user.id_user');
+$db->get_tbl('donasi');
+$donasi	= $db->result();
+
 $foto = array();
 
 

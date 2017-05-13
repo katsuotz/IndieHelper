@@ -21,14 +21,14 @@
 		$result = $db->insert($data);
 
 		if($result == 'Berhasil'){
-			$update	= array('income' => 'income + '.$jumlah);
-			$where 	= array('id_project' => $id_project);
-			$db->where($where);
-			$db->select_tbl('project');
-			$check = $db->update($update,false);
-			if($check == "Berhasil"){
+			// $update	= array('income' => 'income + '.$jumlah);
+			// $where 	= array('id_project' => $id_project);
+			// $db->where($where);
+			// $db->select_tbl('project');
+			// $check = $db->update($update,false);
+			// if($check == "Berhasil"){
 				location('../detailproject.php?id='.$id_project);
-			}
+			// }
 		}
 		else{
 			echo "Error";

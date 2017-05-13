@@ -12,7 +12,7 @@
 	if(isset($_GET['ktg'])){
 		$ktg = $input->get('ktg');
 		$where = array('id_kategori' => $ktg);
-		$db->select(array('project.id_project', 'project.nama AS nama_project', 'project.foto', 'target', 'user.nama', 'alamat','user.foto AS foto_user'));
+		$db->select(array('project.id_project', 'project.nama AS nama_project', 'project.foto', 'target','income', 'user.nama', 'alamat','user.foto AS foto_user'));
 		$db->where($where);
 		$db->join('user','','project.id_user','user.id_user');
 		$db->get_tbl('project');
@@ -20,7 +20,7 @@
 	}elseif(isset($_GET['search'])){
 		$search		= $input->get('search');
 		$where		= array('project.nama' => $search);
-		$db->select(array('project.id_project', 'project.nama AS nama_project', 'project.foto', 'target', 'user.nama', 'alamat','user.foto AS foto_user'));
+		$db->select(array('project.id_project', 'project.nama AS nama_project', 'project.foto', 'target','income', 'user.nama', 'alamat','user.foto AS foto_user'));
 		$db->logic_where('OR');
 		$db->where_explore($where);
 		$db->join('user','','project.id_user','user.id_user');
@@ -28,7 +28,7 @@
 		$data = $db->result();
 	} else{
 		$db->join('user','','project.id_user','user.id_user');
-		$db->select(array('project.id_project', 'project.nama AS nama_project', 'project.foto', 'target', 'user.nama', 'alamat','user.foto AS foto_user'));
+		$db->select(array('project.id_project', 'project.nama AS nama_project', 'project.foto', 'target','income', 'user.nama', 'alamat','user.foto AS foto_user'));
 		$db->get_tbl('project');
 		$data = $db->result();
 	}

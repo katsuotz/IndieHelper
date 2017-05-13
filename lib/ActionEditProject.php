@@ -61,9 +61,9 @@
 			);
 
 		$db->where($where);
-		$upd = $db->update($data_project, 'project');
-		$result = $db->affected_rows();
-		echo $result;
+		$db->select_tbl('project');
+		$upd = $db->update($data_project);
+		echo $upd;
 	}
 
 

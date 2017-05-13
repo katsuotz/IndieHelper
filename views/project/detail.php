@@ -44,13 +44,13 @@
                     <img class="responsive-img image-project" src="<?=baseurl('assets/images/project/').$foto[0][0]?>">
                     <div class="absolute other-images pl6">
                         <div class="row">
-                        <?php for ($k=0; $k < count($foto[0]); $k++){?>
+                            <?php for ($k=0; $k < count($foto[0]); $k++){?>
                             <div class="col s2">
                                 <div class="kotak">
                                     <div class="img-other" get-image="<?=baseurl('assets/images/project/').$foto[0][$k]?>" style="background-image: url('<?=baseurl('assets/images/project/').$foto[0][$k]?>')"></div>
                                 </div>
                             </div>
-                        <?php } ?>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>
@@ -119,9 +119,12 @@
                         </div>
                     </div>
                     <div class="col s12">
-                        <?php if(!empty($session->get_session('ID'))){ ?>
+                        <?php if(!empty($session->get_session('ID')) ){ ?>
+                            <?php if($session->get_session('ID') == $data->id_user){ ?>
+                            <a class="waves-effect waves-light btn btn-large" disabled style="width: 100%">CONTRIBUTE</a>
+                            <?php }else{ ?>
                         <a class="waves-effect waves-light btn btn-large modal-trigger" href="#modal1" style="width: 100%">CONTRIBUTE</a>
-                        <?php } else{ ?>
+                        <?php } }else{ ?>
                         <a class="waves-effect waves-light btn btn-large" href="login.php" style="width: 100%">CONTRIBUTE</a>
                         <?php } ?>
                     </div>
@@ -133,6 +136,28 @@
                             <p>
                                 <?=$data->deskripsi?>
                             </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12">
+                    <div class="card">
+                        <div class="card-content black-text">
+                            <span class="card-title">Contributions</span>
+                            <div class="row">
+                                <?php foreach ($donasi as $key => $value):?>
+                                <div class="col s2">
+                                    <div class="col s12 valign-wrapper">
+                                        <img src="<?=baseurl('assets/images/user/').$value->foto?>" alt="" class="margin-center circle responsive-img">
+                                    </div>
+                                    <div class="col s12 center-align">
+                                        <span class="black-text font17"><?=$value->nama?></span>
+                                        <p class="m0 font12">
+                                            <?=money($value->jumlah)?>
+                                        </p>
+                                    </div>
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
                         </div>
                     </div>
                 </div>
