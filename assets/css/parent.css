@@ -641,3 +641,7 @@ footer .social-icons ul li {
 .margin-center{
 	margin: 0 auto !important;
 }
+
+.progress {
+	background-color: #eee !important;
+}

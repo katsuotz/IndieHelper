@@ -12,6 +12,7 @@ $fotohref = array('#one!','#two!','#three!','#four!','#five!');
 
 $db->select(array('project.id_project', 'project.nama AS nama_project', 'project.foto', 'target','income', 'user.nama', 'alamat','user.foto AS foto_user'));
 $db->join('user','INNER','project.id_user','user.id_user');
+$db->order_by('id_project', 'DESC');
 $db->get_tbl('project',true,6);	
 $data = $db->result();
 

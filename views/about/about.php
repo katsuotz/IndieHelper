@@ -11,12 +11,13 @@
                         <div class="indie">
 
                             <div class="row container-fluid pb3">
-                                <h3 class="center-align title">IndieHelper</h3>
-                                <p>Lorem ipsum dolor sit amet, ceteros propriae duo et, eu his consetetur intellegam vituperatoribus. Putant maiorum vim ea, veri justo recteque id pro. Id nobis detraxit mediocrem duo, purto honestatis ius in. Cu causae persius singulis quo. Dico aperiam pericula ex sit, deleniti consectetuer cum ne. Mel mucius singulis gubergren ne. Et fabellas splendide vel. Aeterno docendi theophrastus in cum, duo eirmod lucilius menandri an, ei nec mazim possit sensibus. Doming ocurreret deseruisse in sea, ne unum meis animal vim. Ea omnesque laboramus pro.</p>
+                                <h3 class="center-align title mb0 font36">What is IndieHelper?</h3>
+                                <p class="center-align">IndieHelper helps all people who want to make their great ideas. Make them together and publish it. With Indiehelper, you can get some contribution from us and people who think your ideas should be come to life.</p>
                             </div>
                         </div>
                         <div class="indie">
-                            <h3 class="center-align title">Our Team</h3>
+                            <h3 class="center-align title font30 mb0">Our Team</h3>
+                            <p class="center-align">Meet with developers who make IndieHelper with their loves</p>
                             <div class="row mt3 pt1">
                                 <div class="col s12 xl4 mt3 center-align">
                                     <div class="card team-card white darken-1">
@@ -26,17 +27,13 @@
                                             </div>
                                             <div class="row m0">
                                                 <p class="pt1"> <b>Irvan Lutfi Gunawan</b></p>
-                                                <p class="pb1">Front End & Back End</p>
+                                                <p class="pb1">Front End & Back End Developer</p>
 
                                             </div>
-                                        </div>
-                                        <div class="card-action">
-                                            <div class="container-fluid">
-                                                <div class="row">
-                                                    <div class="col s2 offset-s3"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-facebook fa-2x "></i></a></div>
-                                                    <div class="col s2"><a href="https://www.instagram.com/irvan_lg" target="_blank"><i class="fa fa-instagram fa-2x "></i></a></div>
-                                                    <div class="col s2"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-twitter fa-2x "></i></a></div>
-                                                </div>
+                                            <div class="row pt2">
+                                                <div class="col s2 offset-s3"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-facebook fa-2x "></i></a></div>
+                                                <div class="col s2"><a href="https://www.instagram.com/irvan_lg" target="_blank"><i class="fa fa-instagram fa-2x "></i></a></div>
+                                                <div class="col s2"><a href="https://twitter.com/irvanlutfi12" target="_blank"><i class="fa fa-twitter fa-2x "></i></a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -45,21 +42,17 @@
                                     <div class="card team-card white darken-1">
                                         <div class="card-content black-text">
                                             <div class="avatar">
-                                                <img src="<?= baseurl('assets/images/about/irvan.jpg')?>" class="circle responsive-img" alt="">
+                                                <img src="<?= baseurl('assets/images/about/jalu.jpg')?>" class="circle responsive-img" alt="">
                                             </div>
                                             <div class="row m0">
                                                 <p class="pt1"> <b>Jalu Nugroho</b></p>
-                                                <p class="pb1">Front End</p>
+                                                <p class="pb1">Front End Developer</p>
 
                                             </div>
-                                        </div>
-                                        <div class="card-action">
-                                            <div class="container-fluid">
-                                                <div class="row">
-                                                    <div class="col s2 offset-s3"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-facebook fa-2x "></i></a></div>
-                                                    <div class="col s2"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-instagram fa-2x "></i></a></div>
-                                                    <div class="col s2"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-twitter fa-2x "></i></a></div>
-                                                </div>
+                                            <div class="row pt2">
+                                                <div class="col s2 offset-s3"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-facebook fa-2x "></i></a></div>
+                                                <div class="col s2"><a href="https://www.instagram.com/jalunugroho13/" target="_blank"><i class="fa fa-instagram fa-2x "></i></a></div>
+                                                <div class="col s2"><a href="https://web.facebook.com/agryva" target="_blank"><i class="fa fa-twitter fa-2x "></i></a></div>
                                             </div>
                                         </div>
                                     </div>
@@ -68,21 +61,17 @@
                                     <div class="card team-card white darken-1">
                                         <div class="card-content black-text">
                                             <div class="avatar">
-                                                <img src="<?= baseurl('assets/images/about/irvan.jpg')?>" class="circle responsive-img" alt="">
+                                                <img src="<?= baseurl('assets/images/about/irfan.jpg')?>" class="circle responsive-img" alt="">
                                             </div>
                                             <div class="row m0">
-                                                <p class="pt1"> <b>M. Irfan Fakhri</b></p>
-                                                <p class="pb1">Front End , Designer & Back End</p>
+                                                <p class="pt1"> <b>Muhammad Irfan Fakhri</b></p>
+                                                <p class="pb1">Designer, Front End & Back End Developer</p>
 
                                             </div>
-                                        </div>
-                                        <div class="card-action">
-                                            <div class="container-fluid">
-                                                <div class="row">
-                                                    <div class="col s2 offset-s3"><a href="https://web.facebook.com/irfanfakhri66" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></div>
-                                                    <div class="col s2"><a href="https://www.instagram.com/irfanfakhri66/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></div>
-                                                    <div class="col s2"><a href="https://web.facebook.com/irfanfakhri66" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></div>
-                                                </div>
+                                            <div class="row pt2">
+                                                <div class="col s2 offset-s3"><a href="https://web.facebook.com/irfanfakhri66" target="_blank"><i class="fa fa-facebook fa-2x"></i></a></div>
+                                                <div class="col s2"><a href="https://www.instagram.com/irfanfakhri66/" target="_blank"><i class="fa fa-instagram fa-2x"></i></a></div>
+                                                <div class="col s2"><a href="https://twitter.com/IrfanF_20" target="_blank"><i class="fa fa-twitter fa-2x"></i></a></div>
                                             </div>
                                         </div>
                                     </div>

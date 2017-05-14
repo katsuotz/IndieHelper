@@ -15,7 +15,7 @@
             <div class="row pt2">
 
                 <h4 class="m0 pt3 center-align title">Explore</h4>
-                <div class="card-title  center-align">Lorem Ipsum Dolor Sit Amet</div>
+                <div class="card-title center-align font20">Be the first to know the newest incredible project</div>
 
                 <!-- <div class="input-field mt2">
                     <div class="chips chips-placeholder"></div>
@@ -80,12 +80,12 @@
 
                                 <div class="col s12">
 
-                                    <h3 class="card-title"><?=money($value->target)?></h3>
+                                    <h3 class="card-title font20"><?=money($value->income) . ' / ' . money($value->target)?></h3>
                                     <div class="progress">
-                                        <div class="determinate" style="width: <?=percent($value->income,$value->target)?>%"></div>
+                                        <div class="determinate blue darken-1" style="width: <?=percent($value->income,$value->target)?>%"></div>
                                     </div>
                                     <div class="col s12 my1">
-                                        <a href="detailproject.php?id=<?=$value->id_project?>"><button type="button" class="full-width waves-effect darken-1 waves-light btn">Contribute</button></a>
+                                        <a href="detailproject.php?id=<?=$value->id_project?>"><button type="button" class="full-width waves-effect blue darken-1 waves-light btn">Contribute</button></a>
                                     </div>
                                 </div>
 

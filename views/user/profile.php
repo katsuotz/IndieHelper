@@ -11,7 +11,7 @@
     <div class="row pt3">
         <div class="col s12 mt3">
             <div class="card profile-card white mt3">
-                <div class="card-content teal lighten-1 white-text col s12">
+                <div class="card-content indigo darken-1 white-text col s12 profile-top">
                     <div class="center-align col s4">
                         <?php if($session->get_session('STATUS') == 'user'){ ?>
 
@@ -45,12 +45,12 @@
                 </div>
                 <div class="card-tabs">
                     <ul class="tabs tabs-fixed-width">
-                        <li class="tab col s3"><a class="purple-text active" href="#test1">Profile</a></li>
-                        <li class="tab col s3"><a class="purple-text" href="#test2">Contributions</a></li>
-                        <li class="tab col s3"><a class="purple-text" href="#test3">Project</a></li>
+                        <li class="tab col s3"><a class="indigo-text active" href="#test1">Profile</a></li>
+                        <li class="tab col s3"><a class="indigo-text" href="#test2">Contributions</a></li>
+                        <li class="tab col s3"><a class="indigo-text" href="#test3">Project</a></li>
                     </ul>
                 </div>
-                <div class="card-content py2">
+                <div class="card-content py2 profile-detail">
                     <div id="test1" class="container">
 
                         <div class="row pb1 m0">
@@ -105,9 +105,9 @@
 
                                         <a href="#!" class="collection-item">
                                             <div class="row m0">
-                                                <div class="col s6">status</div>
+                                                <div class="col s6"><span>Status</span></div>
                                                 <div class="col s6">
-                                                    <span class="new badge left ml0 <?php if($donation->status == 'Belum') echo " red "; ?>" data-badge-caption="<?=$donation->status?>"></span></div>
+                                                    <span class="white-text new badge left ml0 <?php if($donation->status == 'Belum') echo " red "; ?>" data-badge-caption="<?=$donation->status?>"></span></div>
                                             </div>
                                         </a>
                                     </div>
@@ -156,14 +156,14 @@
 
                                             <div class="col s12">
 
-                                                <h3 class="card-title">
-                                                    <?=money($value->target)?>
+                                                <h3 class="card-title font20">
+                                                    <?=money($value->income) . ' / ' . money($value->target)?>
                                                 </h3>
-                                                <div class="progress">
-                                                    <div class="determinate" style="width: <?=percent($value->income,$value->target)?>%"></div>
+                                                <div class="progress ">
+                                                    <div class="determinate indigo" style="width: <?=percent($value->income,$value->target)?>%"></div>
                                                 </div>
                                                 <div class="col s12 my1">
-                                                    <a href="detailproject.php?id=<?=$value->id_project?>"><button type="button" class="full-width waves-effect darken-1 waves-light btn">Views</button></a>
+                                                    <a href="detailproject.php?id=<?=$value->id_project?>"><button type="button" class="full-width waves-effect indigo darken-1 waves-light btn">Views</button></a>
                                                 </div>
                                             </div>
 

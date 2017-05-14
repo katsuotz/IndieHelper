@@ -21,7 +21,7 @@
 	}
 
 	function money($uang){
-		return "Rp. ".number_format($uang,2,',','.');
+		return "Rp " . number_format($uang, 0,',','.') . ', -';
 	}
 
 	function percent($income,$target){
@@ -46,6 +46,7 @@
 		public $invalues = '';
 		public $select = '*';
 		public $where = '';
+		public $order_by = '';
 
 		public $logic = 'AND';
 
@@ -121,6 +122,10 @@
 
 		}
 
+		function order_by($id, $order) {
+			$this->order_by = 'ORDER BY ' . $id . ' ' . $order;
+		}
+
 		function where_explore($value){
 			$col = array();
 
@@ -132,7 +137,7 @@
 			$data = array();
 
 			for ($i=0; $i < count($col); $i++) { 
-				array_push($data, $row." LIKE '". $col[$i] . "%'");
+				array_push($data, $row." LIKE '%". $col[$i] . "%'");
 			}
 
 			 $this->where = 'WHERE '.implode(' OR ', $data);
@@ -158,14 +163,15 @@
 			}
 
 			if($limit)
-				$query = "SELECT $this->select FROM $this->tblname $this->join $this->where LIMIT $count";
+				$query = "SELECT $this->select FROM $this->tblname $this->join $this->where $this->order_by LIMIT $count";
 			else
-				$query = "SELECT $this->select FROM $this->tblname $this->join $this->where";
+				$query = "SELECT $this->select FROM $this->tblname $this->join $this->where $this->order_by";
 
 			$this->data = $this->mysqli->query($query);
 			$this->select = '*';
 			$this->tblname = '';
 			$this->where = '';
+			$this->order_by = '';
 			$this->join = array();
 			
 		}

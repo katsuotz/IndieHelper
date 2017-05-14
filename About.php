@@ -10,6 +10,6 @@ $assets = array(
 include 'views/template/header.php';
 include 'views/template/nanavbaran.php';
 include 'views/about/about.php';
-include 'views/template/footer_admin.php';
+include 'views/template/footer.php';
 
 ?>

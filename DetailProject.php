@@ -17,8 +17,11 @@ if(isset($_GET['id'])){
 	$db->join('kategori','','project.id_kategori','kategori.id_kategori');
 	$db->get_tbl('project');
 	$data = $db->row_result();
-	array_push($foto, json_decode($data->foto));
-
+	foreach (json_decode($data->foto) as $key => $value) {
+		if ($value) {
+			array_push($foto, $value);
+		}
+	}
 	$db->where(array('id_project' => $idpro,'status'=>'Sudah'));
 	$db->join('user','','donasi.id_user','user.id_user');
 	$db->get_tbl('donasi',true,6);

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Indie Helper</title>
+    <link rel="icon" href="<?= baseurl('assets/images/template/indiehelpericon.png') ?>">
     <?php foreach ($assets['css'] as $key => $value): ?>
     <link rel="stylesheet" type="text/css" href="<?= baseurl('assets/css/' . $value) ?>">
     <?php endforeach; ?>

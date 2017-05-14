@@ -20,7 +20,7 @@
 }
 
 .tabs .indicator {
-	background-color: #ab47bc !important;
+	background-color: #303f9f !important;
 }
 
 .my-project .card-image {
@@ -43,4 +43,18 @@
 }
 .custom-padding {
     padding: 6px 24px 24px 24px;
+}
+
+.profile-top input:not([type]):focus:not([readonly]), .profile-top input[type=text]:focus:not([readonly]), .profile-top input[type=password]:focus:not([readonly]), .profile-top input[type=email]:focus:not([readonly]), .profile-top input[type=url]:focus:not([readonly]), .profile-top input[type=time]:focus:not([readonly]), .profile-top input[type=date]:focus:not([readonly]), .profile-top input[type=datetime]:focus:not([readonly]), .profile-top input[type=datetime-local]:focus:not([readonly]), .profile-top input[type=tel]:focus:not([readonly]), .profile-top input[type=number]:focus:not([readonly]), .profile-top input[type=search]:focus:not([readonly]), .profile-top textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #fff !important;
+    box-shadow: 0 1px 0 0 #fff !important;
+}
+
+.profile-detail input:not([type]):focus:not([readonly]), .profile-detail input[type=text]:focus:not([readonly]), .profile-detail input[type=password]:focus:not([readonly]), .profile-detail input[type=email]:focus:not([readonly]), .profile-detail input[type=url]:focus:not([readonly]), .profile-detail input[type=time]:focus:not([readonly]), .profile-detail input[type=date]:focus:not([readonly]), .profile-detail input[type=datetime]:focus:not([readonly]), .profile-detail input[type=datetime-local]:focus:not([readonly]), .profile-detail input[type=tel]:focus:not([readonly]), .profile-detail input[type=number]:focus:not([readonly]), .profile-detail input[type=search]:focus:not([readonly]), .profile-detail textarea.materialize-textarea:focus:not([readonly]) {
+    border-bottom: 1px solid #303f9f  !important;
+    box-shadow: 0 1px 0 0 #303f9f  !important;
+}
+
+.contribution span {
+	color: #333;
 }

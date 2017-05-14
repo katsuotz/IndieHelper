@@ -33,7 +33,7 @@
 <div class="content my2">
     <div class="container" style="width: 85%">
         <div class="row m0">
-            <div class="col s12">
+            <div class="col s12 mb1">
 
                 <div class="col s12">
                     <span class="fontsize2"><?=$data->nama_project?></span>
@@ -41,13 +41,15 @@
             </div>
             <div class="col s12">
                 <div class="col s12 x8 l8 relative">
-                    <img class="responsive-img image-project" src="<?=baseurl('assets/images/project/').$foto[0][0]?>">
+                    <div class="image-wrapper">
+                        <img class="responsive-img image-project" src="<?=baseurl('assets/images/project/').$foto[0]?>">
+                    </div>
                     <div class="absolute other-images pl6">
                         <div class="row">
-                            <?php for ($k=0; $k < count($foto[0]); $k++){?>
+                            <?php for ($k=0; $k < count($foto); $k++){?>
                             <div class="col s2">
                                 <div class="kotak">
-                                    <div class="img-other" get-image="<?=baseurl('assets/images/project/').$foto[0][$k]?>" style="background-image: url('<?=baseurl('assets/images/project/').$foto[0][$k]?>')"></div>
+                                    <div class="img-other" get-image="<?=baseurl('assets/images/project/').$foto[$k]?>" style="background-image: url('<?=baseurl('assets/images/project/').$foto[$k]?>')"></div>
                                 </div>
                             </div>
                             <?php } ?>
@@ -77,55 +79,55 @@
                             <a href="#!" class="collection-item">
                                 <div class="row m0">
                                     <div class="col s6">
-                                        <span>Target</span>
+                                        <span class="grey-text">Target</span>
                                     </div>
                                     <div class="col s6">
-                                        <span><?= money($data->target)?></span>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="#!" class="collection-item">
-                                <div class="row m0">
-                                    <div class="col s6">
-                                        <span>Income</span>
-                                    </div>
-                                    <div class="col s6">
-                                        <span><?=money($data->income)?></span>
+                                        <span class="black-text"><?= money($data->target)?></span>
                                     </div>
                                 </div>
                             </a>
                             <a href="#!" class="collection-item">
                                 <div class="row m0">
                                     <div class="col s6">
-                                        <span>Date</span>
+                                        <span class="grey-text">Income</span>
                                     </div>
                                     <div class="col s6">
-                                        <span><?=substr("$data->tgl",0,10)?></span>
+                                        <span class="black-text"><?=money($data->income)?></span>
                                     </div>
                                 </div>
                             </a>
                             <a href="#!" class="collection-item">
                                 <div class="row m0">
-                                    <div class="col s6">Category</div>
                                     <div class="col s6">
-                                        <span class="new badge left ml0" data-badge-caption="<?=$data->nama_kategori?>"></span></div>
+                                        <span class="grey-text">Date</span>
+                                    </div>
+                                    <div class="col s6">
+                                        <span class="black-text"><?=substr("$data->tgl",0,10)?></span>
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="#!" class="collection-item">
+                                <div class="row m0">
+                                    <div class="col s6 grey-text">Category</div>
+                                    <div class="col s6">
+                                        <span class="new badge left ml0 indigo darken-1" data-badge-caption="<?=$data->nama_kategori?>"></span></div>
                                 </div>
                             </a>
                         </div>
                     </div>
                     <div class="col s12">
                         <div class="progress">
-                            <div class="determinate" style="width:<?= percent($data->income,$data->target) ?>%"></div>
+                            <div class="determinate indigo darken-1" style="width:<?= percent($data->income,$data->target) ?>%"></div>
                         </div>
                     </div>
                     <div class="col s12">
                         <?php if(!empty($session->get_session('ID')) ){ ?>
                             <?php if($session->get_session('ID') == $data->id_user){ ?>
-                            <a class="waves-effect waves-light btn btn-large" disabled style="width: 100%">CONTRIBUTE</a>
+                            <a class="waves-effect waves-light indigo darken-1 btn btn-large" disabled style="width: 100%">CONTRIBUTE</a>
                             <?php }else{ ?>
-                        <a class="waves-effect waves-light btn btn-large modal-trigger" href="#modal1" style="width: 100%">CONTRIBUTE</a>
+                        <a class="waves-effect waves-light indigo darken-1 btn btn-large modal-trigger" href="#modal1" style="width: 100%">CONTRIBUTE</a>
                         <?php } }else{ ?>
-                        <a class="waves-effect waves-light btn btn-large" href="login.php" style="width: 100%">CONTRIBUTE</a>
+                        <a class="waves-effect waves-light indigo darken-1 btn btn-large" href="login.php" style="width: 100%">CONTRIBUTE</a>
                         <?php } ?>
                     </div>
                 </div>
@@ -142,7 +144,7 @@
                 <div class="col s12">
                     <div class="card">
                         <div class="card-content black-text">
-                            <span class="card-title">Contributions</span>
+                            <span class="card-title mb2">Contributions</span>
                             <div class="row">
                                 <?php foreach ($donasi as $key => $value):?>
                                 <div class="col s2">
