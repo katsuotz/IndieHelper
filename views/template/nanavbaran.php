@@ -1,6 +1,6 @@
 <!-- <div class="navbar-fixed"> -->
 <ul id="dropdown1" class="dropdown-content navbar-dropdown">
-    <li><a href="Profile.php">Profile</a></li>
+    <li><a href="Profile.php?id=<?= $session->get_session('ID') ?>">Profile</a></li>
     <li class="divider"></li>
     <li><a href="Logout.php">Logout</a></li>
 </ul>

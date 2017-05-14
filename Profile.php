@@ -6,6 +6,8 @@ checkLogin();
 $foto =array();
 $fotohref = array('#one!','#two!','#three!','#four!','#five!');
 
+$id_user = $input->get('id');
+
 $assets = array(
 	'css' 	=> array('parent.css', 'profile.css', 'materialize.min.css', 'navbar.css','material-icon.css', 'font-awesome.min.css'),
 	'js'	=> array('jquery.min.js', 'materialize.min.js', 'parent.js', 'profile.js','navbar.js')
@@ -18,7 +20,7 @@ $db->join('project','','user.id_user','project.id_user');
 $db->get_tbl('user');
 $data = $db->row_result();
 
-$db->select(array('project.nama','donasi.jumlah','donasi.feedback','donasi.status'));
+// $db->select(array('project.nama','donasi.jumlah','donasi.feedback','donasi.status'));
 $db->where(array('user.id_user' => $session->get_session('ID')));
 $db->join('donasi','','user.id_user','donasi.id_user');
 $db->join('project','','donasi.id_project','project.id_project');

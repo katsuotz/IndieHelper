@@ -2,6 +2,11 @@
     <div class="parallax"><img src="<?= baseurl('assets/images/template/plx-bg.jpg') ?>"></div>
 </div>
 
+
+<?php if ($id_user == $session->get_session('ID')): ?>
+<form action="lib/updateprofile.php" method="post">
+<?php endif ?>
+
 <div class="content container">
     <div class="row pt3">
         <div class="col s12 mt3">
@@ -19,12 +24,20 @@
                     </div>
                     <div class="left-align col s8 pt2 mt2">
                         <div class="row m0 py0 pl0 pr1">
-                            <span class="card-title left m0"><?=$data->nama_user?> </span>
-                            <a class="waves-effect waves-shadow btn right grey lighten-3 black-text">Edit Profile</a>
+                            <?php if ($id_user == $session->get_session('ID')) { ?>
+                                <span class="card-title left m0"><input type="text" value="<?= $data->nama_user ?>" name="nama"></span>    
+                            <?php } else { ?>
+                            <span class="card-title left m0"><?=$data->nama_user ?> </span>
+                            <?php } ?>
+                            <button type="submit" class="waves-effect waves-shadow btn right grey lighten-3 black-text">Update</button>
                         </div>
                         <div class="row m0 pb1">
                             <p class="m0 font12">
-                                <?=$data->alamat?>
+                                <?php if ($id_user == $session->get_session('ID')) { ?>
+                                <input type="text" value="<?= $data->alamat ?>" name="alamat">    
+                                <?php } else { ?>
+                                <?=$data->email ?>
+                                <?php } ?>
                             </p>
                         </div>
 
@@ -43,14 +56,22 @@
                         <div class="row pb1 m0">
                             <div class="col s4"><b>Email</b></div>
                             <div class="col s8">
-                                <?=$data->email?>
+                                <?php if ($id_user == $session->get_session('ID')) { ?>
+                                <input type="text" value="<?= $data->email ?>" name="email">
+                                <?php } else { ?>
+                                <?=$data->email ?>
+                                <?php } ?>
                             </div>
                         </div>
                         <div class="row pb1 m0">
                             <div class="col s4"><b>About</b></div>
                             <div class="col s8">
                                 <p class="justify-align">
-                                    <?= $data->desk_user?>
+                                <?php if ($id_user == $session->get_session('ID')) { ?>
+                                <input type="text" name="deskripsi" placeholder="Deskripsi" value="<?= $data->desk_user ?>">
+                                <?php } else { ?>
+                                <?=$data->desk_user ?>
+                                <?php } ?>
                                 </p>
                             </div>
                         </div>
@@ -159,3 +180,7 @@
         </div>
     </div>
 </div>
+
+<?php if ($id_user == $session->get_session('ID')): ?>
+</form>
+<?php endif ?>
