@@ -61,15 +61,17 @@
                         <div class="card mb1">
                             <div class="card-content black-text" style="padding: 21px 0px 1px">
                                 <div class="row">
-                                    <div class="col s12 valign-wrapper">
-                                        <img src="<?=baseurl('assets/images/user/').$data->foto_user?>" alt="" class="margin-center circle responsive-img">
-                                    </div>
-                                    <div class="col s12 center-align">
-                                        <span class="black-text font17"><?=$data->nama?></span>
-                                        <p class="m0 font12">
-                                            <?=$data->alamat?>
-                                        </p>
-                                    </div>
+                                    <a href="<?= baseurl('profile.php?id=' . $data->id_user) ?>">
+                                        <div class="col s12 valign-wrapper">
+                                            <img src="<?=baseurl('assets/images/user/').$data->foto_user?>" alt="" class="margin-center circle responsive-img">
+                                        </div>
+                                        <div class="col s12 center-align">
+                                            <span class="black-text font17"><?=$data->nama?></span>
+                                            <p class="m0 font12">
+                                                <?=$data->alamat?>
+                                            </p>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>

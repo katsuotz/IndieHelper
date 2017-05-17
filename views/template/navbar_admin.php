@@ -12,12 +12,7 @@
 					</div>
 					<div class="col s8">
 						<!-- Dropdown Trigger -->
-						<a class='dropdown-button' href='#'><span class="white-text name"><?=$session->get_session("NAMA")?> <i class="pl1 fa fa-ellipsis-v dropdown-button right" data-activates='dropdown-profile'></i></span></a>
-						
-						<ul id='dropdown-profile' class='dropdown-content'>
-							<li><a href="#" class="pr3"><i class="fa fa-gear p0 m0"></i> Setting</a></li>
-							<li><a href="<?= baseurl('Logout.php') ?>" class="pr3"><i class="fa fa-sign-out p0 m0"></i> Log Out</a></li>
-						</ul>
+						<a  href='#'><span class="white-text name"><?=$session->get_session("NAMA")?></span></a>
 
 						<!-- Dropdown Structure -->
 						<a href="#"><span class="white-text email">Admin</span></a>

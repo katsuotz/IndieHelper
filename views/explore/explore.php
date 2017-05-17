@@ -69,9 +69,12 @@
                                             <img src="<?=baseurl('assets/images/user/').$value->foto_user?>" alt="" class="circle responsive-img">
                                         </div>
                                         <div class="col s10">
-                                            <span class="black-text font17"><?= $value->nama ?></span>
-                                            <p class="m0 font12"><?= $value->alamat ?></p>
+                                            <a href="<?= baseurl('profile.php?id=' . $value->id_user) ?>">
+                                                        <span class="black-text font17"><?= $value->nama ?></span>
+                                                        <p class="m0 font12"><?= $value->alamat ?></p>
+                                            </a>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>

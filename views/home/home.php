@@ -29,13 +29,13 @@
                 <div class="col s12 xl4 p0 ">
                     <div class="col s12">
                         <div class="card grey lighten-5 z-depth-1"">
-                                <div class="carousel carousel-slider">
-                                    <?php
-                                        for ($j=0; $j < count($foto[$i]); $j++) { 
-                                    ?>
-                                    <a class="carousel-item" href="<?=$fotohref[$j]?>"><div class="image" style="background-image: url('<?=baseurl('assets/images/project/').$foto[$i][$j]?>')"></div></a>
-                                    <?php } ?>
-                                </div>
+                            <div class="carousel carousel-slider">
+                                <?php
+                                    for ($j=0; $j < count($foto[$i]); $j++) { 
+                                ?>
+                                <a class="carousel-item" href="<?=$fotohref[$j]?>"><div class="image" style="background-image: url('<?=baseurl('assets/images/project/').$foto[$i][$j]?>')"></div></a>
+                                <?php } ?>
+                            </div>
                             <div class="row mb0" style="padding-left:24px; padding-right: 24px; padding-top: 8px">
                                 <div class="col s12">
                                     <p class="font24"><?=$value->nama_project?></p>
@@ -46,8 +46,10 @@
                                             <img src="<?=baseurl('assets/images/user/').$value->foto_user?>" alt="" class="circle responsive-img">
                                         </div>
                                         <div class="col s10">
-                                            <span class="black-text font17"><?= $value->nama ?></span>
-                                            <p class="m0 font12"><?= $value->alamat ?></p>
+                                            <a href="<?= baseurl('profile.php?id=' . $value->id_user) ?>">
+                                                <span class="black-text font17"><?= $value->nama ?></span>
+                                                <p class="m0 font12"><?= $value->alamat ?></p>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
