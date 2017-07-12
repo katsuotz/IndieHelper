@@ -24,4 +24,3 @@ Table
 4) Donation
 5) Bank
 6) Project
-7) Group ( Insyaallah ) 

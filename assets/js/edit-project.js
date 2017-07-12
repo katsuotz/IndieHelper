@@ -9,10 +9,8 @@ $(document).ready(function($) {
 		idFile = idFile.charAt(11);
 		var defaultImage = base_url + 'assets/images/project/default-project.jpg';
 		if ($('#uploaded-project-image' + idFile).attr('src') == defaultImage) {
-			console.log(1);
 			$('#project-image' + idFile).click();
 		} else {
-			console.log(2);
 			$('#uploaded-project-image' + idFile).attr('src', defaultImage);
 			$('#project-image' + idFile).val('');
 			$('#choose-file' + idFile + ' .fa').addClass('fa-plus').removeClass('fa-remove');
@@ -39,7 +37,6 @@ $(document).ready(function($) {
 
 	$('#update-project').submit(function(e) {
 		e.preventDefault();
-
 		var chips = $('.chips').material_chip('data');
 		var array = [];
 		var $data = new FormData($(this)[0]);

@@ -99,6 +99,10 @@
 			$this->tblname = $value;
 		}
 
+		function where_null($value) {
+			$this->where = 'WHERE '. $value . ' IS NULL';
+		}
+
 		function where($value) {
 			$row = array();
 			$col = array();
@@ -113,7 +117,6 @@
 			for ($i = 0; $i < count($row); $i++) {
 				array_push($data, ($row[$i] . " = '" . $col[$i]) . "'");
 			}
-
 
 			if($this->logic == 'AND')
 				$this->where = 'WHERE ' . implode(' AND ', $data);

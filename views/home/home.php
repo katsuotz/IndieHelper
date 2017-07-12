@@ -7,8 +7,10 @@
     </div>
     <div class="container-fluid">
         <div class="row pt3" style="margin-top: 18vh">
-            <div class="parallax-title">
-                <h2 class="center-align">Start your project with IndieHelper</h2>
+            <div class="parallax-title center-align">
+                <h3 class="center-align">Create your project together and show it to the World</h3>
+                <a href="learnmore.php" class="waves-effect waves-light btn indigo darken-1">Learn More</a>
+                <a href="formproject.php" class="waves-effect waves-light btn blue darken-4">Start your project</a>
             </div>
         </div>
     </div>

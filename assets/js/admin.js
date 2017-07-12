@@ -65,10 +65,14 @@ $(document).ready(function() {
 		})
 		.done(function(result) {
 			result = JSON.parse(result);
-			Materialize.toast(result.msg + ' menghapus data \
-				<a href="' + base_url + 'lib/undodelete' + result.tbl + 
-				'.php" class="btn m0 px1 undo-btn"><i class="material-icons">undo</i></a>\
-				<a href="#" class="btn m0 px1 close-toast-btn"><i class="material-icons">clear</i></a>');
+			if (result.tbl == 'kategori') {	
+				Materialize.toast(result.msg + ' menghapus data \
+					<a href="' + base_url + 'lib/undodelete' + result.tbl + 
+					'.php" class="btn m0 px1 undo-btn"><i class="material-icons">undo</i></a>\
+					<a href="#" class="btn m0 px1 close-toast-btn"><i class="material-icons">clear</i></a>');
+			} else {
+				Materialize.toast(result.msg + ' menghapus data', 4000);
+			}
 			if ($.trim(result.msg) == 'Berhasil') {
 				row.fadeOut();
 			}

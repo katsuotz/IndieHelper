@@ -7,7 +7,7 @@ $(document).ready(function() {
 			data: $(this).serialize(),
 		})
 		.done(function(result) {
-			Materialize.attr(result, 4000);
+			location.reload();
 		})
 		
 	});
